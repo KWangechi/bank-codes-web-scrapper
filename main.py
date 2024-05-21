@@ -1,4 +1,5 @@
 from urllib.request import urlopen
+import re
 
 url = "https://www.snowdesert.co.ke/resources/"
 
@@ -23,5 +24,15 @@ last_index = html.find("</title>");
 
 title_text = html[start_index:last_index];
 
-print(title_text);
+# print(title_text);
+
+# Lesson 2: Regular Expressions
+# extractedText = re.findall('abc', 'abccds');
+# extractedText = re.findall("a.c", 'adcyub');
+extractedText = re.findall("a*f", "afrvanmfrrfv");
+
+print(extractedText);
+
+
+
 
