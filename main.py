@@ -13,20 +13,20 @@ for link in links:
     bank_name = link.getText().strip('\r\t\n');
 
     if 'Bank' in bank_name:
-        print(bank_name);
-        # print(link.get('href'));
-    # print(bank_name);
-    # print(link.get('href'));
+        # bank_name = bank_name;
 
-# print(soup.findAll('a'))
+        # create a dictionary that will store bank name
+        bank_dict = {
+            'bank_name': bank_name,
+            'bank_link': link.get('href')
+        }
 
-# print(soup);
-# print(soup.getText());
+# open each url and get the html
+        page = urlopen(bank_dict['bank_link']);
+        html = page.read().decode("utf-8")
+        soup = BeautifulSoup(html, "html.parser")
 
-# html_text = soup.getText()
-
-# # display text that has the word bank only
-# banks = soup.find_all("Bank");
-
-# print(banks);
+        # get the bank code
+        # bank_code = soup.find('div', {'class': 'col-md-12 col-sm-12 col-xs-12'})
+        print(soup.getText());
 
