@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
+import re
 
 url = "https://www.snowdesert.co.ke/resources/"
 page = urlopen(url)
@@ -22,11 +23,15 @@ for link in links:
         }
 
 # open each url and get the html
-        page = urlopen(bank_dict['bank_link']);
+        page = urlopen(link.get('href'));
         html = page.read().decode("utf-8")
         soup = BeautifulSoup(html, "html.parser")
+        
+        # print(soup.getText());
+        # 1. Get the branch swift code and the bank code
+        bank_html_text = soup.getText();
+        match_results = re.search("Swift Code: ", bank_html_text, re.IGNORECASE);
+        bank_code = match_results.group()
+        bank
 
-        # get the bank code
-        # bank_code = soup.find('div', {'class': 'col-md-12 col-sm-12 col-xs-12'})
-        print(soup.getText());
-
+        print(bank_code);
