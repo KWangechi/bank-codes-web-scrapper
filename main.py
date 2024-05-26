@@ -35,10 +35,35 @@ for link in links:
         
         # read the table details(may need to use pandas)
         tables = soup.find('table');
-        print(tables);
+        # print(tables);
+        rows = tables.find_all(['tr']);
+        table_data = []
+        
+        for row in rows:
+            cols = row.find_all('td')
+            cols = [col.find('strong').text.strip() if col.find('strong') else col.text.strip() for col in cols]
+            table_data.append(cols)
+        
+        
+        print(table_data);
+        
+        # # f= open("tables.txt", "a");
+        # # f.write(str(tables));
+        # # f.close()
             
-            
+        # # get the columns of the table
+        # table_columns = tables.find('strong')
+        
+        # # find what is between the strong tags
+        # strong_pattern = "<strong>.*?</strong>"
+        # if(table_columns):
+        #     strong_tags = table_columns.getText();
+        #     # strong_tags = re.search(strong_pattern, table_columns.getText(), re.IGNORECASE)
+        
+        #     print(strong_tags);
+        
         bank_html_text = soup.getText();
+        # print(bank_html_text);
         
 
         # # 1. Get the branch swift code and the bank code

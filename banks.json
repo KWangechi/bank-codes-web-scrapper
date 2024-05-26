@@ -1,1 +1,122 @@
-[{"bank_name": "Equity Bank", "bank_swift_code": "EQBLKENA", "bank_code": "68"}, {"bank_name": "Family Bank", "bank_swift_code": "FABLKENA", "bank_code": "70"}, {"bank_name": "Absa Bank", "bank_swift_code": "BARCKENXNCC", "bank_code": "03"}, {"bank_name": "Co-operative Bank", "bank_swift_code": "KCOOKENA", "bank_code": "11"}, {"bank_name": "KCB Bank", "bank_swift_code": "KCBLKENX", "bank_code": "01"}, {"bank_name": "UBA Bank", "bank_swift_code": "UNAFKENA", "bank_code": "76"}, {"bank_name": "SBM Bank", "bank_swift_code": "SBMKKENA", "bank_code": "60"}, {"bank_name": "I&M Bank", "bank_swift_code": "IMBLKENA", "bank_code": "57"}, {"bank_name": "National Bank of Kenya", "bank_swift_code": "NBKEKENX", "bank_code": "000"}, {"bank_name": "Diamond Trust Bank", "bank_swift_code": "DTKEKENA", "bank_code": "63"}, {"bank_name": "Standard Chartered Bank", "bank_swift_code": "SCBLKENX", "bank_code": "02"}, {"bank_name": "Stanbic Bank", "bank_swift_code": "SBICKENX", "bank_code": "31"}, {"bank_name": "NCBA Bank", "bank_swift_code": "CBAFKENX", "bank_code": "07"}, {"bank_name": "Prime Bank", "bank_swift_code": "PRIEKENX", "bank_code": "010"}, {"bank_name": "Access Bank", "bank_swift_code": "ABNGKENA", "bank_code": "26"}, {"bank_name": "ABC Bank", "bank_swift_code": "ABCLKENA", "bank_code": "35"}, {"bank_name": "Bank of Africa", "bank_swift_code": "AFRIKENX", "bank_code": "19"}, {"bank_name": "Bank of Baroda", "bank_swift_code": "BARBKENA", "bank_code": "06"}, {"bank_name": "Bank of India", "bank_swift_code": "BKIDKENAWST", "bank_code": "05"}, {"bank_name": "Development Bank", "bank_swift_code": "DEVKKENA", "bank_code": "59"}, {"bank_name": "Dubai Islamic Bank", "bank_swift_code": "DUIBKENA", "bank_code": "20"}, {"bank_name": "Guardian Bank", "bank_swift_code": "GUARKENA", "bank_code": "55"}, {"bank_name": "M-Oriental Bank", "bank_swift_code": "MORBKENA", "bank_code": "14"}, {"bank_name": "Paramount Bank", "bank_swift_code": "PAUTKENA", "bank_code": "50"}, {"bank_name": "Post Bank", "bank_swift_code": "KPOBKEN1", "bank_code": "62"}, {"bank_name": "Prime Bank", "bank_swift_code": "PRIEKENX", "bank_code": "010"}, {"bank_name": "Sidian Bank", "bank_swift_code": "SIDNKENA", "bank_code": "66"}, {"bank_name": "Victoria Bank", "bank_swift_code": "VICMKENA", "bank_code": "54"}]
+[
+  {
+    "bank_name": "Equity Bank",
+    "bank_swift_code": "EQBLKENA",
+    "bank_code": "68"
+  },
+  {
+    "bank_name": "Family Bank",
+    "bank_swift_code": "FABLKENA",
+    "bank_code": "70"
+  },
+  {
+    "bank_name": "Absa Bank",
+    "bank_swift_code": "BARCKENXNCC",
+    "bank_code": "03"
+  },
+  {
+    "bank_name": "Co-operative Bank",
+    "bank_swift_code": "KCOOKENA",
+    "bank_code": "11"
+  },
+  { "bank_name": "KCB Bank", "bank_swift_code": "KCBLKENX", "bank_code": "01" },
+  { "bank_name": "UBA Bank", "bank_swift_code": "UNAFKENA", "bank_code": "76" },
+  { "bank_name": "SBM Bank", "bank_swift_code": "SBMKKENA", "bank_code": "60" },
+  { "bank_name": "I&M Bank", "bank_swift_code": "IMBLKENA", "bank_code": "57" },
+  {
+    "bank_name": "National Bank of Kenya",
+    "bank_swift_code": "NBKEKENX",
+    "bank_code": "000"
+  },
+  {
+    "bank_name": "Diamond Trust Bank",
+    "bank_swift_code": "DTKEKENA",
+    "bank_code": "63"
+  },
+  {
+    "bank_name": "Standard Chartered Bank",
+    "bank_swift_code": "SCBLKENX",
+    "bank_code": "02"
+  },
+  {
+    "bank_name": "Stanbic Bank",
+    "bank_swift_code": "SBICKENX",
+    "bank_code": "31"
+  },
+  {
+    "bank_name": "NCBA Bank",
+    "bank_swift_code": "CBAFKENX",
+    "bank_code": "07"
+  },
+  {
+    "bank_name": "Prime Bank",
+    "bank_swift_code": "PRIEKENX",
+    "bank_code": "010"
+  },
+  {
+    "bank_name": "Access Bank",
+    "bank_swift_code": "ABNGKENA",
+    "bank_code": "26"
+  },
+  { "bank_name": "ABC Bank", "bank_swift_code": "ABCLKENA", "bank_code": "35" },
+  {
+    "bank_name": "Bank of Africa",
+    "bank_swift_code": "AFRIKENX",
+    "bank_code": "19"
+  },
+  {
+    "bank_name": "Bank of Baroda",
+    "bank_swift_code": "BARBKENA",
+    "bank_code": "06"
+  },
+  {
+    "bank_name": "Bank of India",
+    "bank_swift_code": "BKIDKENAWST",
+    "bank_code": "05"
+  },
+  {
+    "bank_name": "Development Bank",
+    "bank_swift_code": "DEVKKENA",
+    "bank_code": "59"
+  },
+  {
+    "bank_name": "Dubai Islamic Bank",
+    "bank_swift_code": "DUIBKENA",
+    "bank_code": "20"
+  },
+  {
+    "bank_name": "Guardian Bank",
+    "bank_swift_code": "GUARKENA",
+    "bank_code": "55"
+  },
+  {
+    "bank_name": "M-Oriental Bank",
+    "bank_swift_code": "MORBKENA",
+    "bank_code": "14"
+  },
+  {
+    "bank_name": "Paramount Bank",
+    "bank_swift_code": "PAUTKENA",
+    "bank_code": "50"
+  },
+  {
+    "bank_name": "Post Bank",
+    "bank_swift_code": "KPOBKEN1",
+    "bank_code": "62"
+  },
+  {
+    "bank_name": "Prime Bank",
+    "bank_swift_code": "PRIEKENX",
+    "bank_code": "010"
+  },
+  {
+    "bank_name": "Sidian Bank",
+    "bank_swift_code": "SIDNKENA",
+    "bank_code": "66"
+  },
+  {
+    "bank_name": "Victoria Bank",
+    "bank_swift_code": "VICMKENA",
+    "bank_code": "54"
+  }
+]
