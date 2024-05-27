@@ -14,6 +14,7 @@ links = soup.findAll('a');
 
 banks_list = [];
 bank_data_source = [];
+branches = [];
 
 
 print("Extracting bank branch info has began...Kindly wait for the process to complete...")
@@ -32,24 +33,40 @@ for link in links:
         html = page.read().decode("utf-8")
         soup = BeautifulSoup(html, "html.parser")
         
+        # dfs = pd.read_html(soup.find('table'));
+        # print(dfs[0]);
+        
         
         # read the table details(may need to use pandas)
         tables = soup.find('table');
         # print(tables);
         rows = tables.find_all(['tr']);
-        table_data = []
+        # table_data = []
+        
+        # store this data in a key:value pair
+        # strong - keys
+        # normal text - values
         
         for row in rows:
             cols = row.find_all('td')
-            cols = [col.find('strong').text.strip() if col.find('strong') else col.text.strip() for col in cols]
-            table_data.append(cols)
-        
-        
-        print(table_data);
-        
-        # # f= open("tables.txt", "a");
-        # # f.write(str(tables));
-        # # f.close()
+            
+            branch_dict = {}
+            
+            for col in cols:
+                strong_tag = col.find('strong')
+                if strong_tag:
+                    key = strong_tag.text.strip()
+                    strong_tag.decompose()
+                        # Remove the <strong> tag text from the column text
+                    value = col.text.strip()
+                    # print(value);
+                    branch_dict[key] = value
+                    print(branch_dict);
+
+            # if branch_dict:  # Make sure it's not an empty dictionary
+            #     branches.append(branch_dict)
+            
+        # print(branches);
             
         # # get the columns of the table
         # table_columns = tables.find('strong')
