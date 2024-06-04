@@ -1,5 +1,11 @@
 [
     {
+        "Bank Name": "Bank Name Bank Code Branch Code Branch Name",
+        "Bank Code": "",
+        "Branch Code": "",
+        "Branch Name": ""
+    },
+    {
         "Bank Name": "Kenya Commercial Bank Limited",
         "Bank Code": "01 ",
         "Branch Code": "340",
@@ -208,6 +214,12 @@
         "Bank Code": "01 ",
         "Branch Code": "215",
         "Branch Name": "Emali"
+    },
+    {
+        "Bank Name": "Kenya Commercial Bank Limited",
+        "Bank Code": "01 ",
+        "Branch Code": "216",
+        "Branch Name": "Isiolo"
     },
     {
         "Bank Name": "Kenya Commercial Bank Limited",
@@ -422,6 +434,12 @@
     {
         "Bank Name": "Kenya Commercial Bank Limited",
         "Bank Code": "01 ",
+        "Branch Code": "252",
+        "Branch Name": "Egerton University"
+    },
+    {
+        "Bank Name": "Kenya Commercial Bank Limited",
+        "Bank Code": "01 ",
         "Branch Code": "253",
         "Branch Name": "Maua"
     },
@@ -628,6 +646,12 @@
         "Bank Code": "01 ",
         "Branch Code": "163",
         "Branch Name": "Eldama Ravine"
+    },
+    {
+        "Bank Name": "Kenya Commercial Bank Limited",
+        "Bank Code": "01 ",
+        "Branch Code": "164",
+        "Branch Name": "Kibwezi"
     },
     {
         "Bank Name": "Kenya Commercial Bank Limited",
@@ -842,6 +866,12 @@
     {
         "Bank Name": "Kenya Commercial Bank Limited",
         "Bank Code": "01 ",
+        "Branch Code": "161",
+        "Branch Name": "Ongata Rongai"
+    },
+    {
+        "Bank Name": "Kenya Commercial Bank Limited",
+        "Bank Code": "01 ",
         "Branch Code": "162",
         "Branch Name": "Kitengela"
     },
@@ -1048,6 +1078,12 @@
         "Bank Code": "01 ",
         "Branch Code": "176",
         "Branch Name": "Nyamira"
+    },
+    {
+        "Bank Name": "Kenya Commercial Bank Limited",
+        "Bank Code": "01 ",
+        "Branch Code": "177",
+        "Branch Name": "Mukuruweini"
     },
     {
         "Bank Name": "Kenya Commercial Bank Limited",
@@ -1262,6 +1298,12 @@
     {
         "Bank Name": "Standard Chartered Bank Kenya Ltd",
         "Bank Code": "02 ",
+        "Branch Code": "000",
+        "Branch Name": "Eldoret"
+    },
+    {
+        "Bank Name": "Standard Chartered Bank Kenya Ltd",
+        "Bank Code": "02 ",
         "Branch Code": "001",
         "Branch Name": "Kericho"
     },
@@ -1468,6 +1510,12 @@
         "Bank Code": "02 ",
         "Branch Code": "089",
         "Branch Name": "Kitengela"
+    },
+    {
+        "Bank Name": "Standard Chartered Bank Kenya Ltd",
+        "Bank Code": "02 ",
+        "Branch Code": "090",
+        "Branch Name": "Bungoma"
     },
     {
         "Bank Name": "Standard Chartered Bank Kenya Ltd",
@@ -1682,6 +1730,12 @@
     {
         "Bank Name": "Absa Bank Kenya Plc",
         "Bank Code": "03 ",
+        "Branch Code": "056",
+        "Branch Name": "Barclays Advisory And Reg. Services"
+    },
+    {
+        "Bank Name": "Absa Bank Kenya Plc",
+        "Bank Code": "03 ",
         "Branch Code": "057",
         "Branch Name": "Githunguri Branch"
     },
@@ -1888,6 +1942,12 @@
         "Bank Code": "03 ",
         "Branch Code": "047",
         "Branch Name": "Development House Branch"
+    },
+    {
+        "Bank Name": "Absa Bank Kenya Plc",
+        "Bank Code": "03 ",
+        "Branch Code": "048",
+        "Branch Name": "Bungoma"
     },
     {
         "Bank Name": "Absa Bank Kenya Plc",
@@ -2102,6 +2162,12 @@
     {
         "Bank Name": "Absa Bank Kenya Plc",
         "Bank Code": "03 ",
+        "Branch Code": "093",
+        "Branch Name": "Kariobangi Branch"
+    },
+    {
+        "Bank Name": "Absa Bank Kenya Plc",
+        "Bank Code": "03 ",
         "Branch Code": "094",
         "Branch Name": "Queensway House Branch"
     },
@@ -2308,6 +2374,12 @@
         "Bank Code": "07 ",
         "Branch Code": "208",
         "Branch Name": "Ruiru Eastern Bypass"
+    },
+    {
+        "Bank Name": "NCBA Bank Kenya Plc",
+        "Bank Code": "07 ",
+        "Branch Code": "206",
+        "Branch Name": "Nyeri"
     },
     {
         "Bank Name": "NCBA Bank Kenya Plc",
@@ -2522,6 +2594,12 @@
     {
         "Bank Name": "NCBA Bank Kenya Plc",
         "Bank Code": "07 ",
+        "Branch Code": "130",
+        "Branch Name": "Kitengela"
+    },
+    {
+        "Bank Name": "NCBA Bank Kenya Plc",
+        "Bank Code": "07 ",
         "Branch Code": "146",
         "Branch Name": "Kilifi"
     },
@@ -2732,6 +2810,12 @@
     {
         "Bank Name": "NCBA Bank Kenya Plc",
         "Bank Code": "07 ",
+        "Branch Code": "018",
+        "Branch Name": "Thika Road Mall"
+    },
+    {
+        "Bank Name": "NCBA Bank Kenya Plc",
+        "Bank Code": "07 ",
         "Branch Code": "019",
         "Branch Name": "Greenspan Mall"
     },
@@ -2938,6 +3022,12 @@
         "Bank Code": "09 ",
         "Branch Code": "004",
         "Branch Name": "Eldoret"
+    },
+    {
+        "Bank Name": "Central Bank Of Kenya",
+        "Bank Code": "09 ",
+        "Branch Code": "006",
+        "Branch Name": "Nakuru Centre"
     },
     {
         "Bank Name": "Prime Bank Limited",
@@ -3152,6 +3242,12 @@
     {
         "Bank Name": "Co-operative Bank of Kenya Limited",
         "Bank Code": "11 ",
+        "Branch Code": "163",
+        "Branch Name": "Thika Makongeni"
+    },
+    {
+        "Bank Name": "Co-operative Bank of Kenya Limited",
+        "Bank Code": "11 ",
         "Branch Code": "160",
         "Branch Name": "Kangema"
     },
@@ -3358,6 +3454,12 @@
         "Bank Code": "11 ",
         "Branch Code": "003",
         "Branch Name": "Kisumu"
+    },
+    {
+        "Bank Name": "Co-operative Bank of Kenya Limited",
+        "Bank Code": "11 ",
+        "Branch Code": "004",
+        "Branch Name": "Nkurumah Road"
     },
     {
         "Bank Name": "Co-operative Bank of Kenya Limited",
@@ -3572,6 +3674,12 @@
     {
         "Bank Name": "Co-operative Bank of Kenya Limited",
         "Bank Code": "11 ",
+        "Branch Code": "083",
+        "Branch Name": "Keroka"
+    },
+    {
+        "Bank Name": "Co-operative Bank of Kenya Limited",
+        "Bank Code": "11 ",
         "Branch Code": "084",
         "Branch Name": "Gilgil"
     },
@@ -3778,6 +3886,12 @@
         "Bank Code": "11 ",
         "Branch Code": "148",
         "Branch Name": "Rongo"
+    },
+    {
+        "Bank Name": "Co-operative Bank of Kenya Limited",
+        "Bank Code": "11 ",
+        "Branch Code": "149",
+        "Branch Name": "Lavington Mall"
     },
     {
         "Bank Name": "Co-operative Bank of Kenya Limited",
@@ -3992,6 +4106,12 @@
     {
         "Bank Name": "Co-operative Bank of Kenya Limited",
         "Bank Code": "11 ",
+        "Branch Code": "120",
+        "Branch Name": "Umoja"
+    },
+    {
+        "Bank Name": "Co-operative Bank of Kenya Limited",
+        "Bank Code": "11 ",
         "Branch Code": "121",
         "Branch Name": "Embakasi Junction"
     },
@@ -4198,6 +4318,12 @@
         "Bank Code": "12 ",
         "Branch Code": "015",
         "Branch Name": "Eastleigh"
+    },
+    {
+        "Bank Name": "National Bank Of Kenya",
+        "Bank Code": "12 ",
+        "Branch Code": "016",
+        "Branch Name": "Limuru"
     },
     {
         "Bank Name": "National Bank Of Kenya",
@@ -4412,6 +4538,12 @@
     {
         "Bank Name": "National Bank Of Kenya",
         "Bank Code": "12 ",
+        "Branch Code": "070",
+        "Branch Name": "Isiolo"
+    },
+    {
+        "Bank Name": "National Bank Of Kenya",
+        "Bank Code": "12 ",
         "Branch Code": "071",
         "Branch Name": "South C - Red Cross"
     },
@@ -4618,6 +4750,12 @@
         "Bank Code": "12 ",
         "Branch Code": "210",
         "Branch Name": "Bomet Amanah"
+    },
+    {
+        "Bank Name": "National Bank Of Kenya",
+        "Bank Code": "12 ",
+        "Branch Code": "211",
+        "Branch Name": "Bungoma Amanah"
     },
     {
         "Bank Name": "National Bank Of Kenya",
@@ -4832,6 +4970,12 @@
     {
         "Bank Name": "National Bank Of Kenya",
         "Bank Code": "12 ",
+        "Branch Code": "241",
+        "Branch Name": "Maua Amanah"
+    },
+    {
+        "Bank Name": "National Bank Of Kenya",
+        "Bank Code": "12 ",
         "Branch Code": "242",
         "Branch Name": "Meru Amanah"
     },
@@ -5038,6 +5182,12 @@
         "Bank Code": "14 ",
         "Branch Code": "005",
         "Branch Name": "Eldoret"
+    },
+    {
+        "Bank Name": "M-Oriental Bank Limited",
+        "Bank Code": "14 ",
+        "Branch Code": "006",
+        "Branch Name": "Kitale"
     },
     {
         "Bank Name": "M-Oriental Bank Limited",
@@ -5252,6 +5402,12 @@
     {
         "Bank Name": "Bank of  Africa Kenya Limited",
         "Bank Code": "19 ",
+        "Branch Code": "018",
+        "Branch Name": "MERU"
+    },
+    {
+        "Bank Name": "Bank of  Africa Kenya Limited",
+        "Bank Code": "19 ",
         "Branch Code": "019",
         "Branch Name": "Kitengela"
     },
@@ -5458,6 +5614,12 @@
         "Bank Code": "23 ",
         "Branch Code": "013",
         "Branch Name": "Umoja"
+    },
+    {
+        "Bank Name": "Consolidated Bank of Kenya Ltd",
+        "Bank Code": "23 ",
+        "Branch Code": "014",
+        "Branch Name": "River Road"
     },
     {
         "Bank Name": "Consolidated Bank of Kenya Ltd",
@@ -5672,6 +5834,12 @@
     {
         "Bank Name": "Access Bank Kenya PLC",
         "Bank Code": "26 ",
+        "Branch Code": "004",
+        "Branch Name": "Nakuru"
+    },
+    {
+        "Bank Name": "Access Bank Kenya PLC",
+        "Bank Code": "26 ",
         "Branch Code": "005",
         "Branch Name": "Mia"
     },
@@ -5878,6 +6046,12 @@
         "Bank Code": "31 ",
         "Branch Code": "012",
         "Branch Name": "Westgate"
+    },
+    {
+        "Bank Name": "Stanbic Bank Plc",
+        "Bank Code": "31 ",
+        "Branch Code": "013",
+        "Branch Name": "Kisumu"
     },
     {
         "Bank Name": "Stanbic Bank Plc",
@@ -6092,6 +6266,12 @@
     {
         "Bank Name": "ECO Bank Kenya LTD",
         "Bank Code": "43 ",
+        "Branch Code": "005",
+        "Branch Name": "Chambers"
+    },
+    {
+        "Bank Name": "ECO Bank Kenya LTD",
+        "Bank Code": "43 ",
         "Branch Code": "006",
         "Branch Name": "Thika"
     },
@@ -6298,6 +6478,12 @@
         "Bank Code": "49 ",
         "Branch Code": "010",
         "Branch Name": "Senator Cards"
+    },
+    {
+        "Bank Name": "Spire Bank",
+        "Bank Code": "49 ",
+        "Branch Code": "011",
+        "Branch Name": "Nyali"
     },
     {
         "Bank Name": "Spire Bank",
@@ -6512,6 +6698,12 @@
     {
         "Bank Name": "Kingdom Bank Limited",
         "Bank Code": "51 ",
+        "Branch Code": "307",
+        "Branch Name": "Banana"
+    },
+    {
+        "Bank Name": "Kingdom Bank Limited",
+        "Bank Code": "51 ",
         "Branch Code": "308",
         "Branch Name": "Kiambu"
     },
@@ -6718,6 +6910,12 @@
         "Bank Code": "55 ",
         "Branch Code": "006",
         "Branch Name": "Moi Ave"
+    },
+    {
+        "Bank Name": "Guardian Bank Limited",
+        "Bank Code": "55 ",
+        "Branch Code": "007",
+        "Branch Name": "Mombasa Road"
     },
     {
         "Bank Name": "Guardian Bank Limited",
@@ -6932,6 +7130,12 @@
     {
         "Bank Name": "I&M BANK (KENYA) LTD",
         "Bank Code": "57 ",
+        "Branch Code": "015",
+        "Branch Name": "Langata Link"
+    },
+    {
+        "Bank Name": "I&M BANK (KENYA) LTD",
+        "Bank Code": "57 ",
         "Branch Code": "016",
         "Branch Name": "Valley Arcade"
     },
@@ -7138,6 +7342,12 @@
         "Bank Code": "60 ",
         "Branch Code": "039",
         "Branch Name": "Chase Xpress Madaraka Corner"
+    },
+    {
+        "Bank Name": "State Bank of Mauritius Kenya",
+        "Bank Code": "60 ",
+        "Branch Code": "040",
+        "Branch Name": "Kitale"
     },
     {
         "Bank Name": "State Bank of Mauritius Kenya",
@@ -7352,6 +7562,12 @@
     {
         "Bank Name": "State Bank of Mauritius Kenya",
         "Bank Code": "60 ",
+        "Branch Code": "072",
+        "Branch Name": "Nyali"
+    },
+    {
+        "Bank Name": "State Bank of Mauritius Kenya",
+        "Bank Code": "60 ",
         "Branch Code": "073",
         "Branch Name": "Sameer"
     },
@@ -7558,6 +7774,12 @@
         "Bank Code": "61 ",
         "Branch Code": "220",
         "Branch Name": "Gill House"
+    },
+    {
+        "Bank Name": "Housing Finance Bank",
+        "Bank Code": "61 ",
+        "Branch Code": "230",
+        "Branch Name": "Buru Buru"
     },
     {
         "Bank Name": "Housing Finance Bank",
@@ -7772,6 +7994,12 @@
     {
         "Bank Name": "Kenya Post Office Savings Bank",
         "Bank Code": "62 ",
+        "Branch Code": "341",
+        "Branch Name": "Nyeri"
+    },
+    {
+        "Bank Name": "Kenya Post Office Savings Bank",
+        "Bank Code": "62 ",
         "Branch Code": "001",
         "Branch Name": "Head Office"
     },
@@ -7978,6 +8206,12 @@
         "Bank Code": "62 ",
         "Branch Code": "592",
         "Branch Name": "Uthiru"
+    },
+    {
+        "Bank Name": "Kenya Post Office Savings Bank",
+        "Bank Code": "62 ",
+        "Branch Code": "605",
+        "Branch Name": "Canon Hse Nairobi"
     },
     {
         "Bank Name": "Kenya Post Office Savings Bank",
@@ -8192,6 +8426,12 @@
     {
         "Bank Name": "Kenya Post Office Savings Bank",
         "Bank Code": "62 ",
+        "Branch Code": "795",
+        "Branch Name": "Bodo"
+    },
+    {
+        "Bank Name": "Kenya Post Office Savings Bank",
+        "Bank Code": "62 ",
         "Branch Code": "796",
         "Branch Name": "Maralal"
     },
@@ -8398,6 +8638,12 @@
         "Bank Code": "63 ",
         "Branch Code": "003",
         "Branch Name": "Kisumu"
+    },
+    {
+        "Bank Name": "Diamond Trust Bank Limited",
+        "Bank Code": "63 ",
+        "Branch Code": "005",
+        "Branch Name": "Parklands"
     },
     {
         "Bank Name": "Diamond Trust Bank Limited",
@@ -8612,6 +8858,12 @@
     {
         "Bank Name": "Diamond Trust Bank Limited",
         "Bank Code": "63 ",
+        "Branch Code": "078",
+        "Branch Name": "Kayole Junction"
+    },
+    {
+        "Bank Name": "Diamond Trust Bank Limited",
+        "Bank Code": "63 ",
         "Branch Code": "081",
         "Branch Name": "Kiambu"
     },
@@ -8818,6 +9070,12 @@
         "Bank Code": "66 ",
         "Branch Code": "015",
         "Branch Name": "Kisii"
+    },
+    {
+        "Bank Name": "Sidian Bank Limited",
+        "Bank Code": "66 ",
+        "Branch Code": "016",
+        "Branch Name": "CHUKA"
     },
     {
         "Bank Name": "Sidian Bank Limited",
@@ -9032,6 +9290,12 @@
     {
         "Bank Name": "Equity Bank Limited",
         "Bank Code": "68 ",
+        "Branch Code": "014",
+        "Branch Name": "Meru"
+    },
+    {
+        "Bank Name": "Equity Bank Limited",
+        "Bank Code": "68 ",
         "Branch Code": "015",
         "Branch Name": "Mama Ngina"
     },
@@ -9238,6 +9502,12 @@
         "Bank Code": "68 ",
         "Branch Code": "034",
         "Branch Name": "Thika Kenyatta Avenue"
+    },
+    {
+        "Bank Name": "Equity Bank Limited",
+        "Bank Code": "68 ",
+        "Branch Code": "035",
+        "Branch Name": "Knut House"
     },
     {
         "Bank Name": "Equity Bank Limited",
@@ -9452,6 +9722,12 @@
     {
         "Bank Name": "Equity Bank Limited",
         "Bank Code": "68 ",
+        "Branch Code": "071",
+        "Branch Name": "Githurai"
+    },
+    {
+        "Bank Name": "Equity Bank Limited",
+        "Bank Code": "68 ",
         "Branch Code": "072",
         "Branch Name": "Kitui"
     },
@@ -9658,6 +9934,12 @@
         "Bank Code": "68 ",
         "Branch Code": "133",
         "Branch Name": "KPCU"
+    },
+    {
+        "Bank Name": "Equity Bank Limited",
+        "Bank Code": "68 ",
+        "Branch Code": "134",
+        "Branch Name": "Ridgeways"
     },
     {
         "Bank Name": "Equity Bank Limited",
@@ -9872,6 +10154,12 @@
     {
         "Bank Name": "Equity Bank Limited",
         "Bank Code": "68 ",
+        "Branch Code": "101",
+        "Branch Name": "Marsabit"
+    },
+    {
+        "Bank Name": "Equity Bank Limited",
+        "Bank Code": "68 ",
         "Branch Code": "102",
         "Branch Name": "Moyale"
     },
@@ -10078,6 +10366,12 @@
         "Bank Code": "68 ",
         "Branch Code": "182",
         "Branch Name": "Kagwe Sub - Branch"
+    },
+    {
+        "Bank Name": "Equity Bank Limited",
+        "Bank Code": "68 ",
+        "Branch Code": "181",
+        "Branch Name": "Emali Branch"
     },
     {
         "Bank Name": "Equity Bank Limited",
@@ -10292,6 +10586,12 @@
     {
         "Bank Name": "Family Bank Ltd",
         "Bank Code": "70 ",
+        "Branch Code": "032",
+        "Branch Name": "Thika Makongeni"
+    },
+    {
+        "Bank Name": "Family Bank Ltd",
+        "Bank Code": "70 ",
         "Branch Code": "033",
         "Branch Name": "Donholm"
     },
@@ -10498,6 +10798,12 @@
         "Bank Code": "70 ",
         "Branch Code": "088",
         "Branch Name": "Wote"
+    },
+    {
+        "Bank Name": "Family Bank Ltd",
+        "Bank Code": "70 ",
+        "Branch Code": "089",
+        "Branch Name": "Bamburi"
     },
     {
         "Bank Name": "Family Bank Ltd",
@@ -10712,6 +11018,12 @@
     {
         "Bank Name": "Gulf African Bank Ltd",
         "Bank Code": "72 ",
+        "Branch Code": "005",
+        "Branch Name": "Mombasa"
+    },
+    {
+        "Bank Name": "Gulf African Bank Ltd",
+        "Bank Code": "72 ",
         "Branch Code": "006",
         "Branch Name": "Garissa"
     },
@@ -10918,6 +11230,12 @@
         "Bank Code": "75 ",
         "Branch Code": "000",
         "Branch Name": "Head Office"
+    },
+    {
+        "Bank Name": "DIB Bank Kenya Limited",
+        "Bank Code": "75 ",
+        "Branch Code": "006",
+        "Branch Name": "Banda Street"
     },
     {
         "Bank Name": "DIB Bank Kenya Limited",
@@ -11132,6 +11450,12 @@
     {
         "Bank Name": "Kenya Women Microfinance Bank",
         "Bank Code": "78 ",
+        "Branch Code": "028",
+        "Branch Name": "Bungoma Branch"
+    },
+    {
+        "Bank Name": "Kenya Women Microfinance Bank",
+        "Bank Code": "78 ",
         "Branch Code": "029",
         "Branch Name": "Bomet Branch"
     },
@@ -11342,6 +11666,12 @@
     {
         "Bank Name": "Faulu Microfinance Bank Ltd",
         "Bank Code": "79 ",
+        "Branch Code": "020",
+        "Branch Name": "Nyeri"
+    },
+    {
+        "Bank Name": "Faulu Microfinance Bank Ltd",
+        "Bank Code": "79 ",
         "Branch Code": "021",
         "Branch Name": "Thika"
     },
@@ -11548,6 +11878,12 @@
         "Bank Code": "80 ",
         "Branch Code": "005",
         "Branch Name": "Donholm"
+    },
+    {
+        "Bank Name": "Caritas Microfinance Bank Ltd",
+        "Bank Code": "80 ",
+        "Branch Code": "006",
+        "Branch Name": "Thika"
     },
     {
         "Bank Name": "Caritas Microfinance Bank Ltd",
