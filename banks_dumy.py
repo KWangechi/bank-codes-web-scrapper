@@ -1,75 +1,182 @@
-from pypdf import PdfReader
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+import re
 import json
+import pandas as pd
 
-reader = PdfReader('Bank-and-Branches-July-2023v.pdf')
-pages = reader.pages
 
-header = ["Bank Name", "Bank Code", "Branch Code", "Branch Name"]
+url = "https://www.snowdesert.co.ke/resources/"
+page = urlopen(url)
+html = page.read().decode("utf-8")
+soup = BeautifulSoup(html, "html.parser")
+
+links = soup.findAll("a")
+
+banks_list = []
+bank_data_source = []
+branches = []
 
 bank_dict = {}
-bank_data = []
-
-for page in pages:
-    text = page.extract_text()
-    lines = text.strip().split('\n')
-    
-    # print(lines)
-    
-    if lines[0] == "Bank Name Bank Code Branch Code Branch Name":
-        branches = lines[1:]
-
-    branches = lines[0:]
-    branches_info = []
 
 
-    for branch in branches:
-        digit_index = next((i for i, c in enumerate(branch) if c.isdigit()), None)
-        if digit_index is not None:
-            bank_name = branch[:digit_index].strip()
-            bank_code = branch[digit_index:digit_index+3].strip()
-            branch_code = branch[digit_index+3:digit_index+6]
-            branch_name = branch[digit_index+6:].strip()
-            
-            # print(bank_name)
-            if bank_name not in bank_dict and branch_code not in bank_dict:
-                bank_dict = {
-                    'bank_name': bank_name,
-                    'bank_code': bank_code,
-                    'branches': [
-                        {
-                            'branch_code': branch_code,
-                            'branch_name': branch_name
-                        }
-                    ]
-                }
-            bank_data.append(bank_dict)
-        else:
-            bank_name = branch
-            bank_code = ""
-            branch_code = ""
-            branch_name = ""
-            
-        # only include what is unique
-        # bank_dict format
-        # bank_dict = {
-        #     'bank_name': 'Bank 1',
-        #     'bank_code': '001',
-        #     'branches': [
-        #         {
-        #             'branch_code': 'Branch 1',
-        #             'branch_name': 'Branch 1 Name'
-        #         }
-        #     ]
-        # }
-        # bank_dict = dict(zip(header, [bank_name, bank_code, branch_code, branch_name]))
-        # bank_data.append(bank_dict)
-        
-print(bank_data)
+print(
+    "Extracting bank branch info has began...Kindly wait for the process to complete..."
+)
 
-# Print the bank_data to verify
-# print(json.dumps(bank_data, indent=4))
+for link in links:
 
-# Write the entire list to the JSON file
-with open("banks_info.json", "w") as f:
-    json.dump(bank_data, f, indent=4)
+    bank_name = link.getText().strip("\r\t\n")
 
+    if "Bank" in bank_name:
+        banks_list.append(link.get("href"))
+
+        # create a dictionary that will store bank name
+        bank_dict[bank_name] = link.get("href")
+
+page = urlopen(bank_dict["Family Bank"])
+
+html = page.read().decode("utf-8")
+soup = BeautifulSoup(html, "html.parser")
+
+# print(soup)
+
+# read the table details(may need to use pandas)
+tables = soup.find_all("td")
+
+print(tables)
+bank_codes = soup.find_all(width="97")
+bank_branch_codes = []
+branch_names = soup.find_all(width="330")
+bank_branch_names = []
+
+for bank_code in bank_codes:
+    # x = bank_code.get_text()
+    # print(bank_code.text)
+    bank_branch_codes.append(bank_code.text)
+
+
+for branch_name in branch_names:
+    # x = bank_code.get_text()
+    # print(branch_name.text)
+    bank_branch_names.append(branch_name.text)
+
+# new_dict = {bank_branch_names: bank_branch_names for bank_branch_codes,
+#             bank_branch_codes in zip(bank_branch_names, bank_branch_codes)}
+# print(new_dict)
+
+zipped_dict = dict(zip(bank_branch_names, bank_branch_codes))
+print(zipped_dict)
+
+# table_data = []
+# rows = []
+# cols = []
+
+# # open each url and get the html
+# for bank in bank_dict.values():
+#     page = urlopen(bank)
+#     html = page.read().decode("utf-8")
+#     soup = BeautifulSoup(html, "html.parser")
+
+#     # print(soup)
+
+#         # read the table details(may need to use pandas)
+#     tables = soup.find('table')
+#     # print(tables)
+#     rows = tables.find_all(['tr'])
+#     table_data.append(rows)
+
+# print(table_data)
+
+# branch_dict = {}
+
+# for row in rows:
+#     cols = row.find_all('td')
+
+# # key = None
+# for col in cols:
+#     strong_tag = col.find('strong')
+#     if strong_tag:
+#         key = strong_tag.text.strip()
+
+#     value = col.text.strip()
+#     # print(value);
+#     branch_dict[key] = value
+#     print(branch_dict)
+
+#     if branch_dict:  # Make sure it's not an empty dictionary
+#         branches.append(branch_dict)
+
+#         # store this data in a key:value pair
+#         # strong - keys
+#         # normal text - values
+
+#         # for row in rows:
+#         #     cols = row.find_all('td')
+
+#         #     branch_dict = {}
+#         #     key = None
+
+#         #     for col in cols:
+#         #         strong_tag = col.find('strong')
+#         #         if strong_tag:
+#         #             key = strong_tag.text.strip()
+#         #             strong_tag.decompose()
+#         #                 # Remove the <strong> tag text from the column text
+#         #         value = col.text.strip()
+#         #         # print(value);
+#         #         branch_dict[key] = value
+#         #         print(branch_dict);
+
+#         #     # if branch_dict:  # Make sure it's not an empty dictionary
+#         #     #     branches.append(branch_dict)
+
+#         # print(branches);
+
+#         # # get the columns of the table
+#         # table_columns = tables.find('strong')
+
+#         # # find what is between the strong tags
+#         # strong_pattern = "<strong>.*?</strong>"
+#         # if(table_columns):
+#         #     strong_tags = table_columns.getText();
+#         #     # strong_tags = re.search(strong_pattern, table_columns.getText(), re.IGNORECASE)
+
+#         #     print(strong_tags);
+
+#         # bank_html_text = soup.getText();
+#         # print(bank_html_text);
+
+
+#         # # 1. Get the branch swift code and the bank code
+#         # match_swift_code = re.search(r"Swift Code:\s*([A-Za-z0-9]+)", bank_html_text, re.IGNORECASE)
+#         # match_bank_code = re.search(r"Bank Code:\s*([A-Za-z0-9]+)", bank_html_text, re.IGNORECASE)
+
+#         # if (match_swift_code or match_bank_code):
+#         #     bank_swift_code = match_swift_code.group(1);
+#         #     bank_code = match_bank_code.group(1);
+
+#         #     bank_data_source.append((bank_name, bank_swift_code, bank_code));
+
+#         #     print(bank_data_source);
+
+
+#         # else:
+#         #     print("No Data Found");
+
+
+# print(len(bank_data_source));
+
+# for new_bank_name, new_bank_swift_code, new_bank_code in bank_data_source:
+#     # create a dictionary that will store this data and display it
+#             bank_dict = {
+#                 'bank_name': new_bank_name,
+#                 'bank_swift_code': new_bank_swift_code,
+#                 'bank_code': new_bank_code
+#             }
+
+#             banks_list.append(bank_dict)
+#             print(banks_list)
+#             # write this ditionary into a json
+#             # banks_json
+#             with open("banks.json", "w") as json_file:
+#                 json.dump(banks_list, json_file)
