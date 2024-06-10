@@ -1,6 +1,22 @@
 from pypdf import PdfReader
 import json
 
+import requests
+from requests.structures import CaseInsensitiveDict
+
+
+# url = 'https://api.geoapify.com/v1/geocode/search?name=Karen Waterfront Platinum&apiKey=c4d0e19b379d4f41832576f4f0cc1790&filter=countrycode:ke&type=amenity'
+
+# headers = CaseInsensitiveDict()
+# headers["Accept"] = "application/json"
+
+# resp = requests.get(url, headers=headers)
+
+# # print(branch_name)
+# # response_dict = resp.json
+# print(resp.json())
+
+
 reader = PdfReader("Bank-and-Branches-July-2023v.pdf")
 pages = reader.pages
 
@@ -32,6 +48,18 @@ for page in pages:
             branch_code = branch[digit_index + 3 : digit_index + 6]
             branch_name = branch[digit_index + 6 :].strip()
 
+            # geocode the branch name and get latitude and longitude
+            # url = 'https://api.geoapify.com/v1/geocode/search?text={branch_name}&apiKey=c4d0e19b379d4f41832576f4f0cc1790'
+            url = f'https://api.geoapify.com/v1/geocode/search?name={bank_name,branch_name}&apiKey=c4d0e19b379d4f41832576f4f0cc1790&filter=countrycode:ke&type=amenity'
+
+            headers = CaseInsensitiveDict()
+            headers["Accept"] = "application/json"
+
+            resp = requests.get(url, headers=headers)
+
+            print(branch_name)
+            print(resp.json())
+
             # print(bank_name)
             if bank_name not in bank_dict:
                 bank_dict[bank_name] = {
@@ -53,11 +81,6 @@ for page in pages:
         # bank_data.append(bank_dict)
 bank_data.append(bank_dict)
 
-# print(bank_data)
 
-# Print the bank_data to verify
-# print(json.dumps(bank_data, indent=4))
-
-# Write the entire list to the JSON file
 with open("banks_info.json", "w") as f:
     json.dump(bank_data, f, indent=4)
