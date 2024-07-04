@@ -1,0 +1,6 @@
+1. Query all the bank names - api/banks
+2. Count the number of banks - count(api/banks)
+3. Query the bank code of a bank - api/banks/{bank_name}/bank_code
+4. Query the branches of a particular bank - api/banks/{bank_name}/branches
+5. Query the branch code of a branch - api/banks/{bank_name}/{branch_name}/branch_code
+6. Query the branch Get the link 
