@@ -1,25 +1,34 @@
 // import logo from './logo.svg';
 import "./App.css";
-import "./index.css"
+import "./index.css";
 
 function App() {
   return (
-    <div className="">
-      <div className=" bg-blue-500">Kenya Bank Code Search</div>
+    <div className="header mt-12 ml-12">
+      <div className="font-semibold text-4xl ml-12">Kenya Bank Code Search</div>
 
-      <div className="search-bar">
-        <input type="text" placeholder="Enter Bank Code" />
-        <button>Search</button>
+      <div className="bg-gray-400 opacity-40 h-40 mt-2 w-full">
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Enter Bank Name"
+            className="rounded-md w-100 h-10 shadow-lg mt-6 ml-12"
+          />
+          {/* Should be inside the input bar */}
+          <button className="bg-blue-400 rounded-lg p-2 text-xl ml-4">Search</button>
 
-        <select >
-          <option>Bank 1</option>
-        </select>
+          <div className="mt-6 ml-12 ">
+          <select>
+            <option>Bank 1</option>
+          </select>
 
-        <select>
-          <option>Muranga</option>
-        </select>
+          <select>
+            <option>Muranga</option>
+          </select>
 
-        <button className="toggle_map_btn">Toggle Map View</button>
+          <button className="toggle_map_btn">Toggle Map View</button>
+          </div>
+        </div>
       </div>
 
       <div className="results_container">
