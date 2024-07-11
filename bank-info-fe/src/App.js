@@ -4,34 +4,48 @@ import "./index.css";
 
 function App() {
   return (
-    <div className="header mt-12 ml-12">
+    <div className="header mt-5">
       <div className="font-semibold text-4xl ml-12">Kenya Bank Code Search</div>
 
-      <div className="bg-gray-400 opacity-40 h-40 mt-2 w-full">
+      <div className="bg-gray-400/10  h-52 mt-2 w-full flex justify-center ">
         <div className="search-bar">
           <input
             type="text"
-            placeholder="Enter Bank Name"
-            className="rounded-md w-100 h-10 shadow-lg mt-6 ml-12"
+            placeholder="Search Bank/Branch Name..."
+            className="rounded-md w-80 shadow-lg mt-6 px-2 py-3 text-md outline-blue-300"
           />
           {/* Should be inside the input bar */}
-          <button className="bg-blue-400 rounded-lg p-2 text-xl ml-4">Search</button>
+          <button className="bg-[#74C5D7] rounded-lg p-2 text-xl ml-4 px-6 text-white">
+            Search
+          </button>
 
-          <div className="mt-6 ml-12 ">
-          <select>
-            <option>Bank 1</option>
-          </select>
+          <div className="mt-6 flex justify-between">
+            <select className="rounded-md w-80 shadow-lg mt-6 px-2 py-3 text-md">
+              <option selected disabled>
+                Filter By Name
+              </option>
+              <option>Bank 1</option>
+            </select>
 
-          <select>
-            <option>Muranga</option>
-          </select>
+            <select
+              className="rounded-md w-80 shadow-lg mt-6 ml-12 px-2 py-3 text-md"
+              placeholder="Filter By Location"
+            >
+              <option selected disabled>
+                Filter By Location
+              </option>
 
-          <button className="toggle_map_btn">Toggle Map View</button>
+              <option>Muranga</option>
+            </select>
+
+            <button className="rounded-md w-fit shadow-lg mt-6 ml-12 px-3 py-3 text-md bg-[#DD7E7E]/40 text-white text-md">
+              Toggle Map View
+            </button>
           </div>
         </div>
       </div>
 
-      <div className="results_container">
+      {/* <div className="results_container">
         <p>1 Result Found</p>
 
         <div className="result_card">
@@ -52,7 +66,7 @@ function App() {
 
           <p>Muranga</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
