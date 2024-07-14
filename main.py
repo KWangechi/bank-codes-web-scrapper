@@ -1,8 +1,8 @@
 from pypdf import PdfReader
 import json
 
-import requests
-from requests.structures import CaseInsensitiveDict
+# import requests
+# from requests.structures import CaseInsensitiveDict
 
 
 # url = 'https://api.geoapify.com/v1/geocode/search?name=Karen Waterfront Platinum&apiKey=c4d0e19b379d4f41832576f4f0cc1790&filter=countrycode:ke&type=amenity'
@@ -50,20 +50,19 @@ for page in pages:
 
             # geocode the branch name and get latitude and longitude
             # url = 'https://api.geoapify.com/v1/geocode/search?text={branch_name}&apiKey=c4d0e19b379d4f41832576f4f0cc1790'
-            url = f'https://api.geoapify.com/v1/geocode/search?name={bank_name,branch_name}&apiKey=c4d0e19b379d4f41832576f4f0cc1790&filter=countrycode:ke&type=amenity'
+            # url = f'https://api.geoapify.com/v1/geocode/search?name={bank_name,branch_name}&apiKey=c4d0e19b379d4f41832576f4f0cc1790&filter=countrycode:ke&type=amenity'
 
-            headers = CaseInsensitiveDict()
-            headers["Accept"] = "application/json"
+            # headers = CaseInsensitiveDict()
+            # headers["Accept"] = "application/json"
 
-            resp = requests.get(url, headers=headers)
+            # resp = requests.get(url, headers=headers)
 
-            print(branch_name)
-            print(resp.json())
+            # print(branch_name)
+            # print(resp.json())
 
             # print(bank_name)
             if bank_name not in bank_dict:
                 bank_dict[bank_name] = {
-                    "bank_name": bank_name,
                     "bank_code": bank_code,
                     "branches": [],
                 }
@@ -77,10 +76,18 @@ for page in pages:
             branch_code = ""
             branch_name = ""
 
-        # bank_dict = dict(zip(header, [bank_name, bank_code, branch_code, branch_name]))
-        # bank_data.append(bank_dict)
-bank_data.append(bank_dict)
+bank_list = [
+    {
+        "bank_name": bank_name,
+        "bank_code": bank_info["bank_code"],
+        "branches": bank_info["branches"],
+    }
+    for bank_name, bank_info in bank_dict.items()
+]
+# bank_data.append(bank_dict)
 
 
 with open("banks_info.json", "w") as f:
-    json.dump(bank_data, f, indent=4)
+    json.dump(bank_list, f, indent=4)
+    
+print(json.dumps(bank_list, indent=4))

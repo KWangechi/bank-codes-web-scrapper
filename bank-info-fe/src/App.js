@@ -1,14 +1,21 @@
 // import logo from './logo.svg';
-import "./App.css";
+// import "./App.css";
 import "./index.css";
+import { banks, getAllBanks } from "./api/bank-store";
+// import data from "../src/banks_info.json"
 
 function App() {
+  getAllBanks();
+  console.log(banks);
+
+  // const searchTerm = useState([]);
+
   return (
-    <div className="header mt-5">
+    <div className="header mt-5 h-screen">
       <div className="font-semibold text-4xl text-center text-[#695958]">
         Kenya Bank Code Search
       </div>
-      <div className="bg-[#B6C8A9] text-center py-8 mt-5 rounded-lg shadow-sm">
+      <div className="bg-[#B6C8A9] text-center py-8 mt-5 shadow-sm">
         <h4 className="italic text-md mt-4 text-[#695958]">
           Search for all the Banks in Kenya, their codes, their branches info,
           and additional details such as Opening Hours. You can filter by Bank
@@ -33,6 +40,8 @@ function App() {
           1 Result Found
         </span>
       </div>
+
+      {/* {banks} */}
       <div className="mt-6 flex justify-center">
         <div className="rounded-lg shadow-xl bg-grey-200 w-3/4 p-6">
           <div className="flex items-center mb-4">
