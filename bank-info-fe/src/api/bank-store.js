@@ -6,15 +6,9 @@ let branches = [];
 let bank = null;
 
 function getAllBanks() {
-//   console.log(data);
   banks = data;
 
-  banks = data.map((bank) => ({
-    name: bank.bank_name,
-    code: bank.bank_code,
-  }));
-
-console.log(banks);
+  console.log(banks);
 
   // get the banks info from the JSON file
   //   fetch("../banks_info.json")
