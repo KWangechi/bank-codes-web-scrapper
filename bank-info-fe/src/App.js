@@ -23,7 +23,7 @@ function App() {
 
   const newFilteredBanks = filteredBanks.map((bank) =>
     bank.branches.map((branch) => (
-      <div className="mt-6 mb-6 flex justify-center">
+      <div className="mt-6 mb-12 flex justify-center">
         <div className="rounded-lg shadow-xl bg-grey-200 w-3/4 p-6">
           <div className="flex items-center mb-4">
             <img
