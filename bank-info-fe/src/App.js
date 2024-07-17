@@ -5,7 +5,7 @@ import { ResultCard } from "./components/ResultCard";
 
 function App() {
   getAllBanks();
-  console.log(banks.length);
+  // console.log(banks.length);
 
   const [searchTerm, setSearchTerm] = useState(null);
 
@@ -57,10 +57,24 @@ function App() {
             className="rounded-md w-2/3 md:w-1/2 shadow-lg px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
             onChange={handleSearchTermChange}
           />
-          <button className="ml-3 bg-[#695958] rounded-lg text-lg px-4 py-2 text-white shadow hover:bg-[#5a4d4d] transition duration-300">
+          {/* <button className="ml-3 bg-[#695958] rounded-lg text-lg px-4 py-2 text-white shadow hover:bg-[#5a4d4d] transition duration-300">
             Search
-          </button>
-          <button className="ml-3 bg-[#695958] rounded-lg text-lg px-4 py-2 text-white shadow hover:bg-[#5a4d4d] transition duration-300">
+          </button> */}
+          <button className="flex items-center ml-3 bg-[#695958]/80 rounded-lg text-lg px-4 py-2 text-white shadow hover:bg-[#5a4d4d] transition duration-300">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 mr-2 items-center"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
+              />
+            </svg>
             Filter
           </button>
         </div>
@@ -79,7 +93,9 @@ function App() {
         <div className="h-6 border-dashed border-gray-100 w-6">2</div>
         <div className="h-6 border-dashed border-gray-100 w-6">3</div>
       </div> */}
-      <div className="grid grid-cols-2 gap-12 ms-4 me-4">{newFilteredBanks}</div>
+      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 mt-2 sm:grid-cols-1">
+        {newFilteredBanks}
+      </div>
     </div>
   );
 }

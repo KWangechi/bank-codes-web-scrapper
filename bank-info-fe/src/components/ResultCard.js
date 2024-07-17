@@ -1,7 +1,13 @@
 export function ResultCard({ bank, branch }) {
+  const startingTimeWeekdays = "8:00am";
+  const endingTimeWeekdays = "5:00pm";
+
+  const startingTimeWeekends = "8:00am";
+  const endingTimeWeekends = "1:00pm";
+
   return (
-    <div className="mt-6 mb-6 flex justify-around">
-      <div className="rounded-lg shadow-lg bg-gray-50 w-3/4 p-6 shadow-[#695958]-500/40">
+    <div className="mt-4 mb-4">
+      <div className="rounded-lg shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 ">
         <div className="flex items-center mb-4">
           <img
             src={bank?.icon}
@@ -13,7 +19,7 @@ export function ResultCard({ bank, branch }) {
               {branch?.branch_name}
             </h2>
             <div className="flex items-center text-gray-600">
-              <span className="text-lg">
+              <span className="text-lg italic">
                 Branch Code: {branch?.branch_code}
               </span>
               <span className="mx-2">•</span>
@@ -31,7 +37,7 @@ export function ResultCard({ bank, branch }) {
             <span className="ml-1 text-gray-500">Ruiru, Kenya</span>
           </div>
         </div>
-        <div className="grow border-t border-gray-200 pt-4">
+        <div className="border-t border-gray-200 pt-4">
           <div className="flex justify-between items-center mb-4">
             <div>
               <p className="font-semibold text-[#695958]">{bank.bank_name}</p>
@@ -39,15 +45,15 @@ export function ResultCard({ bank, branch }) {
             </div>
             <div className="text-right">
               <p className="font-semibold text-[#695958]">Working Hours</p>
-              <span className="text-gray-600">8:00am - 5:00pm - Weekdays</span>
+              <span className="text-gray-600">{startingTimeWeekdays} - {endingTimeWeekdays} - Weekdays</span>
               <p>
                 <span className="text-gray-600">
-                  8:00am - 1:00pm - Weekends
+                  {startingTimeWeekends} - {endingTimeWeekends} - Weekends
                 </span>
               </p>
             </div>
           </div>
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-4 mt-4">
             <div>
             <p className="font-semibold text-[#695958]">Contact Info</p>
             <span className="text-gray-600">07898990899 | 0709008004</span>
