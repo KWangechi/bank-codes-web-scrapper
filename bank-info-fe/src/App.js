@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./index.css";
-import { banks, getAllBanks} from "./api/bank-store";
+import { banks, getAllBanks } from "./api/bank-store";
 import { ResultCard } from "./components/ResultCard";
 import { NoResultCard } from "./components/NoResultCard";
 
 function App() {
   getAllBanks();
-
 
   const [searchTerm, setSearchTerm] = useState(null);
 
@@ -14,35 +13,57 @@ function App() {
     setSearchTerm(e.target.value);
   };
 
-
   let filteredBanks = banks.filter(
     (bank) =>
       bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
-      bank?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase()) || (
       bank?.aliases?.some((alias) =>
         alias?.toLowerCase().includes(searchTerm?.toLowerCase())
+      ) ||
+      bank?.branches?.some((branch) =>
+        branch?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
       )
-    )
   );
+
+  // console.log(filteredBanks[0].branches);
 
   let newFilteredBanks;
 
   if (filteredBanks && filteredBanks.length > 0) {
-    newFilteredBanks = filteredBanks.map((bank) =>
-      bank.branches.map((branch) => (
-        <ResultCard bank={bank} branch={branch} key={`${bank.bank_code}-${branch.branch_code}`}></ResultCard>
-      ))
-    );
+    newFilteredBanks = filteredBanks.map((bank) => {
+      let filteredBranches = bank?.branches?.filter((branch) =>
+        branch?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
+      );
+
+      // If bank name or aliases match, include all branches
+      if (
+        bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+        bank?.aliases?.some((alias) =>
+          alias?.toLowerCase().includes(searchTerm?.toLowerCase())
+        )
+      ) {
+        filteredBranches = bank.branches;
+      }
+
+      return filteredBranches.map((branch) => (
+        <ResultCard
+          bank={bank}
+          branch={branch}
+          key={`${bank.bank_code}-${branch.branch_code}`}
+        ></ResultCard>
+      ));
+    });
   }
   // If no search term is provided, display all banks
-
-  else if(searchTerm && filteredBanks.length === 0) {
-    <NoResultCard></NoResultCard>
-  }
-  else {
+  else if (searchTerm && filteredBanks.length === 0) {
+    <NoResultCard></NoResultCard>;
+  } else {
     newFilteredBanks = banks.map((bank) =>
       bank.branches.map((branch) => (
-        <ResultCard bank={bank} branch={branch} key={`${bank.bank_code}-${branch.branch_code}`}></ResultCard>
+        <ResultCard
+          bank={bank}
+          branch={branch}
+          key={`${bank.bank_code}-${branch.branch_code}`}
+        ></ResultCard>
       ))
     );
   }

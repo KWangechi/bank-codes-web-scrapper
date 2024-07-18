@@ -34,7 +34,7 @@ export function ResultCard({ bank, branch }) {
             >
               <path d="M12 2C8.14 2 5 5.14 5 9c0 4.69 7 13 7 13s7-8.31 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" />
             </svg>
-            <span className="ml-1 text-gray-500">Ruiru, Kenya</span>
+            <span className="ml-1 text-gray-500">{branch.branch_name}</span>
           </div>
         </div>
         <div className="border-t border-gray-200 pt-4">
