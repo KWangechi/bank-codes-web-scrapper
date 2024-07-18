@@ -1,7 +1,7 @@
 [
     {
         "bank_name": "Kenya Commercial Bank Limited",
-        "alias": ["KCB"],
+        "aliases": ["KCB"],
         "bank_code": "01",
         "branches": [
             {
@@ -869,7 +869,7 @@
     },
     {
         "bank_name": "Standard Chartered Bank Kenya Ltd",
-        "alias": ["Stanchart", "StanChartered"],
+        "aliases": ["Stanchart", "StanChartered"],
         "bank_code": "02",
         "branches": [
             {
@@ -1033,7 +1033,7 @@
     },
     {
         "bank_name": "Absa Bank Kenya Plc",
-        "alias": ["Barclays", "Absa"],
+        "aliases": ["Barclays", "Absa"],
         "bank_code": "03",
         "branches": [
             {
@@ -1521,7 +1521,7 @@
     },
     {
         "bank_name": "Bank of India",
-        "alias": ["BOI"],
+        "aliases": ["BOI"],
         "bank_code": "05",
         "branches": [
             {
@@ -1549,7 +1549,7 @@
     },
     {
         "bank_name": "Bank of Baroda(Kenya Ltd)",
-        "alias": ["BOB"],
+        "aliases": ["BOB"],
         "bank_code": "06",
         "branches": [
             {
@@ -1613,7 +1613,7 @@
     },
     {
         "bank_name": "NCBA Bank Kenya Plc",
-        "alias": ["NCBA"],
+        "aliases": ["NCBA"],
         "bank_code": "07",
         "branches": [
             {
@@ -2037,7 +2037,7 @@
     },
     {
         "bank_name": "Central Bank Of Kenya",
-        "alias": ["CBK"],
+        "aliases": ["CBK"],
         "bank_code": "09",
         "branches": [
             {
@@ -2073,7 +2073,7 @@
     },
     {
         "bank_name": "Prime Bank Limited",
-        "alias": ["Prime"],
+        "aliases": ["Prime"],
         "bank_code": "10",
         "branches": [
             {
@@ -2185,7 +2185,7 @@
     },
     {
         "bank_name": "Co-operative Bank of Kenya Limited",
-        "alias": ["Coop", "Cooperative"],
+        "aliases": ["Coop", "Cooperative"],
         "bank_code": "11",
         "branches": [
             {
@@ -2893,7 +2893,7 @@
     },
     {
         "bank_name": "National Bank Of Kenya",
-        "alias": ["NBK"],
+        "aliases": ["NBK"],
         "bank_code": "12",
         "branches": [
             {
@@ -3602,7 +3602,7 @@
     },
     {
         "bank_name": "Middle East Bank Kenya Limited",
-        "alias": ["MEB"],
+        "aliases": ["MEB"],
         "bank_code": "18",
         "branches": [
             {
@@ -3634,7 +3634,7 @@
     },
     {
         "bank_name": "Bank of Africa Kenya Limited",
-        "alias": ["BOK"],
+        "aliases": ["BOK"],
         "bank_code": "19",
         "branches": [
             {
@@ -4230,7 +4230,7 @@
     },
     {
         "bank_name": "African Banking Corporation Limited",
-        "alias": ["ABC"],
+        "aliases": ["ABC"],
         "bank_code": "35",
         "branches": [
             {
@@ -4302,7 +4302,7 @@
     },
     {
         "bank_name": "ECO Bank Kenya LTD",
-        "alias": ["Ecobank"],
+        "aliases": ["Ecobank"],
         "bank_code": "43",
         "branches": [
             {
@@ -4675,7 +4675,7 @@
     },
     {
         "bank_name": "Guaranty Trust Bank ( Kenya) Ltd",
-        "alias": ["GTB"],
+        "aliases": ["GTB"],
         "bank_code": "53",
         "branches": [
             {
@@ -4751,7 +4751,7 @@
     },
     {
         "bank_name": "Victoria Commercial Bank",
-        "alias": ["VCB"],
+        "aliases": ["VCB"],
         "bank_code": "54",
         "branches": [
             {
@@ -4779,7 +4779,7 @@
     },
     {
         "bank_name": "Guardian Bank Limited",
-        "alias": ["GBL"],
+        "aliases": ["GBL"],
         "bank_code": "55",
         "branches": [
             {
@@ -5009,7 +5009,7 @@
     },
     {
         "bank_name": "Development Bank of Kenya Limited",
-        "alias": ["DBK"],
+        "aliases": ["DBK"],
         "bank_code": "59",
         "branches": [
             {
@@ -5029,7 +5029,7 @@
     },
     {
         "bank_name": "State Bank of Mauritius Kenya",
-        "alias": ["SBM"],
+        "aliases": ["SBM"],
         "bank_code": "60",
         "branches": [
             {
@@ -5357,7 +5357,7 @@
     },
     {
         "bank_name": "Housing Finance Bank",
-        "alias": ["HFC"],
+        "aliases": ["HFC"],
         "bank_code": "61",
         "branches": [
             {
@@ -5469,7 +5469,7 @@
     },
     {
         "bank_name": "Kenya Post Office Savings Bank",
-        "alias": ["Posta", "KPOSB"],
+        "aliases": ["Posta", "KPOSB"],
         "bank_code": "62",
         "branches": [
             {
@@ -5869,7 +5869,7 @@
     },
     {
         "bank_name": "Diamond Trust Bank Limited",
-        "alias": ["DTB"],
+        "aliases": ["DTB"],
         "bank_code": "63",
         "branches": [
             {
@@ -6189,7 +6189,7 @@
     },
     {
         "bank_name": "Mayfair CIB Bank",
-        "alias": ["MCB"],
+        "aliases": ["MCB"],
         "bank_code": "65",
         "branches": [
             {
@@ -7834,7 +7834,7 @@
     },
     {
         "bank_name": "Kenya Women Microfinance Bank",
-        "alias": ["KWMB"],
+        "aliases": ["KWMB"],
         "bank_code": "78",
         "branches": [
             {

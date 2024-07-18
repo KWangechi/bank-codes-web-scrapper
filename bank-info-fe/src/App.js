@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./index.css";
 import { banks, getAllBanks } from "./api/bank-store";
 import { ResultCard } from "./components/ResultCard";
+import { NoResultCard } from "./components/NoResultCard";
 
 function App() {
   getAllBanks();
@@ -18,7 +19,11 @@ function App() {
   let filteredBanks = banks.filter(
     (bank) =>
       bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
-      bank?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
+      bank?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase()) || (
+      bank?.aliases?.some((alias) =>
+        alias?.toLowerCase().includes(searchTerm?.toLowerCase())
+      )
+    )
   );
 
   let newFilteredBanks;
@@ -31,6 +36,10 @@ function App() {
     );
   }
   // If no search term is provided, display all banks
+
+  else if(searchTerm && filteredBanks.length === 0) {
+    <NoResultCard></NoResultCard>
+  }
   else {
     newFilteredBanks = banks.map((bank) =>
       bank.branches.map((branch) => (
