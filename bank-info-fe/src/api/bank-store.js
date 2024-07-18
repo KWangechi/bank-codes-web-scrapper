@@ -1,6 +1,6 @@
 // request the banks-info.json file to get the banks info
 import data from "../banks_info.json";
-var banks;
+let banks;
 let branch;
 let branches = [];
 let bank = null;
@@ -9,6 +9,8 @@ function getAllBanks() {
   banks = data;
 
   console.log(banks);
+
+
 
   // get the banks info from the JSON file
   //   fetch("../banks_info.json")

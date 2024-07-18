@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./index.css";
-import { banks, getAllBanks } from "./api/bank-store";
+import { banks, getAllBanks} from "./api/bank-store";
 import { ResultCard } from "./components/ResultCard";
 import { NoResultCard } from "./components/NoResultCard";
 
 function App() {
   getAllBanks();
-  // console.log(banks.length);
+
 
   const [searchTerm, setSearchTerm] = useState(null);
 
@@ -14,7 +14,6 @@ function App() {
     setSearchTerm(e.target.value);
   };
 
-  // console.log(searchTerm);
 
   let filteredBanks = banks.filter(
     (bank) =>
@@ -31,7 +30,7 @@ function App() {
   if (filteredBanks && filteredBanks.length > 0) {
     newFilteredBanks = filteredBanks.map((bank) =>
       bank.branches.map((branch) => (
-        <ResultCard bank={bank} branch={branch}></ResultCard>
+        <ResultCard bank={bank} branch={branch} key={`${bank.bank_code}-${branch.branch_code}`}></ResultCard>
       ))
     );
   }
@@ -43,7 +42,7 @@ function App() {
   else {
     newFilteredBanks = banks.map((bank) =>
       bank.branches.map((branch) => (
-        <ResultCard bank={bank} branch={branch}></ResultCard>
+        <ResultCard bank={bank} branch={branch} key={`${bank.bank_code}-${branch.branch_code}`}></ResultCard>
       ))
     );
   }
