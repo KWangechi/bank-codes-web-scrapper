@@ -1,6 +1,7 @@
 [
     {
         "bank_name": "Kenya Commercial Bank Limited",
+        "alias": ["KCB"],
         "bank_code": "01",
         "branches": [
             {
@@ -868,6 +869,7 @@
     },
     {
         "bank_name": "Standard Chartered Bank Kenya Ltd",
+        "alias": ["Stanchart", "StanChartered"],
         "bank_code": "02",
         "branches": [
             {
@@ -1031,6 +1033,7 @@
     },
     {
         "bank_name": "Absa Bank Kenya Plc",
+        "alias": ["Barclays", "Absa"],
         "bank_code": "03",
         "branches": [
             {
@@ -1518,6 +1521,7 @@
     },
     {
         "bank_name": "Bank of India",
+        "alias": ["BOI"],
         "bank_code": "05",
         "branches": [
             {
@@ -1545,6 +1549,7 @@
     },
     {
         "bank_name": "Bank of Baroda(Kenya Ltd)",
+        "alias": ["BOB"],
         "bank_code": "06",
         "branches": [
             {
@@ -1608,6 +1613,7 @@
     },
     {
         "bank_name": "NCBA Bank Kenya Plc",
+        "alias": ["NCBA"],
         "bank_code": "07",
         "branches": [
             {
@@ -2031,6 +2037,7 @@
     },
     {
         "bank_name": "Central Bank Of Kenya",
+        "alias": ["CBK"],
         "bank_code": "09",
         "branches": [
             {
@@ -2066,6 +2073,7 @@
     },
     {
         "bank_name": "Prime Bank Limited",
+        "alias": ["Prime"],
         "bank_code": "10",
         "branches": [
             {
@@ -2177,6 +2185,7 @@
     },
     {
         "bank_name": "Co-operative Bank of Kenya Limited",
+        "alias": ["Coop", "Cooperative"],
         "bank_code": "11",
         "branches": [
             {
@@ -2884,6 +2893,7 @@
     },
     {
         "bank_name": "National Bank Of Kenya",
+        "alias": ["NBK"],
         "bank_code": "12",
         "branches": [
             {
@@ -3592,6 +3602,7 @@
     },
     {
         "bank_name": "Middle East Bank Kenya Limited",
+        "alias": ["MEB"],
         "bank_code": "18",
         "branches": [
             {
@@ -3622,7 +3633,8 @@
         "icon": "data:image/jpeg;base64,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0oldJoi4aWgBukd5NyS5QanU+LtER2d0x8rqylyQqq8NZPVxtYwlwbHAW3J1XJdISbC/iUw6iuKd616/u+XxzbvLQOzQOBBZWaJBuCYjccxZ4sVY/wAQie9XHg/dsG5CYiRoOxaXQ3gCS5HaZFH+qxd4o68O3y22TWb+kpHCWzppQbh8tjoni1o1A8zc81Dl1V8kbdodVxxCXWVdI5QEBAQEBB8vbfUubViY2k327NFX4Kfaj+r/AAXm9dwbeZvh/p/00MWs9rvjA5SyQxu1aW48Qo+D5JwZbYskbb/LrV1i9YvXqp7ONgzqaul1dSUmWM8Q83cO0O0vLiv0fSZPExx8wwckbW2R2kqHRPZK32mOa8drSCPMKe1d4mHEdHpzD61k0TJmG7Xta5p5OF15y1eW01leid+rJXL6L6CAgICAg4sg5QEBAXzaAX0EBATYEBAQEBAQEBBxZfNh1TUzXe0L8DvHYVFkwUybc0dnVbTXs1uUmTkFbF0MwOrWx4tpsdxB+I2FWsWW2Kd4R3rzRtKrcQzT1bXeqkilbuLi6N3eLEea06cQpt5olXnDKTZDYfitCOglhZJBe4tK3Sjvt0b7QTuNu1VNRfDk81e6SkWr0WG0qmmcoCAgICAgICAgICAgICAgICAgICAgICAgICDiyBZfByvoICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIP/Z"
     },
     {
-        "bank_name": "Bank of  Africa Kenya Limited",
+        "bank_name": "Bank of Africa Kenya Limited",
+        "alias": ["BOK"],
         "bank_code": "19",
         "branches": [
             {
@@ -4218,6 +4230,7 @@
     },
     {
         "bank_name": "African Banking Corporation Limited",
+        "alias": ["ABC"],
         "bank_code": "35",
         "branches": [
             {
@@ -4289,6 +4302,7 @@
     },
     {
         "bank_name": "ECO Bank Kenya LTD",
+        "alias": ["Ecobank"],
         "bank_code": "43",
         "branches": [
             {
@@ -4661,6 +4675,7 @@
     },
     {
         "bank_name": "Guaranty Trust Bank ( Kenya) Ltd",
+        "alias": ["GTB"],
         "bank_code": "53",
         "branches": [
             {
@@ -4736,6 +4751,7 @@
     },
     {
         "bank_name": "Victoria Commercial Bank",
+        "alias": ["VCB"],
         "bank_code": "54",
         "branches": [
             {
@@ -4763,6 +4779,7 @@
     },
     {
         "bank_name": "Guardian Bank Limited",
+        "alias": ["GBL"],
         "bank_code": "55",
         "branches": [
             {
@@ -4992,6 +5009,7 @@
     },
     {
         "bank_name": "Development Bank of Kenya Limited",
+        "alias": ["DBK"],
         "bank_code": "59",
         "branches": [
             {
@@ -5011,6 +5029,7 @@
     },
     {
         "bank_name": "State Bank of Mauritius Kenya",
+        "alias": ["SBM"],
         "bank_code": "60",
         "branches": [
             {
@@ -5338,6 +5357,7 @@
     },
     {
         "bank_name": "Housing Finance Bank",
+        "alias": ["HFC"],
         "bank_code": "61",
         "branches": [
             {
@@ -5449,6 +5469,7 @@
     },
     {
         "bank_name": "Kenya Post Office Savings Bank",
+        "alias": ["Posta", "KPOSB"],
         "bank_code": "62",
         "branches": [
             {
@@ -5848,6 +5869,7 @@
     },
     {
         "bank_name": "Diamond Trust Bank Limited",
+        "alias": ["DTB"],
         "bank_code": "63",
         "branches": [
             {
@@ -6167,6 +6189,7 @@
     },
     {
         "bank_name": "Mayfair CIB Bank",
+        "alias": ["MCB"],
         "bank_code": "65",
         "branches": [
             {
@@ -7811,6 +7834,7 @@
     },
     {
         "bank_name": "Kenya Women Microfinance Bank",
+        "alias": ["KWMB"],
         "bank_code": "78",
         "branches": [
             {
