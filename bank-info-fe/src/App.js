@@ -16,17 +16,15 @@ function App() {
 
   useEffect(() => {
     let filteredBanks = banks.filter(
-      (bank) => {
-        if(searchTerm && searchTerm.length > 0) {
-          bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
-          bank?.aliases?.some((alias) =>
-            alias?.toLowerCase().includes(searchTerm?.toLowerCase())
-          ) ||
-          bank?.branches?.some((branch) =>
-            branch?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
-          )
-        }
-      }
+      (bank) =>
+        searchTerm.length >= 4 &&
+        (bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+        bank?.aliases?.some((alias) =>
+          alias?.toLowerCase().includes(searchTerm?.toLowerCase())
+        ) ||
+        bank?.branches?.some((branch) =>
+          branch?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
+        ))
     );
 
     if (filteredBanks && filteredBanks.length > 0) {
@@ -57,7 +55,7 @@ function App() {
     }
     // If no search term is provided, display all banks
     else if (searchTerm && filteredBanks.length === 0) {
-     setNewFilteredBanks(<NoResultCard></NoResultCard>);
+     setNewFilteredBanks([]);
     } else {
       const allBanks = banks.map((bank) =>
         bank.branches.map((branch) => (
@@ -117,7 +115,7 @@ function App() {
         <span className="font-semibold text-xl italic text-[#695958]">
           {newFilteredBanks && newFilteredBanks.length > 0
             ? newFilteredBanks.length + " Result(s) Found"
-            : "No Result(s) Found"}
+            : <NoResultCard query={searchTerm}/>}
         </span>
       </div>
 

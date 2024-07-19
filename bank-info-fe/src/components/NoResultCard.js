@@ -1,4 +1,4 @@
-export function NoResultCard() {
+export function NoResultCard({ query}) {
   return (
     <section class="mx-auto text-center">
       <div class="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12">
@@ -16,7 +16,7 @@ export function NoResultCard() {
           No Results
         </h1>
         <p class="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
-          No Results were found with the search query
+          No Results were found with the search query <span className="font-bold italic">{query}</span>
         </p>
       </div>
     </section>
