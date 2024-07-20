@@ -1,29 +1,10 @@
+import { parseTimeStringToDate, isWeekend } from "../utils/dateUtils";
 export function ResultCard({ bank, branch }) {
-  function parseTimeStringToDate(timeString) {
-    const [time, modifier] = timeString.split(/(am|pm)/i);
-    const [hours, minutes] = time.split(":").map(Number);
-
-    let hours24 = hours;
-    if (modifier.toLowerCase() === "pm" && hours !== 12) {
-      hours24 += 12;
-    } else if (modifier.toLowerCase() === "am" && hours === 12) {
-      hours24 = 0;
-    } else {
-      hours24 = hours;
-    }
-
-    const date = new Date();
-    date.setHours(hours24, minutes, 0, 0);
-    return date;
-  }
-
   const startingTimeEveryday = "8:00am";
   const endingTimeWeekdays = "5:00pm";
   const endingTimeWeekends = "1:00pm";
 
   const currentDate = new Date();
-  const isWeekend =
-    currentDate.getDay() === 0 || currentDate.getDay() === 6 ? true : false;
   const formattedCurrentTime = currentDate
     .toLocaleTimeString([], {
       hour12: true,
@@ -34,8 +15,9 @@ export function ResultCard({ bank, branch }) {
     .replace(" ", "");
 
   const startingDateTime = parseTimeStringToDate(startingTimeEveryday);
-  const endingDateTimeWeekdays = !isWeekend ? parseTimeStringToDate(endingTimeWeekdays) : parseTimeStringToDate(endingTimeWeekends);
-  // const endingDateTimeWeekends = parseTimeStringToDate(endingTimeWeekends);
+  const endingDateTimeWeekdays = !isWeekend
+    ? parseTimeStringToDate(endingTimeWeekdays)
+    : parseTimeStringToDate(endingTimeWeekends);
   const currentDateTime = parseTimeStringToDate(formattedCurrentTime);
 
   return (
@@ -63,7 +45,7 @@ export function ResultCard({ bank, branch }) {
                     currentDateTime > startingDateTime &&
                     currentDateTime < endingDateTimeWeekdays
                       ? "#16a34a"
-                      : "#ef4444",
+                      : "#dc2626",
                   fontWeight: "bold",
                 }}
               >
@@ -111,7 +93,7 @@ export function ResultCard({ bank, branch }) {
 
             <div>
               <span className="text-red-600 text-base">
-                Closed - Weekends and Public Holidays
+                Closed - Sundays and Public Holidays
               </span>
             </div>
           </div>
