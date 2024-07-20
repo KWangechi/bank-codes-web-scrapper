@@ -1,12 +1,45 @@
 export function ResultCard({ bank, branch }) {
-  const startingTimeWeekdays = "8:00am";
-  const endingTimeWeekdays = "5:00pm";
+  function parseTimeStringToDate(timeString) {
+    const [time, modifier] = timeString.split(/(am|pm)/i);
+    const [hours, minutes] = time.split(":").map(Number);
 
-  const startingTimeWeekends = "8:00am";
+    let hours24 = hours;
+    if (modifier.toLowerCase() === "pm" && hours !== 12) {
+      hours24 += 12;
+    } else if (modifier.toLowerCase() === "am" && hours === 12) {
+      hours24 = 0;
+    } else {
+      hours24 = hours;
+    }
+
+    const date = new Date();
+    date.setHours(hours24, minutes, 0, 0);
+    return date;
+  }
+
+  const startingTimeEveryday = "8:00am";
+  const endingTimeWeekdays = "5:00pm";
   const endingTimeWeekends = "1:00pm";
 
+  const currentDate = new Date();
+  const isWeekend =
+    currentDate.getDay() === 0 || currentDate.getDay() === 6 ? true : false;
+  const formattedCurrentTime = currentDate
+    .toLocaleTimeString([], {
+      hour12: true,
+      minute: "2-digit",
+      hour: "numeric",
+    })
+    .toLowerCase()
+    .replace(" ", "");
+
+  const startingDateTime = parseTimeStringToDate(startingTimeEveryday);
+  const endingDateTimeWeekdays = !isWeekend ? parseTimeStringToDate(endingTimeWeekdays) : parseTimeStringToDate(endingTimeWeekends);
+  // const endingDateTimeWeekends = parseTimeStringToDate(endingTimeWeekends);
+  const currentDateTime = parseTimeStringToDate(formattedCurrentTime);
+
   return (
-    <div className="mt-4 mb-2 w-auto md:w-4/5 mx-auto">
+    <div className="mt-4 mb-2 w-auto md:w-11/12 mx-auto">
       <div className="grow rounded-lg shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 ">
         <div className="flex items-center mb-4">
           <img
@@ -23,7 +56,22 @@ export function ResultCard({ bank, branch }) {
                 Branch Code: {branch?.branch_code}
               </span>
               <span className="mx-2">•</span>
-              <span className="text-green-600 font-bold">Open</span>
+              <span
+                className="font-bold"
+                style={{
+                  color:
+                    currentDateTime > startingDateTime &&
+                    currentDateTime < endingDateTimeWeekdays
+                      ? "#16a34a"
+                      : "#ef4444",
+                  fontWeight: "bold",
+                }}
+              >
+                {currentDateTime > startingDateTime &&
+                currentDateTime < endingDateTimeWeekdays
+                  ? "Open"
+                  : "Closed"}
+              </span>
             </div>
           </div>
           <div className="flex text-right">
@@ -45,26 +93,27 @@ export function ResultCard({ bank, branch }) {
             </div>
             <div className="text-right">
               <p className="font-semibold text-[#695958]">Working Hours</p>
-              <span className="text-gray-600">{startingTimeWeekdays} - {endingTimeWeekdays} - Weekdays</span>
+              <span className="text-gray-600">
+                {startingTimeEveryday} - {endingTimeWeekdays} - Weekdays
+              </span>
               <p>
                 <span className="text-gray-600">
-                  {startingTimeWeekends} - {endingTimeWeekends} - Weekends
+                  {startingTimeEveryday} - {endingTimeWeekends} - Weekends
                 </span>
               </p>
             </div>
           </div>
           <div className="flex justify-between items-center mb-4 mt-4">
             <div>
-            <p className="font-semibold text-[#695958]">Contact Info</p>
-            <span className="text-gray-600">07898990899 | 0709008004</span>
+              <p className="font-semibold text-[#695958]">Contact Info</p>
+              <span className="text-gray-600">07898990899 | 0709008004</span>
             </div>
 
             <div>
               <span className="text-red-600 text-base">
                 Closed - Weekends and Public Holidays
               </span>
-                </div>
-           
+            </div>
           </div>
         </div>
       </div>

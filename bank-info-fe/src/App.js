@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./index.css";
 import { banks, getAllBanks } from "./api/bank-store";
 import { ResultCard } from "./components/ResultCard";
@@ -9,6 +9,7 @@ function App() {
 
   const [searchTerm, setSearchTerm] = useState(null);
   let [newFilteredBanks, setNewFilteredBanks] = useState([]);
+  // let [filteredBranches, setNewFilteredBranches] = useState([]);
 
   const handleSearchTermChange = (e) => {
     setSearchTerm(e.target.value);
@@ -17,14 +18,16 @@ function App() {
   useEffect(() => {
     let filteredBanks = banks.filter(
       (bank) =>
-        searchTerm?.length >= 4 &&
+        searchTerm?.length >= 3 &&
         (bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
-        bank?.aliases?.some((alias) =>
-          alias?.toLowerCase().includes(searchTerm?.toLowerCase())
-        ) ||
-        bank?.branches?.some((branch) =>
-          branch?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
-        ))
+          bank?.aliases?.some((alias) =>
+            alias?.toLowerCase().includes(searchTerm?.toLowerCase())
+          ) ||
+          bank?.branches?.some((branch) =>
+            branch?.branch_name
+              ?.toLowerCase()
+              .includes(searchTerm?.toLowerCase())
+          ))
     );
 
     if (filteredBanks && filteredBanks.length > 0) {
@@ -41,21 +44,24 @@ function App() {
           )
         ) {
           filteredBranches = bank.branches;
+          
         }
 
-        return filteredBranches.map((branch) => (
+        return filteredBranches.map((branch) => {
+          return (
           <ResultCard
             bank={bank}
             branch={branch}
             key={`${bank.bank_code}-${branch.branch_code}`}
           ></ResultCard>
-        ));
+          )
+      });
       });
       setNewFilteredBanks(updatedFilteredBanks);
     }
     // If no search term is provided, display all banks
     else if (searchTerm && filteredBanks.length === 0) {
-     setNewFilteredBanks([]);
+      setNewFilteredBanks([]);
     } else {
       const allBanks = banks.map((bank) =>
         bank.branches.map((branch) => (
@@ -88,9 +94,6 @@ function App() {
             className="rounded-md w-2/3 md:w-1/2 shadow-lg px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
             onChange={handleSearchTermChange}
           />
-          {/* <button className="ml-3 bg-[#695958] rounded-lg text-lg px-4 py-2 text-white shadow hover:bg-[#5a4d4d] transition duration-300">
-            Search
-          </button> */}
           <button className="flex items-center ml-3 bg-[#695958]/80 rounded-lg text-lg px-4 py-2 text-white shadow hover:bg-[#5a4d4d] transition duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -113,9 +116,13 @@ function App() {
 
       <div className="flex justify-center mt-8">
         <span className="font-semibold text-xl italic text-[#695958]">
-          {newFilteredBanks && newFilteredBanks.length > 0
-            ? newFilteredBanks.length + " Result(s) Found"
-            : <NoResultCard query={searchTerm}/>}
+          {newFilteredBanks && newFilteredBanks.length > 0 ? (
+            newFilteredBanks.length +
+            " Bank(s) with " +
+            " branches country wide"
+          ) : (
+            <NoResultCard query={searchTerm} />
+          )}
         </span>
       </div>
 
