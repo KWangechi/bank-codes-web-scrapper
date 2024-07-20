@@ -6,7 +6,7 @@ export function ResultCard({ bank, branch }) {
   const endingTimeWeekends = "1:00pm";
 
   return (
-    <div className="mt-4 mb-2 w-auto md:w-3/4 mx-auto">
+    <div className="mt-4 mb-2 w-auto md:w-4/5 mx-auto">
       <div className="grow rounded-lg shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 ">
         <div className="flex items-center mb-4">
           <img
