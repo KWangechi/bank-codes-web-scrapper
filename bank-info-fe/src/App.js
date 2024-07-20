@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     let filteredBanks = banks.filter(
       (bank) =>
-        searchTerm.length >= 4 &&
+        searchTerm?.length >= 4 &&
         (bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
         bank?.aliases?.some((alias) =>
           alias?.toLowerCase().includes(searchTerm?.toLowerCase())
