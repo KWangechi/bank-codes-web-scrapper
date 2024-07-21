@@ -3,19 +3,25 @@ import "./index.css";
 import { banks, getAllBanks } from "./api/bank-store";
 import { ResultCard } from "./components/ResultCard";
 import { NoResultCard } from "./components/NoResultCard";
+import SkeletonCard from "./components/SkeletonCard";
 
 function App() {
   getAllBanks();
 
   const [searchTerm, setSearchTerm] = useState(null);
   let [newFilteredBanks, setNewFilteredBanks] = useState([]);
-  // let [filteredBranches, setNewFilteredBranches] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const handleSearchTermChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
   useEffect(() => {
+    if (banks.length === 0) {
+      setLoading(true);
+      return;
+    }
+
     let filteredBanks = banks.filter(
       (bank) =>
         searchTerm?.length >= 3 &&
@@ -44,24 +50,27 @@ function App() {
           )
         ) {
           filteredBranches = bank.branches;
-          
         }
 
-        return filteredBranches.slice(0,100).map((branch) => {
+        return filteredBranches.map((branch) => {
           return (
-          <ResultCard
-            bank={bank}
-            branch={branch}
-            key={`${bank.bank_code}-${branch.branch_code}`}
-          ></ResultCard>
-          )
+            <ResultCard
+              bank={bank}
+              branch={branch}
+              key={`${bank.bank_code}-${branch.branch_code}`}
+            ></ResultCard>
+          );
+        });
       });
-      });
-      setNewFilteredBanks(updatedFilteredBanks);
+      setNewFilteredBanks(updatedFilteredBanks.flat());
+      setLoading(false);
     }
     // If no search term is provided, display all banks
     else if (searchTerm && filteredBanks.length === 0) {
       setNewFilteredBanks([]);
+      setLoading(false);
+    } else if (!searchTerm && filteredBanks.length === 0) {
+      setNewFilteredBanks([<SkeletonCard></SkeletonCard>]);
     } else {
       const allBanks = banks.map((bank) =>
         bank.branches.map((branch) => (
@@ -73,6 +82,28 @@ function App() {
         ))
       );
       setNewFilteredBanks(allBanks);
+    }
+  }, [searchTerm]);
+
+  // define another useEffect() to chunk results for faster loading time
+  useEffect(() => {
+    if (!searchTerm) {
+      const timeout = setTimeout(() => {
+        setLoading(false);
+        setNewFilteredBanks(
+          banks.flatMap((bank) =>
+            bank.branches.map((branch) => (
+              <ResultCard
+                bank={bank}
+                branch={branch}
+                key={`${bank.bank_code}-${branch.branch_code}`}
+              ></ResultCard>
+            ))
+          )
+        );
+      }, 2000);
+
+      return () => clearTimeout(timeout);
     }
   }, [searchTerm]);
 
@@ -114,7 +145,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flex justify-center mt-8 h-full">
+      {/* <div className="flex justify-center mt-8 h-full">
         <span className="font-semibold text-xl italic text-[#695958]">
           {newFilteredBanks && newFilteredBanks.length > 0 ? (
             newFilteredBanks.length +
@@ -128,6 +159,21 @@ function App() {
 
       <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 mt-6 sm:grid-cols-1">
         {newFilteredBanks}
+      </div> */}
+      <div className="flex justify-center mt-8 h-full">
+        <span className="font-semibold text-xl italic text-[#695958]">
+          {newFilteredBanks.length > 0 ? (
+            `${newFilteredBanks.length} Results Found`
+          ) : loading ? (
+            <SkeletonCard />
+          ) : (
+            <NoResultCard query={searchTerm} />
+          )}
+        </span>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 mt-6 sm:grid-cols-1">
+        {loading ? <SkeletonCard /> : newFilteredBanks}
       </div>
     </div>
   );

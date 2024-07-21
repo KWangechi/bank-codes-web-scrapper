@@ -9,7 +9,6 @@ export function ResultCard({ bank, branch }) {
     ? parseTimeStringToDate(endingTimeWeekdays)
     : parseTimeStringToDate(endingTimeWeekends);
 
-    console.log(endingTimeWeekdays);
 
   return (
     <div className="mt-4 mb-2 w-auto md:w-11/12 mx-auto">
