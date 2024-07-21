@@ -71,7 +71,7 @@ export function ResultCard({ bank, branch }) {
               </span>
               <p>
                 <span className="text-gray-600">
-                  {startingTimeEveryday} - {endingTimeWeekends} - Weekends
+                  {startingTimeEveryday} - {endingTimeWeekends} - Saturdays
                 </span>
               </p>
             </div>

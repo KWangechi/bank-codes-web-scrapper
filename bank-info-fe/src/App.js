@@ -47,7 +47,7 @@ function App() {
           
         }
 
-        return filteredBranches.map((branch) => {
+        return filteredBranches.slice(0,100).map((branch) => {
           return (
           <ResultCard
             bank={bank}
@@ -114,7 +114,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-8 h-full">
         <span className="font-semibold text-xl italic text-[#695958]">
           {newFilteredBanks && newFilteredBanks.length > 0 ? (
             newFilteredBanks.length +
@@ -126,12 +126,7 @@ function App() {
         </span>
       </div>
 
-      {/* <div className="grid grid-cols-3 gap-4">
-        <div className="h-10 border-dashed border-gray-100 w-10">1</div>
-        <div className="h-6 border-dashed border-gray-100 w-6">2</div>
-        <div className="h-6 border-dashed border-gray-100 w-6">3</div>
-      </div> */}
-      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 mt-2 sm:grid-cols-1">
+      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 mt-6 sm:grid-cols-1">
         {newFilteredBanks}
       </div>
     </div>

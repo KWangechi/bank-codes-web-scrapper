@@ -1,6 +1,6 @@
 export function NoResultCard({ query}) {
   return (
-    <section class="mx-auto text-center">
+    <section class="mx-auto text-center h-full">
       <div class="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12">
       <svg
           class="mx-auto mb-4 w-10 h-10 text-gray-400"
