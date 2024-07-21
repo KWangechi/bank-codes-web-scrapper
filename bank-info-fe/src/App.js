@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import "./index.css";
 import { banks, getAllBanks } from "./api/bank-store";
 import { ResultCard } from "./components/ResultCard";

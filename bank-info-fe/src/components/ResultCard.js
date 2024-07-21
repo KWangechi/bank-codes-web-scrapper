@@ -1,24 +1,15 @@
-import { parseTimeStringToDate, isWeekend } from "../utils/dateUtils";
+import { parseTimeStringToDate, isWeekend, formattedCurrentDateTime } from "../utils/dateUtils";
 export function ResultCard({ bank, branch }) {
   const startingTimeEveryday = "8:00am";
   const endingTimeWeekdays = "5:00pm";
   const endingTimeWeekends = "1:00pm";
-
-  const currentDate = new Date();
-  const formattedCurrentTime = currentDate
-    .toLocaleTimeString([], {
-      hour12: true,
-      minute: "2-digit",
-      hour: "numeric",
-    })
-    .toLowerCase()
-    .replace(" ", "");
-
+  
   const startingDateTime = parseTimeStringToDate(startingTimeEveryday);
-  const endingDateTimeWeekdays = !isWeekend
+  const endingDateTime = !isWeekend
     ? parseTimeStringToDate(endingTimeWeekdays)
     : parseTimeStringToDate(endingTimeWeekends);
-  const currentDateTime = parseTimeStringToDate(formattedCurrentTime);
+
+    console.log(endingTimeWeekdays);
 
   return (
     <div className="mt-4 mb-2 w-auto md:w-11/12 mx-auto">
@@ -27,7 +18,7 @@ export function ResultCard({ bank, branch }) {
           <img
             src={bank?.icon}
             alt="Bank Logo"
-            className="h-16 w-17 rounded-lg"
+            className="h-16 w-17 rounded-lg bg-none"
           />
           <div className="ml-4 flex-grow">
             <h2 className="font-bold text-xl text-[#695958]">
@@ -42,15 +33,15 @@ export function ResultCard({ bank, branch }) {
                 className="font-bold"
                 style={{
                   color:
-                    currentDateTime > startingDateTime &&
-                    currentDateTime < endingDateTimeWeekdays
+                    formattedCurrentDateTime > startingDateTime &&
+                    formattedCurrentDateTime < endingDateTime
                       ? "#16a34a"
                       : "#dc2626",
                   fontWeight: "bold",
                 }}
               >
-                {currentDateTime > startingDateTime &&
-                currentDateTime < endingDateTimeWeekdays
+                {formattedCurrentDateTime > startingDateTime &&
+                formattedCurrentDateTime < endingDateTime
                   ? "Open"
                   : "Closed"}
               </span>
