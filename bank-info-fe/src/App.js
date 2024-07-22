@@ -1,72 +1,111 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./index.css";
 import { banks, getAllBanks } from "./api/bank-store";
 import { ResultCard } from "./components/ResultCard";
 import { NoResultCard } from "./components/NoResultCard";
+import SkeletonCard from "./components/SkeletonCard";
 
 function App() {
   getAllBanks();
 
   const [searchTerm, setSearchTerm] = useState(null);
+  let [newFilteredBanks, setNewFilteredBanks] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const handleSearchTermChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
-  let filteredBanks = banks.filter(
-    (bank) =>
-      bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
-      bank?.aliases?.some((alias) =>
-        alias?.toLowerCase().includes(searchTerm?.toLowerCase())
-      ) ||
-      bank?.branches?.some((branch) =>
-        branch?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
-      )
-  );
+  useEffect(() => {
+    if (banks.length === 0) {
+      setLoading(true);
+      return;
+    }
 
-  // console.log(filteredBanks[0].branches);
-
-  let newFilteredBanks;
-
-  if (filteredBanks && filteredBanks.length > 0) {
-    newFilteredBanks = filteredBanks.map((bank) => {
-      let filteredBranches = bank?.branches?.filter((branch) =>
-        branch?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
-      );
-
-      // If bank name or aliases match, include all branches
-      if (
-        bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
-        bank?.aliases?.some((alias) =>
-          alias?.toLowerCase().includes(searchTerm?.toLowerCase())
-        )
-      ) {
-        filteredBranches = bank.branches;
-      }
-
-      return filteredBranches.map((branch) => (
-        <ResultCard
-          bank={bank}
-          branch={branch}
-          key={`${bank.bank_code}-${branch.branch_code}`}
-        ></ResultCard>
-      ));
-    });
-  }
-  // If no search term is provided, display all banks
-  else if (searchTerm && filteredBanks.length === 0) {
-    <NoResultCard></NoResultCard>;
-  } else {
-    newFilteredBanks = banks.map((bank) =>
-      bank.branches.map((branch) => (
-        <ResultCard
-          bank={bank}
-          branch={branch}
-          key={`${bank.bank_code}-${branch.branch_code}`}
-        ></ResultCard>
-      ))
+    let filteredBanks = banks.filter(
+      (bank) =>
+        searchTerm?.length >= 3 &&
+        (bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+          bank?.aliases?.some((alias) =>
+            alias?.toLowerCase().includes(searchTerm?.toLowerCase())
+          ) ||
+          bank?.branches?.some((branch) =>
+            branch?.branch_name
+              ?.toLowerCase()
+              .includes(searchTerm?.toLowerCase())
+          ))
     );
-  }
+
+    if (filteredBanks && filteredBanks.length > 0) {
+      const updatedFilteredBanks = filteredBanks.map((bank) => {
+        let filteredBranches = bank?.branches?.filter((branch) =>
+          branch?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
+        );
+
+        // If bank name or aliases match, include all branches
+        if (
+          bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+          bank?.aliases?.some((alias) =>
+            alias?.toLowerCase().includes(searchTerm?.toLowerCase())
+          )
+        ) {
+          filteredBranches = bank.branches;
+        }
+
+        return filteredBranches.map((branch) => {
+          return (
+            <ResultCard
+              bank={bank}
+              branch={branch}
+              key={`${bank.bank_code}-${branch.branch_code}`}
+            ></ResultCard>
+          );
+        });
+      });
+      setNewFilteredBanks(updatedFilteredBanks.flat());
+      setLoading(false);
+    }
+    // If no search term is provided, display all banks
+    else if (searchTerm && filteredBanks.length === 0) {
+      setNewFilteredBanks([]);
+      setLoading(false);
+    } else if (!searchTerm && filteredBanks.length === 0) {
+      setNewFilteredBanks([<SkeletonCard></SkeletonCard>]);
+    } else {
+      const allBanks = banks.map((bank) =>
+        bank.branches.map((branch) => (
+          <ResultCard
+            bank={bank}
+            branch={branch}
+            key={`${bank.bank_code}-${branch.branch_code}`}
+          ></ResultCard>
+        ))
+      );
+      setNewFilteredBanks(allBanks);
+    }
+  }, [searchTerm]);
+
+  // define another useEffect() to chunk results for faster loading time
+  useEffect(() => {
+    if (!searchTerm) {
+      const timeout = setTimeout(() => {
+        setLoading(false);
+        setNewFilteredBanks(
+          banks.flatMap((bank) =>
+            bank.branches.map((branch) => (
+              <ResultCard
+                bank={bank}
+                branch={branch}
+                key={`${bank.bank_code}-${branch.branch_code}`}
+              ></ResultCard>
+            ))
+          )
+        );
+      }, 2000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [searchTerm]);
 
   return (
     <div className="header h-90 bg-gray-100 pb-4">
@@ -86,9 +125,6 @@ function App() {
             className="rounded-md w-2/3 md:w-1/2 shadow-lg px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
             onChange={handleSearchTermChange}
           />
-          {/* <button className="ml-3 bg-[#695958] rounded-lg text-lg px-4 py-2 text-white shadow hover:bg-[#5a4d4d] transition duration-300">
-            Search
-          </button> */}
           <button className="flex items-center ml-3 bg-[#695958]/80 rounded-lg text-lg px-4 py-2 text-white shadow hover:bg-[#5a4d4d] transition duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -109,21 +145,35 @@ function App() {
         </div>
       </div>
 
-      <div className="flex justify-center mt-8">
+      {/* <div className="flex justify-center mt-8 h-full">
         <span className="font-semibold text-xl italic text-[#695958]">
-          {newFilteredBanks && newFilteredBanks.length > 0
-            ? newFilteredBanks.length + " Result(s) Found"
-            : "No Result(s) Found"}
+          {newFilteredBanks && newFilteredBanks.length > 0 ? (
+            newFilteredBanks.length +
+            " Bank(s) with " +
+            " branches country wide"
+          ) : (
+            <NoResultCard query={searchTerm} />
+          )}
         </span>
       </div>
 
-      {/* <div className="grid grid-cols-3 gap-4">
-        <div className="h-10 border-dashed border-gray-100 w-10">1</div>
-        <div className="h-6 border-dashed border-gray-100 w-6">2</div>
-        <div className="h-6 border-dashed border-gray-100 w-6">3</div>
-      </div> */}
-      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 mt-2 sm:grid-cols-1">
+      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 mt-6 sm:grid-cols-1">
         {newFilteredBanks}
+      </div> */}
+      <div className="flex justify-center mt-8 h-full">
+        <span className="font-semibold text-xl italic text-[#695958]">
+          {newFilteredBanks.length > 0 ? (
+            `${newFilteredBanks.length} Results Found`
+          ) : loading ? (
+            <SkeletonCard />
+          ) : (
+            <NoResultCard query={searchTerm} />
+          )}
+        </span>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 mt-6 sm:grid-cols-1">
+        {loading ? <SkeletonCard /> : newFilteredBanks}
       </div>
     </div>
   );

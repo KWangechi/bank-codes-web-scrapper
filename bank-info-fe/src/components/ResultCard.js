@@ -1,18 +1,23 @@
+import { parseTimeStringToDate, isWeekend, formattedCurrentDateTime } from "../utils/dateUtils";
 export function ResultCard({ bank, branch }) {
-  const startingTimeWeekdays = "8:00am";
+  const startingTimeEveryday = "8:00am";
   const endingTimeWeekdays = "5:00pm";
-
-  const startingTimeWeekends = "8:00am";
   const endingTimeWeekends = "1:00pm";
+  
+  const startingDateTime = parseTimeStringToDate(startingTimeEveryday);
+  const endingDateTime = !isWeekend
+    ? parseTimeStringToDate(endingTimeWeekdays)
+    : parseTimeStringToDate(endingTimeWeekends);
+
 
   return (
-    <div className="mt-4 mb-4">
-      <div className="rounded-lg shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 ">
+    <div className="mt-4 mb-2 w-auto md:w-11/12 mx-auto">
+      <div className="grow rounded-lg shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 ">
         <div className="flex items-center mb-4">
           <img
             src={bank?.icon}
             alt="Bank Logo"
-            className="h-16 w-17 rounded-lg"
+            className="h-16 w-17 rounded-lg bg-none"
           />
           <div className="ml-4 flex-grow">
             <h2 className="font-bold text-xl text-[#695958]">
@@ -23,7 +28,22 @@ export function ResultCard({ bank, branch }) {
                 Branch Code: {branch?.branch_code}
               </span>
               <span className="mx-2">•</span>
-              <span className="text-green-600 font-bold">Open</span>
+              <span
+                className="font-bold"
+                style={{
+                  color:
+                    formattedCurrentDateTime > startingDateTime &&
+                    formattedCurrentDateTime < endingDateTime
+                      ? "#16a34a"
+                      : "#dc2626",
+                  fontWeight: "bold",
+                }}
+              >
+                {formattedCurrentDateTime > startingDateTime &&
+                formattedCurrentDateTime < endingDateTime
+                  ? "Open"
+                  : "Closed"}
+              </span>
             </div>
           </div>
           <div className="flex text-right">
@@ -45,26 +65,27 @@ export function ResultCard({ bank, branch }) {
             </div>
             <div className="text-right">
               <p className="font-semibold text-[#695958]">Working Hours</p>
-              <span className="text-gray-600">{startingTimeWeekdays} - {endingTimeWeekdays} - Weekdays</span>
+              <span className="text-gray-600">
+                {startingTimeEveryday} - {endingTimeWeekdays} - Weekdays
+              </span>
               <p>
                 <span className="text-gray-600">
-                  {startingTimeWeekends} - {endingTimeWeekends} - Weekends
+                  {startingTimeEveryday} - {endingTimeWeekends} - Saturdays
                 </span>
               </p>
             </div>
           </div>
           <div className="flex justify-between items-center mb-4 mt-4">
             <div>
-            <p className="font-semibold text-[#695958]">Contact Info</p>
-            <span className="text-gray-600">07898990899 | 0709008004</span>
+              <p className="font-semibold text-[#695958]">Contact Info</p>
+              <span className="text-gray-600">07898990899 | 0709008004</span>
             </div>
 
             <div>
               <span className="text-red-600 text-base">
-                Closed - Weekends and Public Holidays
+                Closed - Sundays and Public Holidays
               </span>
-                </div>
-           
+            </div>
           </div>
         </div>
       </div>
