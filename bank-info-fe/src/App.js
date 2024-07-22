@@ -9,6 +9,8 @@ function App() {
   getAllBanks();
 
   const [searchTerm, setSearchTerm] = useState(null);
+  const [filterTerm, setFilterTerm] = useState(null);
+
   let [newFilteredBanks, setNewFilteredBanks] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -16,6 +18,11 @@ function App() {
     setSearchTerm(e.target.value);
   };
 
+  const changeBankNameFilter = (e) => {
+    setFilterTerm(e.target.value);
+  };
+
+  // handles the search
   useEffect(() => {
     if (banks.length === 0) {
       setLoading(true);
@@ -24,8 +31,8 @@ function App() {
 
     let filteredBanks = banks.filter(
       (bank) =>
-        searchTerm?.length >= 3 &&
-        (bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+        searchTerm?.length >= 3 && (
+        (bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase())  ||
           bank?.aliases?.some((alias) =>
             alias?.toLowerCase().includes(searchTerm?.toLowerCase())
           ) ||
@@ -34,6 +41,8 @@ function App() {
               ?.toLowerCase()
               .includes(searchTerm?.toLowerCase())
           ))
+        ) &&
+        (bank?.bank_name?.toLowerCase().includes(filterTerm?.toLowerCase()))
     );
 
     if (filteredBanks && filteredBanks.length > 0) {
@@ -83,7 +92,8 @@ function App() {
       );
       setNewFilteredBanks(allBanks);
     }
-  }, [searchTerm]);
+  }, [searchTerm, filterTerm]);
+
 
   // define another useEffect() to chunk results for faster loading time
   useEffect(() => {
@@ -143,23 +153,33 @@ function App() {
             Filter
           </button>
         </div>
+
+        <div className="mt-6 flex justify-center">
+          <select
+            name="banks"
+            id="banks"
+            className="rounded-md w-1/3 md:w-1/3 shadow-md px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
+            onChange={changeBankNameFilter}
+            disabled={!searchTerm ? true : false}
+          >
+            <option disabled defaultChecked>Filter By Bank Name</option>
+            {searchTerm?.length > 0
+              ? banks.map((bank) => (
+                  <option value={bank?.bank_name} label={bank?.bank_name}>
+                    {bank?.bank_name}
+                  </option>
+                ))
+              : "null"}
+          </select>
+          {/* <select
+            type="text"
+            placeholder="Filter By Bank Name"
+            className="rounded-md w-1/3 md:w-1/3 shadow-md px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
+            onChange={changeBankNameFilter}
+          /> */}
+        </div>
       </div>
 
-      {/* <div className="flex justify-center mt-8 h-full">
-        <span className="font-semibold text-xl italic text-[#695958]">
-          {newFilteredBanks && newFilteredBanks.length > 0 ? (
-            newFilteredBanks.length +
-            " Bank(s) with " +
-            " branches country wide"
-          ) : (
-            <NoResultCard query={searchTerm} />
-          )}
-        </span>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 mt-6 sm:grid-cols-1">
-        {newFilteredBanks}
-      </div> */}
       <div className="flex justify-center mt-8 h-full">
         <span className="font-semibold text-xl italic text-[#695958]">
           {newFilteredBanks.length > 0 ? (
