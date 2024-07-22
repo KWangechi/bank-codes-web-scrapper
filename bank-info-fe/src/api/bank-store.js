@@ -7,7 +7,7 @@ let totalBranches = 0;
 function getAllBanks() {
   banks = data;
 
-  console.log(banks);
+  // console.log(banks);
 
   branches = banks.map((bank) => {
     totalBranches += bank.branches.length;

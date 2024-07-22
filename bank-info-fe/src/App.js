@@ -12,6 +12,8 @@ function App() {
   const [filterTerm, setFilterTerm] = useState(null);
 
   let [newFilteredBanks, setNewFilteredBanks] = useState([]);
+  let [dummyData, setDummyData] = useState([]);
+
   const [loading, setLoading] = useState(true);
 
   const handleSearchTermChange = (e) => {
@@ -20,6 +22,17 @@ function App() {
 
   const changeBankNameFilter = (e) => {
     setFilterTerm(e.target.value);
+
+    console.log(dummyData);
+
+    let bankNameFilterResults = dummyData.filter(bank => {
+      return bank?.bank_name === e.target.value;
+    });
+
+    console.log(bankNameFilterResults.length)
+
+    setNewFilteredBanks(bankNameFilterResults);
+    setLoading(false);
   };
 
   // handles the search
@@ -41,8 +54,7 @@ function App() {
               ?.toLowerCase()
               .includes(searchTerm?.toLowerCase())
           ))
-        ) &&
-        (bank?.bank_name?.toLowerCase().includes(filterTerm?.toLowerCase()))
+        )
     );
 
     if (filteredBanks && filteredBanks.length > 0) {
@@ -61,6 +73,8 @@ function App() {
           filteredBranches = bank.branches;
         }
 
+        setDummyData(filteredBanks);
+
         return filteredBranches.map((branch) => {
           return (
             <ResultCard
@@ -71,6 +85,7 @@ function App() {
           );
         });
       });
+
       setNewFilteredBanks(updatedFilteredBanks.flat());
       setLoading(false);
     }
@@ -162,7 +177,7 @@ function App() {
             onChange={changeBankNameFilter}
             disabled={!searchTerm ? true : false}
           >
-            <option disabled defaultChecked>Filter By Bank Name</option>
+            <option disabled selected>Filter By Bank Name</option>
             {searchTerm?.length > 0
               ? banks.map((bank) => (
                   <option value={bank?.bank_name} label={bank?.bank_name}>
