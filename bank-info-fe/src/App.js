@@ -25,13 +25,25 @@ function App() {
 
     console.log(dummyData);
 
-    let bankNameFilterResults = dummyData.filter(bank => {
+    let bankNameFilterResults = dummyData.filter((bank) => {
       return bank?.bank_name === e.target.value;
     });
 
-    console.log(bankNameFilterResults.length)
+    console.log(bankNameFilterResults);
 
-    setNewFilteredBanks(bankNameFilterResults);
+    setNewFilteredBanks(
+      bankNameFilterResults.map((bankNameFilter) => {
+        return bankNameFilter.branches.map((branchNameFilter) => {
+          return (
+            <ResultCard
+              bank={bankNameFilter}
+              branch={branchNameFilter}
+              key={`${bankNameFilter.bank_code}-${branchNameFilter.branch_code}`}
+            ></ResultCard>
+          );
+        });
+      })
+    );
     setLoading(false);
   };
 
@@ -44,8 +56,8 @@ function App() {
 
     let filteredBanks = banks.filter(
       (bank) =>
-        searchTerm?.length >= 3 && (
-        (bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase())  ||
+        searchTerm?.length >= 3 &&
+        (bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
           bank?.aliases?.some((alias) =>
             alias?.toLowerCase().includes(searchTerm?.toLowerCase())
           ) ||
@@ -54,7 +66,6 @@ function App() {
               ?.toLowerCase()
               .includes(searchTerm?.toLowerCase())
           ))
-        )
     );
 
     if (filteredBanks && filteredBanks.length > 0) {
@@ -109,7 +120,6 @@ function App() {
     }
   }, [searchTerm, filterTerm]);
 
-
   // define another useEffect() to chunk results for faster loading time
   useEffect(() => {
     if (!searchTerm) {
@@ -144,13 +154,39 @@ function App() {
           Name and Location.
         </h4>
         <div className="mt-6 flex justify-center">
+          {/* <div></div> */}
           <input
             type="text"
             placeholder="Search Bank/Branch Name... e.g KCB"
-            className="rounded-md w-2/3 md:w-1/2 shadow-lg px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
+            className="rounded-md w-1/3 md:w-1/3 shadow-lg px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
             onChange={handleSearchTermChange}
           />
-          <button className="flex items-center ml-3 bg-[#695958]/80 rounded-lg text-lg px-4 py-2 text-white shadow hover:bg-[#5a4d4d] transition duration-300">
+            <select
+              name="banks"
+              id="banks"
+              className="rounded-md w-1/3 md:w-1/6 shadow-md ml-4 px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
+              onChange={changeBankNameFilter}
+              disabled={!searchTerm ? true : false}
+            >
+              <option disabled selected>
+                Filter By Bank Name
+              </option>
+              {searchTerm?.length > 0
+                ? banks.map((bank) => (
+                    <option value={bank?.bank_name} label={bank?.bank_name}>
+                      {bank?.bank_name}
+                    </option>
+                  ))
+                : "null"}
+            </select>
+            {/* <select
+            type="text"
+            placeholder="Filter By Bank Name"
+            className="rounded-md w-1/3 md:w-1/3 shadow-md px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
+            onChange={changeBankNameFilter}
+          /> */}
+         
+          {/* <button className="flex items-center ml-3 bg-[#695958]/80 rounded-lg text-lg px-4 py-2 text-white shadow hover:bg-[#5a4d4d] transition duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -166,32 +202,8 @@ function App() {
               />
             </svg>
             Filter
-          </button>
-        </div>
-
-        <div className="mt-6 flex justify-center">
-          <select
-            name="banks"
-            id="banks"
-            className="rounded-md w-1/3 md:w-1/3 shadow-md px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
-            onChange={changeBankNameFilter}
-            disabled={!searchTerm ? true : false}
-          >
-            <option disabled selected>Filter By Bank Name</option>
-            {searchTerm?.length > 0
-              ? banks.map((bank) => (
-                  <option value={bank?.bank_name} label={bank?.bank_name}>
-                    {bank?.bank_name}
-                  </option>
-                ))
-              : "null"}
-          </select>
-          {/* <select
-            type="text"
-            placeholder="Filter By Bank Name"
-            className="rounded-md w-1/3 md:w-1/3 shadow-md px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
-            onChange={changeBankNameFilter}
-          /> */}
+          </button> */}
+         
         </div>
       </div>
 
