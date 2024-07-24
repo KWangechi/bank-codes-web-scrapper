@@ -9,10 +9,10 @@ function App() {
   getAllBanks();
 
   const [searchTerm, setSearchTerm] = useState(null);
-  const [filterTerm, setFilterTerm] = useState(null);
+  // const [filterTerm, setFilterTerm] = useState(null);
 
   let [newFilteredBanks, setNewFilteredBanks] = useState([]);
-  let [dummyData, setDummyData] = useState([]);
+  // let [dummyData, setDummyData] = useState([]);
 
   const [loading, setLoading] = useState(true);
 
@@ -20,32 +20,32 @@ function App() {
     setSearchTerm(e.target.value);
   };
 
-  const changeBankNameFilter = (e) => {
-    setFilterTerm(e.target.value);
+  // const changeBankNameFilter = (e) => {
+  //   setFilterTerm(e.target.value);
 
-    console.log(dummyData);
+  //   console.log(dummyData);
 
-    let bankNameFilterResults = dummyData.filter((bank) => {
-      return bank?.bank_name === e.target.value;
-    });
+  //   let bankNameFilterResults = dummyData.filter((bank) => {
+  //     return bank?.bank_name === e.target.value;
+  //   });
 
-    console.log(bankNameFilterResults);
+  //   console.log(bankNameFilterResults);
 
-    setNewFilteredBanks(
-      bankNameFilterResults.map((bankNameFilter) => {
-        return bankNameFilter.branches.map((branchNameFilter) => {
-          return (
-            <ResultCard
-              bank={bankNameFilter}
-              branch={branchNameFilter}
-              key={`${bankNameFilter.bank_code}-${branchNameFilter.branch_code}`}
-            ></ResultCard>
-          );
-        });
-      })
-    );
-    setLoading(false);
-  };
+  //   setNewFilteredBanks(
+  //     bankNameFilterResults.map((bankNameFilter) => {
+  //       return bankNameFilter.branches.map((branchNameFilter) => {
+  //         return (
+  //           <ResultCard
+  //             bank={bankNameFilter}
+  //             branch={branchNameFilter}
+  //             key={`${bankNameFilter.bank_code}-${branchNameFilter.branch_code}`}
+  //           ></ResultCard>
+  //         );
+  //       });
+  //     })
+  //   );
+  //   setLoading(false);
+  // };
 
   // handles the search
   useEffect(() => {
@@ -84,7 +84,7 @@ function App() {
           filteredBranches = bank.branches;
         }
 
-        setDummyData(filteredBanks);
+        // setDummyData(filteredBanks);
 
         return filteredBranches.map((branch) => {
           return (
@@ -118,7 +118,7 @@ function App() {
       );
       setNewFilteredBanks(allBanks);
     }
-  }, [searchTerm, filterTerm]);
+  }, [searchTerm]);
 
   // define another useEffect() to chunk results for faster loading time
   useEffect(() => {
