@@ -20,6 +20,11 @@ function App() {
     setSearchTerm(e.target.value);
   };
 
+  const handleClearSearch = () => {
+    setSearchTerm("");
+    document.getElementById("mySearchInput").value = ""
+  };
+
   const changeBankNameFilter = (e) => {
     setFilterTerm(e.target.value);
 
@@ -157,10 +162,29 @@ function App() {
           {/* <div></div> */}
           <input
             type="text"
+            id="mySearchInput"
             placeholder="Search Bank/Branch Name... e.g KCB"
-            className="rounded-md w-1/3 md:w-1/3 shadow-lg px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
+            className="rounded-md w-1/3 md:w-1/3 shadow-lg px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958] pr-8"
             onChange={handleSearchTermChange}
+            value={searchTerm}
           />
+          {searchTerm && (
+          <button
+            className="absolute top-50 right-26 m-2 bg-transparent hover:bg-gray-200 rounded-full p-1"
+            onClick={handleClearSearch}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-4 h-4"
+            >
+              <path strokeLinecap="round" strokeLineJoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          )}
             <select
               name="banks"
               id="banks"
