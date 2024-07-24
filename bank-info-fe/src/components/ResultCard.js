@@ -11,7 +11,7 @@ export function ResultCard({ bank, branch }) {
 
 
   return (
-    <div className="mt-4 mb-2 w-auto md:w-11/12 mx-auto">
+    <div className="grow shrink mt-4 mb-2 w-auto md:w-11/12 mx-auto">
       <div className="grow rounded-lg shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 ">
         <div className="flex items-center mb-4">
           <img
