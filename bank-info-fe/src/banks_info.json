@@ -7889,7 +7889,7 @@
   {
     "id": 42,
     "bank_name": "Kenya Women Microfinance Bank",
-    "aliases": ["KWMB"],
+    "aliases": ["KWMB", "KWFT"],
     "bank_code": "78",
     "branches": [
       {
