@@ -4,6 +4,12 @@
     "bank_name": "Kenya Commercial Bank Limited",
     "aliases": ["KCB"],
     "bank_code": "01",
+    "contactInfo": {
+      "phone1": "0711087000",
+      "phone2": "0732187000",
+      "email": "contactcentre@kcbgroup.com"
+    },
+
     "branches": [
       {
         "branch_code": "340",
@@ -873,6 +879,11 @@
     "bank_name": "Standard Chartered Bank Kenya Ltd",
     "aliases": ["Stanchart", "StanChartered"],
     "bank_code": "02",
+    "contactInfo": {
+      "phone1": "020 243 7730",
+      "phone2": "020 243 7731",
+      "email": ""
+    },
     "branches": [
       {
         "branch_code": "000",
@@ -7878,7 +7889,7 @@
   {
     "id": 42,
     "bank_name": "Kenya Women Microfinance Bank",
-    "aliases": ["KWMB"],
+    "aliases": ["KWMB", "KWFT"],
     "bank_code": "78",
     "branches": [
       {
