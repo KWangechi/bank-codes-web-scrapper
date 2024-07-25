@@ -20,6 +20,12 @@ function App() {
     setSearchTerm(e.target.value);
   };
 
+
+  const handleClearSearch = () => {
+    setSearchTerm("");
+    document.getElementById("username").value = ""
+  };
+
   // const changeBankNameFilter = (e) => {
   //   setFilterTerm(e.target.value);
 
@@ -30,6 +36,19 @@ function App() {
   //   });
 
   //   console.log(bankNameFilterResults);
+
+=======
+  // const changeBankNameFilter = (e) => {
+  //   setFilterTerm(e.target.value);
+
+  //   console.log(dummyData);
+
+  //   let bankNameFilterResults = dummyData.filter((bank) => {
+  //     return bank?.bank_name === e.target.value;
+  //   });
+
+  //   console.log(bankNameFilterResults);
+
 
   //   setNewFilteredBanks(
   //     bankNameFilterResults.map((bankNameFilter) => {
@@ -154,15 +173,6 @@ function App() {
           Name and Location.
         </h4>
         <div className="mt-6 flex justify-center">
-          {/* <div></div> */}
-          {/* <input
-            type="text"
-            placeholder="Search Bank/Branch Name... e.g KCB"
-            className="rounded-md w-1/2 md:w-1/2 shadow-lg px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
-            onChange={handleSearchTermChange}
-          /> */}
-          <div class="relative w-2/3 md:w-1/2 items-center">
-            {/* <div class="absolute right-0 inset-y-0 flex items-center pr-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5 text-gray-400 hover:text-gray-500 cursor-pointer"
@@ -177,7 +187,6 @@ function App() {
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
-            </div> */}
 
             <div class="absolute left-0 inset-y-0 flex items-center pl-3">
               <button></button>
