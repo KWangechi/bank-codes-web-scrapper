@@ -23,11 +23,11 @@ export function ResultCard({ bank, branch }) {
             className="h-16 w-17 rounded-lg bg-none"
           />
           <div className="ml-4 flex-grow">
-            <h2 className="font-bold text-xl text-[#695958]">
+            <h2 className="italic text-xl text-[#695958]">
               {branch?.branch_name}
             </h2>
             <div className="flex items-center text-gray-600">
-              <span className="text-lg italic">
+              <span className="text-lg font-bold">
                 Branch Code: {branch?.branch_code}
               </span>
               <span className="mx-2">•</span>

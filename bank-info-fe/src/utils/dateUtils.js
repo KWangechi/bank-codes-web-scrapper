@@ -1,6 +1,4 @@
-let isWeekend;
-let formattedCurrentDateTime;
-function parseTimeStringToDate(timeString) {
+export function parseTimeStringToDate(timeString) {
   const [time, modifier] = timeString.split(/(am|pm)/i);
   const [hours, minutes] = time.split(":").map(Number);
 
@@ -18,7 +16,7 @@ function parseTimeStringToDate(timeString) {
   return currentDate;
 }
 
-function getFormattedCurrentTime() {
+export function getFormattedCurrentTime() {
   const currentDate = new Date();
   const currentDateTime = currentDate
     .toLocaleTimeString([], {
@@ -34,8 +32,6 @@ function getFormattedCurrentTime() {
 }
 
 const currentDate = new Date();
-formattedCurrentDateTime = getFormattedCurrentTime(currentDate);
-isWeekend = currentDate.getDay() === 6 || currentDate.getDay() === 0;
+export const formattedCurrentDateTime = getFormattedCurrentTime(currentDate);
+export const isWeekend = currentDate.getDay() === 6 || currentDate.getDay() === 0;
 
-
-export { isWeekend, parseTimeStringToDate, formattedCurrentDateTime, getFormattedCurrentTime };

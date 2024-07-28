@@ -1,18 +1,15 @@
 import { useState, useEffect } from "react";
 import "./index.css";
-import { banks, getAllBanks } from "./api/bank-store";
+import banks from "./banks_info.json";
 import { ResultCard } from "./components/ResultCard";
 import { NoResultCard } from "./components/NoResultCard";
 import SkeletonCard from "./components/SkeletonCard";
 
 function App() {
-  getAllBanks();
-
   const [searchTerm, setSearchTerm] = useState(null);
   // const [filterTerm, setFilterTerm] = useState(null);
 
   let [newFilteredBanks, setNewFilteredBanks] = useState([]);
-  // let [dummyData, setDummyData] = useState([]);
 
   const [loading, setLoading] = useState(true);
 
@@ -21,47 +18,9 @@ function App() {
   };
 
   const handleClearSearch = () => {
-    setSearchTerm("");
+    setSearchTerm(null);
     document.getElementById("username").value = "";
   };
-
-  // const changeBankNameFilter = (e) => {
-  //   setFilterTerm(e.target.value);
-
-  //   console.log(dummyData);
-
-  //   let bankNameFilterResults = dummyData.filter((bank) => {
-  //     return bank?.bank_name === e.target.value;
-  //   });
-
-  //   console.log(bankNameFilterResults);
-
-  // const changeBankNameFilter = (e) => {
-  //   setFilterTerm(e.target.value);
-
-  //   console.log(dummyData);
-
-  //   let bankNameFilterResults = dummyData.filter((bank) => {
-  //     return bank?.bank_name === e.target.value;
-  //   });
-
-  //   console.log(bankNameFilterResults);
-
-  //   setNewFilteredBanks(
-  //     bankNameFilterResults.map((bankNameFilter) => {
-  //       return bankNameFilter.branches.map((branchNameFilter) => {
-  //         return (
-  //           <ResultCard
-  //             bank={bankNameFilter}
-  //             branch={branchNameFilter}
-  //             key={`${bankNameFilter.bank_code}-${branchNameFilter.branch_code}`}
-  //           ></ResultCard>
-  //         );
-  //       });
-  //     })
-  //   );
-  //   setLoading(false);
-  // };
 
   // handles the search
   useEffect(() => {
@@ -72,16 +31,13 @@ function App() {
 
     let filteredBanks = banks.filter(
       (bank) =>
-        searchTerm?.length >= 3 &&
-        (bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
-          bank?.aliases?.some((alias) =>
-            alias?.toLowerCase().includes(searchTerm?.toLowerCase())
-          ) ||
-          bank?.branches?.some((branch) =>
-            branch?.branch_name
-              ?.toLowerCase()
-              .includes(searchTerm?.toLowerCase())
-          ))
+        bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+        bank?.aliases?.some((alias) =>
+          alias?.toLowerCase().includes(searchTerm?.toLowerCase())
+        ) ||
+        bank?.branches?.some((branch) =>
+          branch?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
+        )
     );
 
     if (filteredBanks && filteredBanks.length > 0) {
@@ -171,13 +127,6 @@ function App() {
             Name and Location.
           </h4>
           <div className="mt-6 flex justify-center">
-            {/* <div></div> */}
-            {/* <input
-            type="text"
-            placeholder="Search Bank/Branch Name... e.g KCB"
-            className="rounded-md w-1/2 md:w-1/2 shadow-lg px-4 py-3 text-md outline-none focus:ring-2 focus:ring-[#695958]"
-            onChange={handleSearchTermChange}
-          /> */}
             <div class="relative w-2/3 md:w-1/2 items-center">
               <div class="absolute right-0 inset-y-0 flex items-center pr-3">
                 {searchTerm && (
@@ -190,9 +139,9 @@ function App() {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M6 18L18 6M6 6l12 12"
                       />
                     </svg>
@@ -210,9 +159,9 @@ function App() {
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   />
                 </svg>
