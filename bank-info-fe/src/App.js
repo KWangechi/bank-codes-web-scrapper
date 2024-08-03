@@ -49,7 +49,7 @@ function App() {
             alias?.toLowerCase().includes(searchTerm?.toLowerCase())
           )
         ) {
-          filteredBranches = bank.branches.slice(0, rowsPerPage);
+          filteredBranches = bank.branches;
         }
 
         return {
