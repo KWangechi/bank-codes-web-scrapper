@@ -14,6 +14,9 @@ function App() {
     setSearchTerm(e.target.value);
   };
 
+  const rowsPerPage = useRef(0);
+  rowsPerPage.current = 30;
+
   const handleClearSearch = () => {
     setSearchTerm("");
     document.getElementById("username").value = "";
@@ -30,7 +33,9 @@ function App() {
             alias?.toLowerCase().includes(searchTerm?.toLowerCase())
           ) ||
           bank?.branches?.some((branch) =>
-            branch?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
+            branch?.branch_name
+              ?.toLowerCase()
+              .includes(searchTerm?.toLowerCase())
           )
       )
       .map((bank) => {
@@ -44,15 +49,18 @@ function App() {
             alias?.toLowerCase().includes(searchTerm?.toLowerCase())
           )
         ) {
-          filteredBranches = bank.branches;
+          filteredBranches = bank.branches.slice(0, rowsPerPage);
         }
 
         return {
           ...bank,
           branches: filteredBranches,
         };
-      });
+      })
+      ;
   }, [searchTerm]);
+
+  console.log(filteredBanks.length);
 
   useEffect(() => {
     setLoading(true);
@@ -162,7 +170,7 @@ function App() {
 
       <div>
         <Pagination
-          results={newFilteredBanks}
+          rowsPerPage={rowsPerPage}
           totalResultsCount={totalResults.current}
         />
       </div>
