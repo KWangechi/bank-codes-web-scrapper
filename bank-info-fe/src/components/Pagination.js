@@ -31,7 +31,7 @@ export default function Pagination({ rowsPerPage, totalResultsCount }) {
 
   // iterate through the totalPages and display the current page on a button
   const pageButtons = [];
-  const truncatedButtons = [];
+  // const truncatedButtons = [];
 
   for (let i = 1; i <= totalPages.current; i++) {
     const minLength = 3;
