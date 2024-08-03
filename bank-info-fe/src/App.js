@@ -1,17 +1,13 @@
-import { useState, useEffect } from "react";
-import "./index.css";
-// import { banks, getAllBanks } from "./api/bank-store";
-// import { ResultCard } from "./components/ResultCard";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import { NoResultCard } from "./components/NoResultCard";
 import SkeletonCard from "./components/SkeletonCard";
 import banks from "./banks_info.json";
 import { ResultCard } from "./components/ResultCard";
-
+import Pagination from "./components/Pagination";
 function App() {
-  const [searchTerm, setSearchTerm] = useState(null);
-  // const [filterTerm, setFilterTerm] = useState(null);
-
-  let [newFilteredBanks, setNewFilteredBanks] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [newFilteredBanks, setNewFilteredBanks] = useState([]);
+  const totalResults = useRef(0);
   const [loading, setLoading] = useState(true);
 
   const handleSearchTermChange = (e) => {
@@ -23,36 +19,25 @@ function App() {
     document.getElementById("username").value = "";
   };
 
-  // handles the search
-  useEffect(() => {
-    if (banks.length === 0) {
-      setLoading(true);
-      return;
-    }
+  const filteredBanks = useMemo(() => {
+    if (!searchTerm) return banks;
 
-    let filteredBanks = banks.filter(
-      (bank) =>
-        searchTerm?.length >= 3 &&
-        (bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+    return banks
+      .filter(
+        (bank) =>
+          bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
           bank?.aliases?.some((alias) =>
             alias?.toLowerCase().includes(searchTerm?.toLowerCase())
           ) ||
           bank?.branches?.some((branch) =>
-            branch?.branch_name
-              ?.toLowerCase()
-              .includes(searchTerm?.toLowerCase())
-          ))
-    );
-
-    console.log(filteredBanks);
-
-    if (filteredBanks && filteredBanks.length > 0) {
-      const updatedFilteredBanks = filteredBanks.map((bank) => {
+            branch?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
+          )
+      )
+      .map((bank) => {
         let filteredBranches = bank?.branches?.filter((branch) =>
           branch?.branch_name?.toLowerCase().includes(searchTerm?.toLowerCase())
         );
 
-        // If bank name or aliases match, include all branches
         if (
           bank?.bank_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
           bank?.aliases?.some((alias) =>
@@ -61,42 +46,27 @@ function App() {
         ) {
           filteredBranches = bank.branches;
         }
-        console.log(filteredBranches);
+
         return {
           ...bank,
           branches: filteredBranches,
         };
       });
-      console.log(updatedFilteredBanks);
-
-      setNewFilteredBanks(updatedFilteredBanks);
-      // setLoading(false);
-    }
-    // If no search term is provided, display all banks
-    else if (!searchTerm && filteredBanks.length === 0) {
-      console.log(
-        `Display all the bank name since search term is empty: ${banks.length}`
-      );
-      setNewFilteredBanks(banks);
-      // setLoading(false);
-    } else {
-      setNewFilteredBanks([]);
-      // setLoading(false);
-    }
-    setLoading(false);
   }, [searchTerm]);
 
-  // define another useEffect() to chunk results for faster loading time
   useEffect(() => {
-    if (!searchTerm) {
-      const timeout = setTimeout(() => {
-        setNewFilteredBanks(banks);
-        setLoading(false);
-      }, 2000);
+    setLoading(true);
+    const timeout = setTimeout(() => {
+      setNewFilteredBanks(filteredBanks);
+      totalResults.current = filteredBanks?.reduce(
+        (acc, bank) => acc + bank.branches.length,
+        0
+      );
+      setLoading(false);
+    }, 500);
 
-      return () => clearTimeout(timeout);
-    }
-  }, [searchTerm]);
+    return () => clearTimeout(timeout);
+  }, [filteredBanks]);
 
   return (
     <div>
@@ -111,13 +81,13 @@ function App() {
             Name and Location.
           </h4>
           <div className="mt-6 flex justify-center">
-            <div class="relative w-2/3 md:w-1/2 items-center">
-              <div class="absolute right-0 inset-y-0 flex items-center pr-3">
+            <div className="relative w-2/3 md:w-1/2 items-center">
+              <div className="absolute right-0 inset-y-0 flex items-center pr-3">
                 {searchTerm && (
                   <button onClick={handleClearSearch}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 text-gray-400 hover:text-gray-500 cursor-pointer"
+                      className="h-5 w-5 text-gray-400 hover:text-gray-500 cursor-pointer"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -133,11 +103,10 @@ function App() {
                 )}
               </div>
 
-              <div class="absolute left-0 inset-y-0 flex items-center pl-3">
-                <button></button>
+              <div className="absolute left-0 inset-y-0 flex items-center pl-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-gray-600 hover:text-gray-500 cursor-pointer"
+                  className="h-6 w-6 text-gray-600 hover:text-gray-500 cursor-pointer"
                   fill="none"
                   viewBox="0 0 26 26"
                   stroke="currentColor"
@@ -154,7 +123,7 @@ function App() {
               <input
                 type="text"
                 placeholder="Search Bank/Branch Name... e.g KCB"
-                class="appearance-none border-2 border-gray-300 hover:border-gray-400 transition-colors rounded-md w-full py-4 px-3 pl-10 pr-10 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-[#695958] focus:border-[#695958] focus:shadow-outline"
+                className="appearance-none border-2 border-gray-300 hover:border-gray-400 transition-colors rounded-md w-full py-4 px-3 pl-10 pr-10 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-[#695958] focus:border-[#695958] focus:shadow-outline"
                 id="username"
                 onChange={handleSearchTermChange}
               />
@@ -165,8 +134,8 @@ function App() {
 
       <div className="flex justify-center mt-6 h-full">
         <span className="font-semibold text-xl italic text-[#695958]">
-          {newFilteredBanks.length > 0 ? (
-            `${newFilteredBanks.length} Results Found`
+          {totalResults.current > 0 ? (
+            `${totalResults.current} Results Found`
           ) : !loading ? (
             <NoResultCard query={searchTerm} />
           ) : (
@@ -179,17 +148,23 @@ function App() {
         {loading ? (
           <SkeletonCard />
         ) : (
-          newFilteredBanks
-            .map((bank) =>
-              bank.branches.map((branch) => (
-                <ResultCard
-                  key={`${bank.bank_code}-${branch.branch_code}`}
-                  bank={bank}
-                  branch={branch}
-                />
-              ))
-            )
+          newFilteredBanks.map((bank) =>
+            bank.branches.map((branch) => (
+              <ResultCard
+                key={`${bank.bank_code}-${branch.branch_code}`}
+                bank={bank}
+                branch={branch}
+              />
+            ))
+          )
         )}
+      </div>
+
+      <div>
+        <Pagination
+          results={newFilteredBanks}
+          totalResultsCount={totalResults.current}
+        />
       </div>
     </div>
   );
