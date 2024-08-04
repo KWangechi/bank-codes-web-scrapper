@@ -27,7 +27,7 @@ export function ResultCard({ bank, branch }) {
   return (
     <div className="grow shrink mt-12 mb-2 w-auto md:w-11/12 mx-auto">
       <div className="grow rounded-lg shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 ">
-        <div className="flex items-center mb-4">
+      <div className="flex flex-col sm:flex-row items-center mb-4">
           <img
             src={bank?.icon}
             alt="Bank Logo"
@@ -64,13 +64,13 @@ export function ResultCard({ bank, branch }) {
             <span className="ml-1 text-gray-500">{branch.branch_name}</span>
           </div>
         </div>
-        <div className="border-t border-gray-200 pt-4">
-          <div className="flex justify-between items-center mb-4">
+         <div className="border-t border-gray-200 pt-4">
+         <div className="flex justify-between items-start mb-4 flex-col sm:flex-row">
             <div>
               <p className="font-semibold text-[#695958]">{bank.bank_name}</p>
               <span className="text-gray-600">Bank Code: {bank.bank_code}</span>
             </div>
-            <div className="text-right">
+            <div className="text-left sm:text-right mt-1.5 sm:mt-0">
               <p className="font-semibold text-[#695958]">Working Hours</p>
               <span className="text-gray-600">
                 {startingTimeEveryday} - {endingTimeWeekdays} - Weekdays
@@ -82,7 +82,7 @@ export function ResultCard({ bank, branch }) {
               </p>
             </div>
           </div>
-          <div className="flex justify-between items-center mb-4 mt-4">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 mt-4">
             <div>
               <p className="font-semibold text-[#695958]">Contact Info</p>
               <div className="flex justify-between">
@@ -104,7 +104,6 @@ export function ResultCard({ bank, branch }) {
                   <span className="ml-2">{bank?.contactInfo?.phone1} {bank?.contactInfo?.phone2 ? "|" : ""} {bank?.contactInfo?.phone2}</span>
                 </span>
               </div>
-
               <div className="flex justify-between ">
                 <span className="flex justify-between items-center mt-1 text-gray-600">
                   <svg
@@ -121,19 +120,17 @@ export function ResultCard({ bank, branch }) {
                       d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
                     />
                   </svg>
-
                   <span className="ml-2">{bank?.contactInfo?.email}</span>
                 </span>
               </div>
             </div>
-
-            <div>
+            <div className="mt-1.5 sm:mt-0">
               <span className="text-red-600 text-base">
                 Closed - Sundays and Public Holidays
               </span>
             </div>
-          </div>
-        </div>
+          </div> 
+        </div> 
       </div>
     </div>
   );
