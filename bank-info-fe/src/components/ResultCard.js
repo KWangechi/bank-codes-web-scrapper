@@ -7,11 +7,22 @@ export function ResultCard({ bank, branch }) {
   const startingTimeEveryday = "8:00am";
   const endingTimeWeekdays = "4:00pm";
   const endingTimeWeekends = "12:00pm";
+  const isSunday = new Date().getDay() === 0;
 
   const startingDateTime = parseTimeStringToDate(startingTimeEveryday);
   const endingDateTime = !isWeekend
     ? parseTimeStringToDate(endingTimeWeekdays)
     : parseTimeStringToDate(endingTimeWeekends);
+
+  const isOpen = () => {
+    if (isSunday) {
+      return "Closed";
+  }
+  return formattedCurrentDateTime > startingDateTime &&
+    formattedCurrentDateTime < endingDateTime
+    ? "Open"
+    : "Closed";
+  };
 
   return (
     <div className="grow shrink mt-12 mb-2 w-auto md:w-11/12 mx-auto">
@@ -34,18 +45,11 @@ export function ResultCard({ bank, branch }) {
               <span
                 className="font-bold"
                 style={{
-                  color:
-                    formattedCurrentDateTime > startingDateTime &&
-                    formattedCurrentDateTime < endingDateTime
-                      ? "#16a34a"
-                      : "#dc2626",
+                  color: isOpen() === "Open" ? "#16a34a" : "#dc2626",
                   fontWeight: "bold",
                 }}
               >
-                {formattedCurrentDateTime > startingDateTime &&
-                formattedCurrentDateTime < endingDateTime
-                  ? "Open"
-                  : "Closed"}
+                {isOpen()}
               </span>
             </div>
           </div>
