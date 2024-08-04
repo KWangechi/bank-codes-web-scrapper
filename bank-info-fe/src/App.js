@@ -83,13 +83,13 @@ function App() {
           Kenya Bank Code Search
         </div>
         <div className="bg-[#B6C8A9] text-center py-8 mt-5 shadow-sm">
-          <h4 className="italic text-md mt-4 text-[#695958]">
+          <h4 className="italic text-md mt-4 text-[#695958] mx-[5%]">
             Search for all the Banks in Kenya, their codes, their branches info,
             and additional details such as Opening Hours. You can filter by Bank
             Name and Location.
           </h4>
           <div className="mt-6 flex justify-center">
-            <div className="relative w-2/3 md:w-1/2 items-center">
+          <div className="relative w-2/3 md:w-1/2 items-center w-full sm:w-auto mx-[5%]">
               <div className="absolute right-0 inset-y-0 flex items-center pr-3">
                 {searchTerm && (
                   <button onClick={handleClearSearch}>

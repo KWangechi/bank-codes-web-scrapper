@@ -10,7 +10,7 @@ const SkeletonCard = () => {
         .map((item, index) => (
           <div
             key={index}
-            className="grow rounded-lg w-10/12 md:w-11/12 mx-auto shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 mb-6"
+            className="grow rounded-lg w-10/12 md:w-11/12 mx-auto shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 mb-6 w-full"
           >
             <div className="flex items-center mb-4">
               <Skeleton circle={true} height={64} width={64} />
