@@ -19,7 +19,6 @@ function App() {
 
   const handleClearSearch = () => {
     setSearchTerm("");
-    document.getElementById("username").value = "";
   };
 
   const filteredBanks = useMemo(() => {
@@ -133,6 +132,7 @@ function App() {
                 placeholder="Search Bank/Branch Name... e.g KCB"
                 className="appearance-none border-2 border-gray-300 hover:border-gray-400 transition-colors rounded-md w-full py-4 px-3 pl-10 pr-10 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-[#695958] focus:border-[#695958] focus:shadow-outline"
                 id="username"
+                value={searchTerm}
                 onChange={handleSearchTermChange}
               />
             </div>
