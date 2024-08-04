@@ -3,7 +3,9 @@ import {
   isWeekend,
   formattedCurrentDateTime,
 } from "../utils/dateUtils";
-export function ResultCard({ bank, branch }) {
+import { highlightText } from "utils/";
+
+export function ResultCard({ bank, branch, searchTerm }) {
   const startingTimeEveryday = "8:00am";
   const endingTimeWeekdays = "4:00pm";
   const endingTimeWeekends = "12:00pm";
@@ -27,7 +29,7 @@ export function ResultCard({ bank, branch }) {
   return (
     <div className="grow shrink mt-12 mb-2 w-auto md:w-11/12 mx-auto">
       <div className="grow rounded-lg shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 ">
-      <div className="flex flex-col sm:flex-row items-center mb-4">
+        <div className="flex flex-col sm:flex-row items-center mb-4">
           <img
             src={bank?.icon}
             alt="Bank Logo"
@@ -35,11 +37,11 @@ export function ResultCard({ bank, branch }) {
           />
           <div className="ml-4 flex-grow">
             <h2 className="italic text-xl text-[#695958]">
-              {branch?.branch_name}
+              {highlightText(branch?.branch_name, searchTerm)}
             </h2>
             <div className="flex items-center text-gray-600">
               <span className="text-lg font-bold">
-                Branch Code: {branch?.branch_code}
+                Branch Code: {highlightText(branch?.branch_code, searchTerm)}
               </span>
               <span className="mx-2">•</span>
               <span
@@ -61,13 +63,13 @@ export function ResultCard({ bank, branch }) {
             >
               <path d="M12 2C8.14 2 5 5.14 5 9c0 4.69 7 13 7 13s7-8.31 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" />
             </svg>
-            <span className="ml-1 text-gray-500">{branch.branch_name}</span>
+            <span className="ml-1 text-gray-500">{highlightText(branch.branch_name, searchTerm)}</span>
           </div>
         </div>
-         <div className="border-t border-gray-200 pt-4">
-         <div className="flex justify-between items-start mb-4 flex-col sm:flex-row">
+        <div className="border-t border-gray-200 pt-4">
+          <div className="flex justify-between items-start mb-4 flex-col sm:flex-row">
             <div>
-              <p className="font-semibold text-[#695958]">{bank.bank_name}</p>
+              <p className="font-semibold text-[#695958]">{highlightText(bank.bank_name, searchTerm)}</p>
               <span className="text-gray-600">Bank Code: {bank.bank_code}</span>
             </div>
             <div className="text-left sm:text-right mt-1.5 sm:mt-0">
@@ -129,8 +131,8 @@ export function ResultCard({ bank, branch }) {
                 Closed - Sundays and Public Holidays
               </span>
             </div>
-          </div> 
-        </div> 
+          </div>
+        </div>
       </div>
     </div>
   );
