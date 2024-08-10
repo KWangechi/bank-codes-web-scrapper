@@ -21,7 +21,7 @@ function App() {
     searchTerm,
     setLoading,
     totalResults,
-    setNewFilteredBanks,
+    setNewFilteredBanks
   );
   rowsPerPage.current = 30;
 
@@ -53,16 +53,18 @@ function App() {
                 branch={branch}
                 searchTerm={searchTerm}
               />
-            )),
+            ))
           )
         )}
       </div>
-      <div>
-        <Pagination
-          rowsPerPage={rowsPerPage}
-          totalResultsCount={totalResults.current}
-        />
-      </div>
+      {totalResults.current ? (
+        <div>
+          <Pagination
+            rowsPerPage={rowsPerPage}
+            totalResultsCount={totalResults.current}
+          />
+        </div>
+      ) : null}
     </div>
   );
 }

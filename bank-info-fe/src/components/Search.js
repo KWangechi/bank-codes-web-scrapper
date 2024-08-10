@@ -21,7 +21,7 @@ function Search({ searchTerm, setSearchTerm }) {
           Name and Location.
         </h4>
         <div className="mt-6 flex justify-center">
-          <div className="relative w-2/3 md:w-1/2 items-center w-full sm:w-auto mx-[5%]">
+          <div className="relative md:w-1/2 items-center w-full sm:w-auto mx-[5%]">
             <div className="absolute right-0 inset-y-0 flex items-center pr-3">
               {searchTerm ? (
                 <button onClick={onClearSearch}>

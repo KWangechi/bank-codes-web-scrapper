@@ -4867,6 +4867,7 @@
   {
     "id": 28,
     "bank_name": "I&M BANK (KENYA) LTD",
+    "aliases": ["IM"],
     "bank_code": "57",
     "branches": [
       {

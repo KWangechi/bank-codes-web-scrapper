@@ -10,6 +10,7 @@ export default function Pagination({ rowsPerPage, totalResultsCount }) {
   // const rowsPerPage = useRef();
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = useRef(0);
+  const buttonIsDisabled = useRef(false);
 
   // rowsPerPage.current = 30;
   totalPages.current = Math.ceil(totalResultsCount / rowsPerPage.current);
@@ -18,20 +19,23 @@ export default function Pagination({ rowsPerPage, totalResultsCount }) {
     if (currentPage >= 1) {
       setCurrentPage(currentPage - 1);
     }
-
-    console.log(currentPage);
+    buttonIsDisabled.current = true;
   }
 
   /**
    * Navigate to the next Page by going to the next route
    */
   function toNextPage() {
-    setCurrentPage(currentPage + 1);
+    // console.log(currentPage);
+
+    if (currentPage >= 1 && currentPage < totalPages.current) {
+      setCurrentPage(currentPage + 1);
+    }
+    buttonIsDisabled.current = true;
   }
 
   // iterate through the totalPages and display the current page on a button
   const pageButtons = [];
-  // const truncatedButtons = [];
 
   for (let i = 1; i <= totalPages.current; i++) {
     const minLength = 3;
@@ -77,7 +81,7 @@ export default function Pagination({ rowsPerPage, totalResultsCount }) {
           ...
         </button>
       );
-      i = totalPages.current - minLength - 1; // Skip to near end page
+      i = totalPages.current - minLength - 1;
     }
   }
 
@@ -97,8 +101,13 @@ export default function Pagination({ rowsPerPage, totalResultsCount }) {
         <div>
           <p className="text-sm text-gray-700">
             Showing <span className="font-medium">1</span> to{" "}
-            <span className="font-medium">{rowsPerPage.current}</span> of{" "}
-            <span className="font-medium">{totalResultsCount}</span> results
+            <span className="font-medium">
+              {totalResultsCount > rowsPerPage.current
+                ? rowsPerPage.current
+                : totalResultsCount}
+            </span>{" "}
+            of <span className="font-medium">{totalResultsCount}</span>{" "}
+            result(s)
           </p>
         </div>
         <div>
@@ -122,7 +131,7 @@ export default function Pagination({ rowsPerPage, totalResultsCount }) {
             <button
               onClick={toNextPage}
               className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-              disabled={currentPage === totalPages}
+              disabled={currentPage === totalPages.current}
             >
               <span className="sr-only">Next</span>
               <ChevronRightIcon aria-hidden="true" className="h-5 w-5" />
