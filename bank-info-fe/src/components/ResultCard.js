@@ -26,8 +26,18 @@ export function ResultCard({ bank, branch, searchTerm }) {
     : "Closed";
   };
 
+
+// This helps: When user clicks the div, the bank code is automatically copied to the clipboard
+const CopyToClipboard = (branchCode) => {
+  navigator.clipboard.writeText(branchCode).then(() => {
+    console.log("Branch code copied to clipboard");
+  }).catch((err) => {
+    console.log(`Error, failed to copy to clipboard: ${err}`)
+  })
+}
+
   return (
-    <div className="grow shrink mt-12 mb-2 w-auto md:w-11/12 mx-auto">
+    <div className="grow shrink mt-12 mb-2 w-auto md:w-11/12 mx-auto" onClick={() => CopyToClipboard(branch?.branch_code)}>
       <div className="grow rounded-lg shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 ">
         <div className="flex flex-col sm:flex-row items-center mb-4">
           <img
