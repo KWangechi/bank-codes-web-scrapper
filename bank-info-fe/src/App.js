@@ -7,6 +7,8 @@ import SkeletonCard from "./components/SkeletonCard";
 import banks from "./banks_info.json";
 import { ResultCard } from "./components/ResultCard";
 import Pagination from "./components/Pagination";
+import Header from "components/Header";
+import Footer from "components/Footer";
 
 function App() {
   const rowsPerPage = useRef(0);
@@ -27,6 +29,7 @@ function App() {
 
   return (
     <div>
+      <Header></Header>
       <Search searchTerm={search} setSearchTerm={setSearch} />
       <div className="flex justify-center mt-6 h-full">
         {loading ? null : (
@@ -65,6 +68,10 @@ function App() {
           />
         </div>
       ) : null}
+
+      <div>
+        <Footer></Footer>
+      </div>
     </div>
   );
 }
