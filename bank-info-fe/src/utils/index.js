@@ -1,1 +1,1 @@
-export { default as highlightText } from 'utils/highlightText';
+export { default as highlightText } from 'utils/highlightText.js';

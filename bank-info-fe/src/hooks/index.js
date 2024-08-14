@@ -1,2 +1,2 @@
-export { default as useDebounce } from 'hooks/useDebounce';
-export { default as useFilteredBanks } from 'hooks/useFilteredBanks';
+export { default as useDebounce } from 'hooks/useDebounce.js';
+export { default as useFilteredBanks } from 'hooks/useFilteredBanks.js';
