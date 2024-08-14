@@ -51,8 +51,8 @@ export default function Pagination({ rowsPerPage, totalResultsCount }) {
         <button
           key={i}
           className={`relative z-10 inline-flex items-center px-4 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 ${
-            currentPage === i ? "bg-[#B6C8A9]" : "hover:bg-gray-50"
-          } hover:text-white transition duration-150 ease-in-out`}
+            currentPage === i ? "bg-[#B6C8A9]" : ""
+          } transition duration-150 ease-in-out`}
           onClick={() => setCurrentPage(i)}
         >
           {i}
