@@ -20,28 +20,35 @@ function useFilteredBanks(
     if (!searchTerm) {
       return banks;
     }
-    const search = searchTerm.toLowerCase();
+    const searchWords = searchTerm.toLowerCase().split(" ");
+
+    function matchesSearch(text, strictEquality = false) {
+      const matchFunc = strictEquality ? "every" : "some";
+      return searchWords[matchFunc](function (word) {
+        return text?.toLowerCase().includes(word);
+      });
+    }
 
     function matchedAlias(bank) {
       return bank?.aliases?.some(function (alias) {
-        return alias?.toLowerCase().includes(search);
+        return matchesSearch(alias, true);
       });
     }
 
     function matchedBank(bank) {
-      return bank?.bank_name?.toLowerCase().includes(search);
+      return matchesSearch(bank?.bank_name, true);
     }
 
     const filtered = banks.filter(function (bank) {
       const matchedBranch = bank?.branches?.some(function (branch) {
-        return branch?.branch_name?.toLowerCase().includes(search);
+        return matchesSearch(branch?.branch_name);
       });
       return matchedBank(bank) || matchedAlias(bank) || matchedBranch;
     });
 
     const formatted = filtered.map(function (bank) {
       let branches = bank?.branches?.filter(function (branch) {
-        return branch?.branch_name?.toLowerCase().includes(search);
+        return matchesSearch(branch?.branch_name);
       });
       if (matchedBank(bank) || matchedAlias(bank)) {
         branches = bank.branches;

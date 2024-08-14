@@ -10,16 +10,21 @@ function highlightText(text, highlight) {
     return text;
   }
 
-  const parts = text.split(new RegExp(`(${highlight})`, "gi"));
-
+  const words = highlight.split(" ");
+  const regex = new RegExp(`(${words.join("|")})`, "gi");
+  const parts = text.split(regex);
   const result = parts.map(function (part, index) {
-    return part.toLowerCase() === highlight.toLowerCase() ? (
-      <span key={index} className="bg-yellow-300">
-        {part}
-      </span>
-    ) : (
-      part
-    );
+    const match = words.some(function (word) {
+      return part.toLowerCase() === word.toLowerCase();
+    });
+    if (match) {
+      return (
+        <span key={index} className="bg-yellow-300">
+          {part}
+        </span>
+      );
+    }
+    return part;
   });
 
   return result;
