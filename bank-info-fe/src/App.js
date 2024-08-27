@@ -9,6 +9,7 @@ import { ResultCard } from "./components/ResultCard";
 import Pagination from "./components/Pagination";
 import Header from "components/Header";
 import Footer from "components/Footer";
+import { Link } from "react-router-dom";
 
 function App() {
   const rowsPerPage = useRef(0);
@@ -30,6 +31,10 @@ function App() {
   return (
     <div>
       <Header></Header>
+      {/* <div>
+        <Link to={`test`}></Link>
+        View test page
+      </div> */}
       <Search searchTerm={search} setSearchTerm={setSearch} />
       <div className="flex justify-center mt-6 h-full">
         {loading ? null : (
