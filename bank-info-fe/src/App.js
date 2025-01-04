@@ -14,7 +14,7 @@ function App() {
   const rowsPerPage = useRef(0);
   const totalResults = useRef(0);
   const [search, setSearch] = useState("");
-  const searchTerm = useDebounce(search, 10);
+  const searchTerm = useDebounce(search, 5);
   const [loading, setLoading] = useState(true);
   const [newFilteredBanks, setNewFilteredBanks] = useState([]);
 
@@ -28,10 +28,10 @@ function App() {
   rowsPerPage.current = 30;
 
   return (
-    <div>
+    <div className="min-h-screen h-full w-full bg-slate-200">
       <Header></Header>
       <Search searchTerm={search} setSearchTerm={setSearch} />
-      <div className="flex justify-center mt-6 h-full">
+      <div className="flex justify-center mt-6 h-full ">
         {loading ? null : (
           <span className="font-semibold text-xl italic text-[#695958]">
             {totalResults.current > 0 ? (
@@ -44,7 +44,7 @@ function App() {
           </span>
         )}
       </div>
-      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 sm:grid-cols-1">
+      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 sm:grid-cols-1 ">
         {loading ? (
           <SkeletonCard />
         ) : (
