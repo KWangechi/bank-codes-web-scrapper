@@ -90,7 +90,7 @@ export function ResultCard({ bank, branch, searchTerm }) {
                 Bank Code:  {bank.bank_code}
               </p> */}
               <Snippet size="sm" className="w-full" symbol="">
-                <p className="font-semibold">Bank Code: {bank.bank_code}</p>{" "}
+                <p className="font-semibold">Bank Code {bank.bank_code}</p>{" "}
               </Snippet>
             </div>
 

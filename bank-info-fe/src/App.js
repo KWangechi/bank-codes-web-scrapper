@@ -44,7 +44,7 @@ function App() {
         )}
       </div>
 
-      <div className="min-h-screen h-full w-full  my-4">
+      <div className="min-h-screen h-[70vh] overflow-y-auto max-w-full w-[98%] mx-auto  my-4">
         <div className="grid md:grid-cols-3 gap-6 ms-4 me-4 sm:grid-cols-1">
           {loading ? (
             <SkeletonCard />
