@@ -31,35 +31,38 @@ function App() {
     <div className="min-h-screen h-full w-full bg-slate-200">
       <Header></Header>
       <Search searchTerm={search} setSearchTerm={setSearch} />
-      <div className="flex justify-center mt-6 h-full ">
-        {loading ? null : (
-          <span className="font-semibold text-xl italic text-[#695958]">
-            {totalResults.current > 0 ? (
-              `${totalResults.current} Results Found`
-            ) : !loading ? (
-              <NoResultCard query={search} />
-            ) : (
-              ""
-            )}
-          </span>
-        )}
-      </div>
-      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 sm:grid-cols-1 ">
-        {loading ? (
-          <SkeletonCard />
+
+      <div className="flex justify-center mt-4 h-full ">
+        {!loading && totalResults.current > 0 ? (
+          <>
+            <span className="font-semibold text-xl  text-[#212121]">
+              [{totalResults.current}] Results Found
+            </span>
+          </>
         ) : (
-          newFilteredBanks.map((bank) =>
-            bank.branches.map((branch) => (
-              <ResultCard
-                key={`${bank.bank_code}-${branch.branch_code}`}
-                bank={bank}
-                branch={branch}
-                searchTerm={searchTerm}
-              />
-            ))
-          )
+          <NoResultCard query={search} />
         )}
       </div>
+
+      <div className="min-h-screen h-full w-full  my-4">
+        <div className="grid md:grid-cols-3 gap-6 ms-4 me-4 sm:grid-cols-1">
+          {loading ? (
+            <SkeletonCard />
+          ) : (
+            newFilteredBanks.map((bank) =>
+              bank.branches.map((branch) => (
+                <ResultCard
+                  key={`${bank.bank_code}-${branch.branch_code}`}
+                  bank={bank}
+                  branch={branch}
+                  searchTerm={searchTerm}
+                />
+              ))
+            )
+          )}
+        </div>
+      </div>
+
       {totalResults.current ? (
         <div>
           <Pagination
@@ -69,9 +72,7 @@ function App() {
         </div>
       ) : null}
 
-      <div>
-        <Footer></Footer>
-      </div>
+      <Footer />
     </div>
   );
 }

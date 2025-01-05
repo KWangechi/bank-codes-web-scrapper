@@ -3,7 +3,7 @@ import React from "react";
 
 function Search({ searchTerm, setSearchTerm }) {
   return (
-    <div className="    my-4 py-4">
+    <div className="my-4 ">
       <p className="font-bold text-5xl text-center text-slate-700 ">
         Kenya Bank Code Search
       </p>
