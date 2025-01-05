@@ -1,24 +1,16 @@
-export function NoResultCard({ query}) {
+export function NoResultCard({ query }) {
   return (
-    <section className="mx-auto text-center h-full">
-      <div className="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12">
-      <svg
-          className="mx-auto mb-4 w-10 h-10 text-gray-400"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-        >
-          <path
-            fill="currentColor"
-            d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 416c-92.635 0-168-75.365-168-168 0-32.11 9.017-62.075 24.682-87.433l231.75 231.751C318.075 414.983 288.11 424 256 424zm143.318-56.567L167.567 167.682C193.925 152.017 223.89 143 256 143c92.635 0 168 75.365 168 168 0 32.11-9.017 62.075-24.682 87.433z"
-          />
-        </svg>
-        <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-500 lg:mb-6 md:text-5xl xl:text-6xl">
+    <div className="mx-auto text-center h-full bg-slate-300 rounded-lg my-4">
+      <div className="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-10 lg:px-12">
+        <i className="fa-solid fa-database text-4xl text-slate-500 mb-2"></i>
+        <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-500 lg:mb-6 md:text-3xl ">
           No Results
         </h1>
-        <p className="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
-          No Results were found with the search query <span className="font-bold italic">{query}</span>
+        <p className="font-light text-gray-500 md:text-lg xl:text-sm dark:text-gray-400">
+          No results were found with the search query :{" "}
+          <b className="font-semibold underline underline-offset "> {query} </b>
         </p>
       </div>
-    </section>
+    </div>
   );
 }
