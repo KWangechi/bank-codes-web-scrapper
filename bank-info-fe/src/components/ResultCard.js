@@ -1,5 +1,4 @@
 import {
-  Alert,
   Card,
   CardBody,
   CardFooter,
@@ -15,7 +14,6 @@ import {
   formattedCurrentDateTime,
 } from "../utils/dateUtils";
 import { highlightText } from "utils/";
-import { useState } from "react";
 
 export function ResultCard({ bank, branch, searchTerm }) {
   const startingTimeEveryday = "8:00am";
