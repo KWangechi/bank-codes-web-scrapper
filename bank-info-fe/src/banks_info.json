@@ -9,7 +9,7 @@
       "phone2": "0732187000",
       "email": "contactcentre@kcbgroup.com"
     },
-
+    "headquarters": "UpperHill, Nairobi",
     "branches": [
       {
         "branch_code": "340",
@@ -884,6 +884,7 @@
       "phone2": "020 243 7731",
       "email": ""
     },
+    "headquarters": "48 Westlands Rd, Nairobi",
     "branches": [
       {
         "branch_code": "000",
@@ -1049,6 +1050,7 @@
     "bank_name": "Absa Bank Kenya Plc",
     "aliases": ["Barclays", "Absa"],
     "bank_code": "03",
+    "headquarters": "Waiyaki Way, Nairobi",
     "branches": [
       {
         "branch_code": "140",
@@ -1567,6 +1569,7 @@
     "bank_name": "Bank of Baroda(Kenya Ltd)",
     "aliases": ["BOB"],
     "bank_code": "06",
+    "headquarters": "Baroda House, Koinange Street, Nairobi",
     "branches": [
       {
         "branch_code": "017",
@@ -1632,6 +1635,7 @@
     "bank_name": "NCBA Bank Kenya Plc",
     "aliases": ["NCBA"],
     "bank_code": "07",
+    "headquarters": "CBA Building, Nairobi",
     "branches": [
       {
         "branch_code": "209",
@@ -2057,6 +2061,7 @@
     "bank_name": "Central Bank Of Kenya",
     "aliases": ["CBK"],
     "bank_code": "09",
+    "headquarters": "CBA Building, Nairobi",
     "branches": [
       {
         "branch_code": "008",
@@ -2094,6 +2099,7 @@
     "bank_name": "Prime Bank Limited",
     "aliases": ["Prime"],
     "bank_code": "10",
+    "headquarters": "Riverside Drive, Nairobi",
     "branches": [
       {
         "branch_code": "021",
@@ -2207,6 +2213,7 @@
     "bank_name": "Co-operative Bank of Kenya Limited",
     "aliases": ["Coop", "Cooperative"],
     "bank_code": "11",
+    "headquarters": "Co-operative House, Haile Selassie Avenue, Nairobi",
     "branches": [
       {
         "branch_code": "170",
@@ -2916,6 +2923,7 @@
     "bank_name": "National Bank Of Kenya",
     "aliases": ["NBK"],
     "bank_code": "12",
+    "headquarters": "Harambee Avenue, Nairobi",
     "branches": [
       {
         "branch_code": "000",
@@ -3536,6 +3544,7 @@
     "id": 11,
     "bank_name": "M-Oriental Bank Limited",
     "bank_code": "14",
+    "headquarters": "Finance House, Koinange Street, Nairobi",
     "branches": [
       {
         "branch_code": "011",
@@ -3576,6 +3585,7 @@
     "id": 12,
     "bank_name": "CITI BANK N A",
     "bank_code": "16",
+    "headquarters": "Citi Bank House, Upperhill Nairobi",
     "branches": [
       {
         "branch_code": "000",
@@ -3598,9 +3608,10 @@
   },
   {
     "id": 13,
-
     "bank_name": "Habib Bank AG Zurich",
     "bank_code": "17",
+    "aliases": ["HBZ"],
+    "headquarters": "Habib House, Koinange Street, Nairobi",
     "branches": [
       {
         "branch_code": "000",
@@ -3630,6 +3641,7 @@
     "bank_name": "Middle East Bank Kenya Limited",
     "aliases": ["MEB"],
     "bank_code": "18",
+    "headquarters": "Jakaya Kikwete Rd, Nairobi",
     "branches": [
       {
         "branch_code": "000",
@@ -3663,6 +3675,7 @@
     "bank_name": "Bank of Africa Kenya Limited",
     "aliases": ["BOK"],
     "bank_code": "19",
+    "headquarters": "BOA House, Karuna Cl, Nairobi",
     "branches": [
       {
         "branch_code": "043",
@@ -3831,6 +3844,7 @@
     "id": 16,
     "bank_name": "Consolidated Bank of Kenya Ltd",
     "bank_code": "23",
+    "headquarters": "Consolidated Bank House, Koinange Street, Nairobi",
     "branches": [
       {
         "branch_code": "000",
@@ -3915,6 +3929,7 @@
     "id": 17,
     "bank_name": "Credit Bank PLC",
     "bank_code": "25",
+    "headquarters": "14th Floor, One Africa Place, Waiyaki Way",
     "branches": [
       {
         "branch_code": "016",
@@ -4003,6 +4018,7 @@
     "id": 18,
     "bank_name": "Access Bank Kenya PLC",
     "bank_code": "26",
+    "headquarters": "11th Floor, The Address, Nairobi",
     "branches": [
       {
         "branch_code": "020",
@@ -4123,6 +4139,7 @@
     "id": 19,
     "bank_name": "Stanbic Bank Plc",
     "bank_code": "31",
+    "headquarters": "Stanbic Bank Centre, Westlands Road, Chiromo, Nairobi",
     "branches": [
       {
         "branch_code": "030",
@@ -4264,6 +4281,7 @@
     "bank_name": "African Banking Corporation Limited",
     "aliases": ["ABC"],
     "bank_code": "35",
+    "headquarters": "ABC Bank House, Woodvale Grove, Westlands, Nairobi",
     "branches": [
       {
         "branch_code": "011",
@@ -4337,6 +4355,7 @@
     "bank_name": "ECO Bank Kenya LTD",
     "aliases": ["Ecobank"],
     "bank_code": "43",
+    "headquarters": "Fortis Office Park, Muthangari Drive, Nairobi",
     "branches": [
       {
         "branch_code": "030",
@@ -4473,6 +4492,7 @@
     "id": 22,
     "bank_name": "Spire Bank",
     "bank_code": "49",
+    "headquarters": "Mwalimu Towers, Hill Lane, Upper Hill",
     "branches": [
       {
         "branch_code": "017",
@@ -4541,6 +4561,7 @@
     "id": 23,
     "bank_name": "Paramount Bank Limited",
     "bank_code": "50",
+    "headquarters": "Sound Plaza - 4th Floor, Woodvale Grove, Westlands, Nairobi",
     "branches": [
       {
         "branch_code": "001",
@@ -4581,6 +4602,7 @@
     "id": 24,
     "bank_name": "Kingdom Bank Limited",
     "bank_code": "51",
+    "headquarters": "Argwings Kodhek Road, Kilimani, Nairobi",
     "branches": [
       {
         "branch_code": "409",
@@ -4714,6 +4736,7 @@
     "bank_name": "Guaranty Trust Bank ( Kenya) Ltd",
     "aliases": ["GTB"],
     "bank_code": "53",
+    "headquarters": "Skypark, Parklands Road, Nairobi",
     "branches": [
       {
         "branch_code": "000",
@@ -4791,6 +4814,7 @@
     "bank_name": "Victoria Commercial Bank",
     "aliases": ["VCB"],
     "bank_code": "54",
+    "headquarters": " Victoria Towers Mezzanine Floor, Kilimanjaro Avenue, Upper Hill, Nairobi",
     "branches": [
       {
         "branch_code": "004",
@@ -4820,6 +4844,7 @@
     "bank_name": "Guardian Bank Limited",
     "aliases": ["GBL"],
     "bank_code": "55",
+    "headquarters": "Guardian Centre, Biashara Street, Nairobi",
     "branches": [
       {
         "branch_code": "001",
@@ -4869,6 +4894,7 @@
     "bank_name": "I&M BANK (KENYA) LTD",
     "aliases": ["IM"],
     "bank_code": "57",
+    "headquarters": "1st Parklands Avenue, Nairobi",
     "branches": [
       {
         "branch_code": "036",
@@ -5054,6 +5080,7 @@
     "bank_name": "Development Bank of Kenya Limited",
     "aliases": ["DBK"],
     "bank_code": "59",
+    "headquarters": "16th Floor, Finance House; Loita Street, Nairobi",
     "branches": [
       {
         "branch_code": "000",
@@ -5075,6 +5102,7 @@
     "bank_name": "State Bank of Mauritius Kenya",
     "aliases": ["SBM"],
     "bank_code": "60",
+    "headquarters": "Riverside Mews, Riverside Drive, Nairobi",
     "branches": [
       {
         "branch_code": "078",
@@ -5404,6 +5432,7 @@
     "bank_name": "Housing Finance Bank",
     "aliases": ["HFC"],
     "bank_code": "61",
+    "headquarters": "Rehani House, Koinange Street, Nairobi",
     "branches": [
       {
         "branch_code": "024",
@@ -5517,6 +5546,7 @@
     "bank_name": "Kenya Post Office Savings Bank",
     "aliases": ["Posta", "KPOSB"],
     "bank_code": "62",
+    "headquarters": "Postbank House, Banda Street, Nairobi",
     "branches": [
       {
         "branch_code": "066",
@@ -5918,6 +5948,7 @@
     "bank_name": "Diamond Trust Bank Limited",
     "aliases": ["DTB"],
     "bank_code": "63",
+    "headquarters": "Diamond Trust Bank Centre, Mombasa Road, Nairobi",
     "branches": [
       {
         "branch_code": "064",
@@ -6239,6 +6270,7 @@
     "bank_name": "Mayfair CIB Bank",
     "aliases": ["MCB"],
     "bank_code": "65",
+    "headquarters": "Kamhouse, Mwanzi Road, Westlands, Nairobi",
     "branches": [
       {
         "branch_code": "005",
@@ -6275,6 +6307,7 @@
     "id": 35,
     "bank_name": "Sidian Bank Limited",
     "bank_code": "66",
+    "headquarters": "Ring Road Kilimani, Wood Ave, Nairobi",
     "branches": [
       {
         "branch_code": "051",
@@ -6463,6 +6496,7 @@
     "id": 36,
     "bank_name": "Equity Bank Limited",
     "bank_code": "68",
+    "headquarters": "Britam Towers, Hospital Rd, Nairobi",
     "branches": [
       {
         "branch_code": "175",
@@ -7251,6 +7285,7 @@
     "id": 37,
     "bank_name": "Family Bank Ltd",
     "bank_code": "70",
+    "headquarters": "Family Bank Towers, Muindi MBingu Street, Nairobi",
     "branches": [
       {
         "branch_code": "030",
@@ -7647,6 +7682,7 @@
     "id": 38,
     "bank_name": "Gulf African Bank Ltd",
     "bank_code": "72",
+    "headquarters": "Kilimanjaro Rd, Nairobi",
     "branches": [
       {
         "branch_code": "019",
@@ -7731,6 +7767,7 @@
     "id": 39,
     "bank_name": "Premier Bank Kenya Limited",
     "bank_code": "74",
+    "headquarters": "Nginyo Towers, Koinange Street, Nairobi",
     "branches": [
       {
         "branch_code": "001",
@@ -7823,6 +7860,7 @@
     "id": 40,
     "bank_name": "DIB Bank Kenya Limited",
     "bank_code": "75",
+    "headquarters": "Lower Hill Rd, Nairobi",
     "branches": [
       {
         "branch_code": "004",
@@ -7859,6 +7897,7 @@
     "id": 41,
     "bank_name": "UBA Kenya Bank Ltd",
     "bank_code": "76",
+    "headquarters": "Imperial Court Westlands Ground Floor, Nairobi",
     "branches": [
       {
         "branch_code": "005",
@@ -7892,6 +7931,7 @@
     "bank_name": "Kenya Women Microfinance Bank",
     "aliases": ["KWMB", "KWFT"],
     "bank_code": "78",
+    "headquarters": "KWFT Centre, Kiambere – Masaba Road Junction, Upper hill, Nairobi",
     "branches": [
       {
         "branch_code": "001",
@@ -8036,6 +8076,7 @@
     "id": 43,
     "bank_name": "Faulu Microfinance Bank Ltd",
     "bank_code": "79",
+    "headquarters": "Ngong Lane, off Ngong Road, Nairobi",
     "branches": [
       {
         "branch_code": "003",
@@ -8280,6 +8321,7 @@
     "id": 44,
     "bank_name": "Caritas Microfinance Bank Ltd",
     "bank_code": "80",
+    "headquarters": "Cardinal Otunga Plaza, 5th Floor along Cardinal Otunga Street",
     "branches": [
       {
         "branch_code": "001",

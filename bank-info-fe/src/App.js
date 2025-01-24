@@ -9,7 +9,7 @@ import { ResultCard } from "./components/ResultCard";
 import Pagination from "./components/Pagination";
 import Header from "components/Header";
 import Footer from "components/Footer";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function App() {
   const rowsPerPage = useRef(0);
@@ -18,23 +18,24 @@ function App() {
   const searchTerm = useDebounce(search, 10);
   const [loading, setLoading] = useState(true);
   const [newFilteredBanks, setNewFilteredBanks] = useState([]);
+  const [pagination, setPagination] = useState({});
+  const [currentPage] = useState(1);
 
   useFilteredBanks(
     banks,
     searchTerm,
     setLoading,
     totalResults,
-    setNewFilteredBanks
+    setNewFilteredBanks,
+    setPagination,
+    pagination,
+    currentPage
   );
-  rowsPerPage.current = 30;
+  rowsPerPage.current = pagination?.rowsPerPage;
 
   return (
     <div>
       <Header></Header>
-      {/* <div>
-        <Link to={`test`}></Link>
-        View test page
-      </div> */}
       <Search searchTerm={search} setSearchTerm={setSearch} />
       <div className="flex justify-center mt-6 h-full">
         {loading ? null : (
@@ -70,6 +71,7 @@ function App() {
           <Pagination
             rowsPerPage={rowsPerPage}
             totalResultsCount={totalResults.current}
+            setPagination={setPagination}
           />
         </div>
       ) : null}

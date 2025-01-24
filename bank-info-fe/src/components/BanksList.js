@@ -1,49 +1,74 @@
-// this component will return all the banks and their branches
-// Purpose is separation of concerns, have this component do things related to the Array<Banks>
+import React, { useRef, useState } from "react";
 
+// import Search from "components/Search";
+import { useDebounce, useFilteredBanks } from "hooks/";
 import { NoResultCard } from "./NoResultCard";
+import SkeletonCard from "./SkeletonCard";
+import banks from "./../banks_info.json";
 import { ResultCard } from "./ResultCard";
+import Pagination from "./Pagination";
+// import Header from "components/Header";
+// import Footer from "components/Footer";
+// import { Link } from "react-router-dom";
 
-export function BanksList({ banksList }) {
-    // console.log(`${banksList}`);
-  // if there is no searchTerm, return all the banks
-  // else return only the filtered banks
+function BanksList() {
+  const rowsPerPage = useRef(0);
+  const totalResults = useRef(0);
+  const [search, setSearch] = useState("");
+  const searchTerm = useDebounce(search, 10);
+  const [loading, setLoading] = useState(true);
+  const [newFilteredBanks, setNewFilteredBanks] = useState([]);
 
-  // if there is no data, return a NoResultCard component
-
-  // add a search bar component to filter banks by name
-
-  //   TODO:  add a pagination component to display the results in smaller chunks
-
-  // TODO: add a sort button to sort the results by bank name or branch name
-
-  // TODO: add a filter button to filter the results by bank type or branch type
-
-  // TODO: add a map button to display the results on a map (using a map library like Google Maps or Leaflet)
-
-  // TODO: add a bookmark button to save the results for later use
-
-  // TODO: add a share button to share the results on social media
-
-  // TODO: add a print button to print the results
-
-  // TODO: add a download button to download the results as a CSV file
+  useFilteredBanks(
+    banks,
+    searchTerm,
+    setLoading,
+    totalResults,
+    setNewFilteredBanks
+  );
+  rowsPerPage.current = 30;
 
   return (
     <>
-      {banksList.length > 0 ? (
-        banksList.map((bank) => (
-            bank?.branches.map((branch) => (
+      <div className="flex justify-center mt-6 h-full">
+        {loading ? null : (
+          <span className="font-semibold text-xl italic text-[#695958]">
+            {totalResults.current > 0 ? (
+              `${totalResults.current} Results Found`
+            ) : !loading ? (
+              <NoResultCard query={search} />
+            ) : (
+              ""
+            )}
+          </span>
+        )}
+      </div>
+      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 sm:grid-cols-1">
+        {loading ? (
+          <SkeletonCard />
+        ) : (
+          newFilteredBanks.map((bank) =>
+            bank.branches.map((branch) => (
               <ResultCard
-                key={`${bank.bank_code} - ${branch.branch_code} `}
+                key={`${bank.bank_code}-${branch.branch_code}`}
                 bank={bank}
                 branch={branch}
+                searchTerm={searchTerm}
               />
             ))
-        ))
-      ) : (
-        <NoResultCard/>
-      )}
+          )
+        )}
+      </div>
+      {totalResults.current ? (
+        <div>
+          <Pagination
+            rowsPerPage={rowsPerPage}
+            totalResultsCount={totalResults.current}
+          />
+        </div>
+      ) : null}
     </>
   );
 }
+
+export default BanksList;

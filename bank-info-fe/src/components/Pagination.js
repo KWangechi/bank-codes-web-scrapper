@@ -1,19 +1,35 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { useEffect } from "react";
 import { useRef, useState } from "react";
+// import { Navigate, useNavigation, useParams } from "react-router-dom";
 
 /**
  * Navigate to the previous Page and go to the next route
  * @param {*} element
  */
 
-export default function Pagination({ rowsPerPage, totalResultsCount }) {
+export default function Pagination({
+  rowsPerPage,
+  totalResultsCount,
+  setPagination,
+}) {
   // const rowsPerPage = useRef();
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = useRef(0);
   const buttonIsDisabled = useRef(false);
 
-  // rowsPerPage.current = 30;
   totalPages.current = Math.ceil(totalResultsCount / rowsPerPage.current);
+
+  useEffect(() => {
+    const pagination = {
+      currentPage: currentPage,
+      rowsPerPage: 20,
+      totalElements: totalResultsCount,
+    };
+
+    setPagination(pagination);
+    console.log(pagination);
+  }, [currentPage, rowsPerPage, totalResultsCount, setPagination]);
 
   function toPreviousPage() {
     if (currentPage >= 1) {
@@ -26,10 +42,18 @@ export default function Pagination({ rowsPerPage, totalResultsCount }) {
    * Navigate to the next Page by going to the next route
    */
   function toNextPage() {
-    // console.log(currentPage);
+    // console.log(pagination);
 
     if (currentPage >= 1 && currentPage < totalPages.current) {
       setCurrentPage(currentPage + 1);
+      // console.log(currentPage);
+      const pagination = {
+        currentPage: currentPage + 1,
+        rowsPerPage: rowsPerPage.current,
+        totalElements: totalResultsCount,
+      };
+      setPagination(pagination);
+      console.log(pagination);
     }
     buttonIsDisabled.current = true;
   }
