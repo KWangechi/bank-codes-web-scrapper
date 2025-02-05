@@ -1,0 +1,64 @@
+"address": {
+          "latitude": -1.3116928869126196, 
+          "longitude": 36.77946383449724
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
+
+Branches to check 
+KCB Ngong
+KCB JKIA - Not sure if it's open or closed
+KCB Makutano - not sure if it's that location
+Two Rivers KCB- opening Hours
+KCB Diaspora May be closed
+KCB Kabartonjo has no operating hours
+KCB Kikim Branch - not found by Google Maps - or it's Kikima??
+From KCB Changamwe Branch upwards, round off location to 5 D.Ps
+KCB Changamwe opens on Sundays??
+KCB Syokimau - Monday and Tuesday Open from 9-3, Wednesday till 5pm
+KCB Emali has no hours. Using default
+KCB Mutomo is an ATM
+kcb Mariakani Has no Operating Hours
+KCB Mtito Andei - default working hours
+KCB Kengeleni Closes rather late 8am - 5am - check on this
+KCB Loandiani closes at 4am - weekdays I've put to 4 am, saturday, default
+KCB Mashariki May be closed
+KCB Kimathi Street - Google Says, "This place might be closed"
+KCB Haile Sellassie closes at 4am
+
+
+Caritas Branch Karen doesn't seem to exist
+Caritas Githurai Branch is missing - and no branch code yet
+Caritas Branch - Nyeri and Karuri have no opening or closing hours, so defaulted to the one for the headquarters
+
+Faulu Kariobangi closes very later: 4:00am
+Faulu Makutano doesn't seem to exist
+Faulu Maua was merged with Meru
+Faulu Homabay was closed down in 2023
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

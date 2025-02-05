@@ -13,323 +13,1124 @@
     "branches": [
       {
         "branch_code": "340",
-        "branch_name": "Karen Waterfront Platinum"
+        "branch_name": "Karen Waterfront Platinum",
+        "address": {
+          "latitude": -1.3288999382420836,
+          "longitude": 36.71468114417211
+        },
+        "operatingHours": {
+          "weekdays": "9:30am - 5:30pm",
+          "saturdays": "10:00am - 2:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "341",
-        "branch_name": "KCB Ngong Branch"
+        "branch_name": "KCB Ngong Branch",
+        "address": {
+          "latitude": -1.362452044094185,
+          "longitude": 36.655636312450966
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "325",
-        "branch_name": "Garden City"
+        "branch_name": "Garden City",
+        "address": {
+          "latitude": -1.2323641135514851,
+          "longitude": 36.87895536850021
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "326",
-        "branch_name": "JKIA"
+        "branch_name": "JKIA",
+        "address": {
+          "latitude": -1.3342710407322431,
+          "longitude": 36.919276842063475
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "327",
-        "branch_name": "Makutano"
+        "branch_name": "Makutano",
+        "address": {
+          "latitude": -0.7555754710696132,
+          "longitude": 37.2778960441773
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "330",
-        "branch_name": "KCB NextGen"
+        "branch_name": "KCB NextGen",
+        "address": {
+          "latitude": -1.323908553255593,
+          "longitude": 36.843615095487955,
+          "type": "mall"
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "331",
-        "branch_name": "KCB Mogotio"
+        "branch_name": "KCB Mogotio",
+        "address": {
+          "latitude": -0.01956193483896831,
+          "longitude": 35.96320661428955
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "329",
-        "branch_name": "Two Rivers"
+        "branch_name": "Two Rivers",
+        "address": {
+          "latitude": -1.2102437354372622,
+          "longitude": 36.79550477992549
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "332",
-        "branch_name": "KCB Upperhill Platinum"
+        "branch_name": "KCB Upperhill Platinum",
+        "address": {
+          "latitude": -1.3014417512541847,
+          "longitude": 36.812628080146126
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "337",
-        "branch_name": "KCB Kilimani Platinum"
+        "branch_name": "KCB Kilimani Platinum",
+        "address": {
+          "latitude": -1.2895424763258911,
+          "longitude": 36.79409575315866
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 6:00pm",
+          "saturdays": "8:30am - 6:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "339",
-        "branch_name": "KCB Utawala"
+        "branch_name": "KCB Utawala",
+        "address": {
+          "latitude": -1.2848881862019341,
+          "longitude": 36.95635713999074
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "302",
-        "branch_name": "Diaspora"
+        "branch_name": "Diaspora",
+        "address": {
+          "latitude": -1.285536520353482,
+          "longitude": 36.82550557012983
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "303",
-        "branch_name": "Kisii West"
+        "branch_name": "Kisii West",
+        "address": {
+          "latitude": -0.6624687963610315,
+          "longitude": 34.75626626664885
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "304",
-        "branch_name": "Mbita"
+        "branch_name": "Mbita",
+        "address": {
+          "latitude": -0.4240257289324845,
+          "longitude": 34.20859429548312
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 4:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "305",
-        "branch_name": "Sori"
+        "branch_name": "Sori",
+        "address": {
+          "latitude": -0.8421645732843895,
+          "longitude": 34.15754899548533
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "306",
-        "branch_name": "Hurlingham"
+        "branch_name": "Hurlingham",
+        "address": {
+          "latitude": -1.2931394766258675,
+          "longitude": 36.79162182432323
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "307",
-        "branch_name": "Kibera"
+        "branch_name": "Kibera",
+        "address": {
+          "latitude": -1.3101355520245455,
+          "longitude": 36.77402839548805
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "308",
-        "branch_name": "Thika Road Mall Branch"
+        "branch_name": "Thika Road Mall Branch",
+        "address": {
+          "latitude": -1.2193276122066745,
+          "longitude": 36.88875078014554
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 6:00pm",
+          "saturdays": "9:00am - 4:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "309",
-        "branch_name": "Kasarani Branch"
+        "branch_name": "Kasarani Branch",
+        "address": {
+          "latitude": -1.2189696498325184,
+          "longitude": 36.895396324322746
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "310",
-        "branch_name": "KCB Maasai Mara"
+        "branch_name": "KCB Maasai Mara",
+        "address": {
+          "latitude": -1.4408878960230487,
+          "longitude": 35.21531274067794
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "311",
-        "branch_name": "KCB Kabartonjo"
+        "branch_name": "KCB Kabartonjo",
+        "address": {
+          "latitude": 0.6288665534130348,
+          "longitude": 35.794475284658155
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "312",
-        "branch_name": "KCB Eldoret East"
+        "branch_name": "KCB Eldoret East",
+        "address": {
+          "latitude": 0.5170439702091787,
+          "longitude": 35.27522184334088
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "313",
-        "branch_name": "Kikim"
+        "branch_name": "Kikim",
+        "address": {
+          "latitude": -1.3116928869126196,
+          "longitude": 36.77946383449724
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "314",
-        "branch_name": "KCB JKUAT"
+        "branch_name": "KCB JKUAT",
+        "address": {
+          "latitude": -1.0998426199788514,
+          "longitude": 37.01498333966403
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "315",
-        "branch_name": "KCB Changamwe"
+        "branch_name": "KCB Changamwe",
+        "address": {
+          "latitude": -4.025772529134522,
+          "longitude": 39.625553683457184
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "8:30am - 4:00pm",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "316",
-        "branch_name": "KCB Makongeni"
+        "branch_name": "KCB Makongeni",
+        "address": {
+          "latitude": -1.0554588857036569,
+          "longitude": 37.111828412454685
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "317",
-        "branch_name": "KCB Syokimau"
+        "branch_name": "KCB Syokimau",
+        "address": {
+          "latitude": -1.3643285249068935,
+          "longitude": 36.91236164970822
+        },
+        "operatingHours": {
+          "weekdays": "9:00am - 5:00pm",
+          "saturdays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "318",
-        "branch_name": "KCB Moi Referral Hospital"
+        "branch_name": "KCB Moi Referral Hospital",
+        "address": {
+          "latitude": 0.5125756039306032,
+          "longitude": 35.27979770184823
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "319",
-        "branch_name": "KCB Kitale Advantage"
+        "branch_name": "KCB Kitale Advantage",
+        "address": {
+          "latitude": 1.0163580505432388,
+          "longitude": 35.00305859547756
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "320",
-        "branch_name": "KCB Lavington"
+        "branch_name": "KCB Lavington",
+        "address": {
+          "latitude": -1.2794155493256716,
+          "longitude": 36.769894955006976
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "322",
-        "branch_name": "KCB Riverside Advantage"
+        "branch_name": "KCB Riverside Advantage",
+        "address": {
+          "latitude": -1.2703119023972722,
+          "longitude": 36.800586279370584
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "323",
-        "branch_name": "KCB Gigiri Square"
+        "branch_name": "KCB Gigiri Square",
+        "address": {
+          "latitude": -1.2321597716546249,
+          "longitude": 36.81598317774133
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "324",
-        "branch_name": "Kayole"
+        "branch_name": "Kayole",
+        "address": {
+          "latitude": -1.28080822329229,
+          "longitude": 36.90534568014596
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "214",
-        "branch_name": "Gatundu"
+        "branch_name": "Gatundu",
+        "address": {
+          "latitude": -1.0113367198670435,
+          "longitude": 36.90226380897987
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "215",
-        "branch_name": "Emali"
+        "branch_name": "Emali",
+        "address": {
+          "latitude": -2.078001254093439,
+          "longitude": 37.47121929420075
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "216",
-        "branch_name": "Isiolo"
+        "branch_name": "Isiolo",
+        "address": {
+          "latitude": 0.34990104330398375,
+          "longitude": 37.58266948360351
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "217",
-        "branch_name": "KCB Flamingo"
+        "branch_name": "KCB Flamingo",
+        "address": {
+          "latitude": -0.2852925543501519,
+          "longitude": 36.06702264890084
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "218",
-        "branch_name": "Njoro"
+        "branch_name": "Njoro",
+        "address": {
+          "latitude": -0.3028302259669866,
+          "longitude": 36.08051094890106
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "219",
-        "branch_name": "Mutomo"
+        "branch_name": "Mutomo",
+        "address": {
+          "latitude": -1.8463671899826204,
+          "longitude": 38.20838008504872
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "220",
-        "branch_name": "Mariakani"
+        "branch_name": "Mariakani",
+        "address": {
+          "latitude": -3.863498997019586,
+          "longitude": 39.473791694365914
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "221",
-        "branch_name": "Mpeketoni"
+        "branch_name": "Mpeketoni",
+        "address": {
+          "latitude": -2.3880551853002583,
+          "longitude": 40.69822725261007
+        },
+        "operatingHours": {
+          "weekdays": "9:00am - 4:00pm",
+          "saturdays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "222",
-        "branch_name": "Mtitu Andei"
+        "branch_name": "Mtitu Andei",
+        "address": {
+          "latitude": -2.6917473174667323,
+          "longitude": 38.16377677000739
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "223",
-        "branch_name": "Mtwapa"
+        "branch_name": "Mtwapa",
+        "address": {
+          "latitude": -3.9425406443458013,
+          "longitude": 39.745254452623215
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "224",
-        "branch_name": "Taveta"
+        "branch_name": "Taveta",
+        "address": {
+          "latitude": -3.396110505093347,
+          "longitude": 37.67587363781101
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "225",
-        "branch_name": "Kengeleni"
+        "branch_name": "Kengeleni",
+        "address": {
+          "latitude": -4.039861080785911,
+          "longitude": 39.68144008913043
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 5:00am",
+          "saturdays": "8:30am - 2:00am",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "226",
-        "branch_name": "Garsen"
+        "branch_name": "Garsen",
+        "address": {
+          "latitude": -2.269932444692863,
+          "longitude": 40.10913632357181
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "227",
-        "branch_name": "Watamu"
+        "branch_name": "Watamu",
+        "address": {
+          "latitude": -3.3509784868031245,
+          "longitude": 40.0195316698079
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "228",
-        "branch_name": "Bondo"
+        "branch_name": "Bondo",
+        "address": {
+          "latitude": -0.10141729440084214,
+          "longitude": 34.27417049654416
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "229",
-        "branch_name": "Busia"
+        "branch_name": "Busia",
+        "address": {
+          "latitude": 0.46380341090151694,
+          "longitude": 34.10530097506596
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "230",
-        "branch_name": "Homa Bay"
+        "branch_name": "Homa Bay",
+        "address": {
+          "latitude": -0.5264725320864926,
+          "longitude": 34.4572891909886
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "231",
-        "branch_name": "Kapsowar"
+        "branch_name": "Kapsowar",
+        "address": {
+          "latitude": 0.9776036354134691,
+          "longitude": 35.56371364889624
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "232",
-        "branch_name": "Kehancha"
+        "branch_name": "Kehancha",
+        "address": {
+          "latitude": -1.1908635093205335,
+          "longitude": 34.62171291027301
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "233",
-        "branch_name": "Keroka"
+        "branch_name": "Keroka",
+        "address": {
+          "latitude": -0.7729378067370343,
+          "longitude": 34.94295019570447
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "234",
-        "branch_name": "Kilgoris"
+        "branch_name": "Kilgoris",
+        "address": {
+          "latitude": -1.0075872913236836,
+          "longitude": 34.88256242561385
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "235",
-        "branch_name": "Kimilili"
+        "branch_name": "Kimilili",
+        "address": {
+          "latitude": 0.7831143346752404,
+          "longitude": 34.720257555357776
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "236",
-        "branch_name": "Litein"
+        "branch_name": "Litein",
+        "address": {
+          "latitude": -0.36567551183242875,
+          "longitude": 35.28224866586308
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "237",
-        "branch_name": "Londiani Branch"
+        "branch_name": "Londiani Branch",
+        "address": {
+          "latitude": -0.1633207885519459,
+          "longitude": 35.59150313012768
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00am",
+          "saturdays": "8:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "238",
-        "branch_name": "Luanda"
+        "branch_name": "Luanda",
+        "address": {
+          "latitude": 0.02582160551358094,
+          "longitude": 34.58637852745711
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "239",
-        "branch_name": "Malaba"
+        "branch_name": "Malaba",
+        "address": {
+          "latitude": 0.6355471712563676,
+          "longitude": 34.274736657114914
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "240",
-        "branch_name": "Muhoroni"
+        "branch_name": "Muhoroni",
+        "address": {
+          "latitude": -0.15547776788898177,
+          "longitude": 35.19989289307771
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "241",
-        "branch_name": "Oyugis"
+        "branch_name": "Oyugis",
+        "address": {
+          "latitude": -0.5129126165739789,
+          "longitude": 34.734651994371546
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "242",
-        "branch_name": "Ugunja"
+        "branch_name": "Ugunja",
+        "address": {
+          "latitude": 0.1818302067326177,
+          "longitude": 34.295652139531846
+        },
+        "operatingHours": {
+          "weekdays": "9:00am - 3:00pm",
+          "saturdays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "243",
-        "branch_name": "United Mall"
+        "branch_name": "United Mall",
+        "address": {
+          "latitude": -0.09790283876916915,
+          "longitude": 34.7632180697868
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 4:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "244",
-        "branch_name": "Serem"
+        "branch_name": "Serem",
+        "address": {
+          "latitude": 0.07963094405634492,
+          "longitude": 34.8530481666454
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "245",
-        "branch_name": "Sondu"
+        "branch_name": "Sondu",
+        "address": {
+          "latitude": -0.3904891000347304,
+          "longitude": 35.013050495483085
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "246",
-        "branch_name": "Kisumu West"
+        "branch_name": "Kisumu West",
+        "address": {
+          "latitude": -0.09724986758683994,
+          "longitude": 34.75078835315258
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "247",
-        "branch_name": "Marigat"
+        "branch_name": "Marigat",
+        "address": {
+          "latitude": 0.47077446202561996,
+          "longitude": 35.98159216453259
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 4:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "248",
-        "branch_name": "Mois Bridge"
+        "branch_name": "Mois Bridge",
+        "address": {
+          "latitude": 0.8763087701633805,
+          "longitude": 35.12079874729283
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:30pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "249",
-        "branch_name": "Mashariki"
+        "branch_name": "Mashariki",
+        "address": {
+          "latitude": -1.309846043170912,
+          "longitude": 36.856322798965735
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "250",
-        "branch_name": "Naro Moro"
+        "branch_name": "Naro Moro",
+        "address": {
+          "latitude": -0.17299442344311813,
+          "longitude": 37.02203892492998
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "251",
-        "branch_name": "Kiriaini"
+        "branch_name": "Kiriaini",
+        "address": {
+          "latitude": -0.41686426793833947,
+          "longitude": 36.95096671593791
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "252",
-        "branch_name": "Egerton University"
+        "branch_name": "Egerton University",
+        "address": {
+          "latitude": -0.36985777100496176,
+          "longitude": 35.93188346664754
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "253",
-        "branch_name": "Maua"
+        "branch_name": "Maua",
+        "address": {
+          "latitude": 0.23198342765141808,
+          "longitude": 37.940657187859685
+        },
+        "operatingHours": {
+          "weekdays": "9:00am - 3:00pm",
+          "saturdays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "254",
-        "branch_name": "Kawangare"
+        "branch_name": "Kawangware",
+        "address": {
+          "latitude": -1.2875379889479353,
+          "longitude": 36.74856982432336
+        },
+        "operatingHours": {
+          "weekdays": "9:00am - 4:00pm",
+          "saturdays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "255",
-        "branch_name": "Kimathi"
+        "branch_name": "Kimathi Street",
+        "address": {
+          "latitude": -1.2839542188238875,
+          "longitude": 36.823192125346225
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "256",
-        "branch_name": "Namanga"
+        "branch_name": "Namanga",
+        "address": {
+          "latitude": -2.543616258009985,
+          "longitude": 36.78951458254847
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "288",
-        "branch_name": "Haile Selassie"
+        "branch_name": "Haile Selassie",
+        "address": {
+          "latitude": -1.2920652283046994,
+          "longitude": 36.82194753659232
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00am",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "289",
-        "branch_name": "Salama House Mortgage Centre"
+        "branch_name": "Salama House Mortgage Centre",
+        "address": {
+          "latitude": -1.2860099931175293,
+          "longitude": 36.82275999548773
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "290",
-        "branch_name": "Garden Plaza"
+        "branch_name": "Garden Plaza",
+        "address": {
+          "latitude": -1.2815059172910979,
+          "longitude": 36.82087929625838
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "291",
-        "branch_name": "Sarit Centre Mortgage Centre"
+        "branch_name": "Sarit Centre Mortgage Centre",
+        "address": {
+          "latitude": -1.261314410364417,
+          "longitude": 36.8020109536128
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "292",
@@ -7864,31 +8665,101 @@
     "branches": [
       {
         "branch_code": "004",
-        "branch_name": "Eastleigh"
+        "branch_name": "Eastleigh",
+        "address": {
+          "latitude": -1.3116928869126196,
+          "longitude": 36.77946383449724
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:30pm",
+          "saturdays": "9:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "005",
-        "branch_name": "Bondeni"
+        "branch_name": "Bondeni",
+        "address": {
+          "latitude": -4.052487,
+          "longitude": 39.673593
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:30pm",
+          "saturdays": "9:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "000",
-        "branch_name": "Head Office"
+        "branch_name": "Head Office",
+        "address": {
+          "latitude": -1.2997248889727033,
+          "longitude": 36.82129862351764
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:30pm",
+          "saturdays": "9:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "006",
-        "branch_name": "Banda Street"
+        "branch_name": "Banda Street",
+        "address": {
+          "latitude": -1.2840306138477438,
+          "longitude": 36.82073642853207
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:30pm",
+          "saturdays": "9:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "003",
-        "branch_name": "Moi Avenue Mombasa"
+        "branch_name": "Moi Avenue Mombasa",
+        "address": {
+          "latitude": -4.061217,
+          "longitude": 39.664482
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:30pm",
+          "saturdays": "9:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "001",
-        "branch_name": "Upper Hill Branch"
+        "branch_name": "Upper Hill Branch",
+        "address": {
+          "latitude": -1.2997248889727033,
+          "longitude": 36.82129862351764
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:30pm",
+          "saturdays": "9:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "002",
-        "branch_name": "Sarit Branch"
+        "branch_name": "Sarit Branch",
+        "address": {
+          "latitude": -1.2613029419540223,
+          "longitude": 36.79824908353862
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:30pm",
+          "saturdays": "9:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       }
     ],
     "icon": "data:image/jpeg;base64,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"
@@ -7901,27 +8772,87 @@
     "branches": [
       {
         "branch_code": "005",
-        "branch_name": "Nakuru"
+        "branch_name": "Nakuru",
+        "address": {
+          "latitude": -0.285856,
+          "longitude": 36.063876
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "004",
-        "branch_name": "Mombasa"
+        "branch_name": "Mombasa",
+        "address": {
+          "latitude": -4.061628,
+          "longitude": 39.6647
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "003",
-        "branch_name": "Upper Hill"
+        "branch_name": "Upper Hill",
+        "address": {
+          "latitude": -1.294428,
+          "longitude": 36.812632
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "099",
-        "branch_name": "Head Office"
+        "branch_name": "Head Office",
+        "address": {
+          "latitude": -1.2685218749391833,
+          "longitude": 36.807563492719716
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "001",
-        "branch_name": "Westlands"
+        "branch_name": "Westlands",
+        "address": {
+          "latitude": -1.2685218749391833,
+          "longitude": 36.807563492719716
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "002",
-        "branch_name": "Enterprise Road"
+        "branch_name": "Enterprise Road",
+        "address": {
+          "latitude": -1.300211,
+          "longitude": 36.837567
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       }
     ],
     "icon": "data:image/png;base64,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"
@@ -7935,139 +8866,481 @@
     "branches": [
       {
         "branch_code": "001",
-        "branch_name": "Kakamega Branch"
+        "branch_name": "Kakamega Branch",
+        "address": {
+          "latitude": 0.283875,
+          "longitude": 34.751956
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "002",
-        "branch_name": "Eldoret Branch"
+        "branch_name": "Eldoret Branch",
+        "address": {
+          "latitude": 0.5181910747199089,
+          "longitude": 35.27162498934488
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "003",
-        "branch_name": "Nyeri Branch"
+        "branch_name": "Nyeri Branch",
+        "address": {
+          "latitude": -0.42276573575308735,
+          "longitude": 36.95376987769198
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "004",
-        "branch_name": "Mombasa Branch"
+        "branch_name": "Mombasa Branch",
+        "address": {
+          "latitude": -4.063148,
+          "longitude": 39.67444
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "005",
-        "branch_name": "River Rd Branch"
+        "branch_name": "River Rd Branch",
+        "address": {
+          "latitude": -1.282267,
+          "longitude": 36.827207
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "006",
-        "branch_name": "Malindi Branch"
+        "branch_name": "Malindi Branch",
+        "address": {
+          "latitude": -3.2158590821583743,
+          "longitude": 40.11748163031558
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "007",
-        "branch_name": "Kericho Branch"
+        "branch_name": "Kericho Branch",
+        "address": {
+          "latitude": -0.36949,
+          "longitude": 35.281894
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "008",
-        "branch_name": "Machakos Branch"
+        "branch_name": "Machakos Branch",
+        "address": {
+          "latitude": -1.3116928869126196,
+          "longitude": 36.77946383449724
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "009",
-        "branch_name": "Embu Branch"
+        "branch_name": "Embu Branch",
+        "address": {
+          "latitude": -0.535773,
+          "longitude": 37.452338
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "010",
-        "branch_name": "Kisii Branch"
+        "branch_name": "Kisii Branch",
+        "address": {
+          "latitude": -0.674659,
+          "longitude": 34.77069
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "011",
-        "branch_name": "Nanyuki Branch"
+        "branch_name": "Nanyuki Branch",
+        "address": {
+          "latitude": 0.01522714755377463,
+          "longitude": 37.077382731863445
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "012",
-        "branch_name": "Migori Branch"
+        "branch_name": "Migori Branch",
+        "address": {
+          "latitude": -1.0624161866272988,
+          "longitude": 34.47330097706392
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "013",
-        "branch_name": "Thika Branch"
+        "branch_name": "Thika Branch",
+        "address": {
+          "latitude": -1.034442,
+          "longitude": 37.075019
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "014",
-        "branch_name": "Kitale Branch"
+        "branch_name": "Kitale Branch",
+        "address": {
+          "latitude": 1.015152,
+          "longitude": 35.003221
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "000",
-        "branch_name": "Head Office"
+        "branch_name": "Head Office",
+        "address": {
+          "latitude": -1.3045520673574866,
+          "longitude": 36.819721090539936
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "023",
-        "branch_name": "Kitui"
+        "branch_name": "Kitui",
+        "address": {
+          "latitude": -1.3676954524878955,
+          "longitude": 38.00948029568654
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "015",
-        "branch_name": "Nakuru Branch"
+        "branch_name": "Nakuru Branch",
+        "address": {
+          "latitude": -0.285088,
+          "longitude": 36.067241
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "016",
-        "branch_name": "Emali Branch"
+        "branch_name": "Emali Branch",
+        "address": {
+          "latitude": -2.080245446017363,
+          "longitude": 37.47094954499684
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "017",
-        "branch_name": "Voi Branch"
+        "branch_name": "Voi Branch",
+        "address": {
+          "latitude": 3.407667,
+          "longitude": 38.566098
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "018",
-        "branch_name": "Kisumu Branch"
+        "branch_name": "Kisumu Branch",
+        "address": {
+          "latitude": -0.091974,
+          "longitude": 34.765984
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "019",
-        "branch_name": "Meru Branch"
+        "branch_name": "Meru Branch",
+        "address": {
+          "latitude": 0.050787,
+          "longitude": 37.645481
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "020",
-        "branch_name": "Diani Branch"
+        "branch_name": "Diani Branch",
+        "address": {
+          "latitude": -4.282031656049851,
+          "longitude": 39.56700708312272
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "021",
-        "branch_name": "Upperhill Branch"
+        "branch_name": "Upperhill Branch",
+        "address": {
+          "latitude": -1.3045520673574866,
+          "longitude": 36.819721090539936
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "022",
-        "branch_name": "Naivasha Branch"
+        "branch_name": "Naivasha Branch",
+        "address": {
+          "latitude": -0.712814,
+          "longitude": 36.430126
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "024",
-        "branch_name": "Busia Branch"
+        "branch_name": "Busia Branch",
+        "address": {
+          "latitude": 0.181472,
+          "longitude": 34.296432
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "027",
-        "branch_name": "Kariobangi Branch"
+        "branch_name": "Kariobangi Branch",
+        "address": {
+          "latitude": -1.2591168850235515,
+          "longitude": 36.87924141394668
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "028",
-        "branch_name": "Bungoma Branch"
+        "branch_name": "Bungoma Branch",
+        "address": {
+          "latitude": 0.6082235145298664,
+          "longitude": 34.77111896507746
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "029",
-        "branch_name": "Bomet Branch"
+        "branch_name": "Bomet Branch",
+        "address": {
+          "latitude": -0.781591,
+          "longitude": 35.340169
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "031",
-        "branch_name": "Kawangware Branch"
+        "branch_name": "Kawangware Branch",
+        "address": {
+          "latitude": -1.28273,
+          "longitude": 36.752352
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "032",
-        "branch_name": "Gikomba Branch"
+        "branch_name": "Gikomba Branch",
+        "address": {
+          "latitude": -1.3116928869126196,
+          "longitude": 36.77946383449724
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        },
+        "comments": "Does not seem to be existing"
       },
       {
         "branch_code": "033",
-        "branch_name": "Kiambu Branch"
+        "branch_name": "Kiambu Branch",
+        "address": {
+          "latitude": -1.168219159084472,
+          "longitude": 36.82577474475346
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "034",
-        "branch_name": "Rongai Branch"
+        "branch_name": "Rongai Branch",
+        "address": {
+          "latitude": -1.3974187917616678,
+          "longitude": 36.75967631658659
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        },
+        "comments": "Google says it may be closed"
       },
       {
         "branch_code": "041",
-        "branch_name": "Marsabit Branch"
+        "branch_name": "Marsabit Branch",
+        "address": {
+          "latitude": 2.329727,
+          "longitude": 37.989578
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "043",
-        "branch_name": "Lodwar Branch"
+        "branch_name": "Lodwar Branch",
+        "address": {
+          "latitude": 3.120156102786154,
+          "longitude": 35.594043469752144
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       }
     ],
     "icon": "data:image/png;base64,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"
@@ -8080,239 +9353,830 @@
     "branches": [
       {
         "branch_code": "003",
-        "branch_name": "Kariobangi"
+        "branch_name": "Kariobangi",
+        "address": {
+          "latitude": -1.2593227527807445,
+          "longitude": 36.879232447796824
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:30am",
+          "saturdays": "8:00am - 1:00am",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "004",
-        "branch_name": "Githurai"
+        "branch_name": "Githurai",
+        "address": {
+          "latitude": -1.205162,
+          "longitude": 36.918493
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "046",
-        "branch_name": "Kawangware"
+        "branch_name": "Kawangware",
+        "address": {
+          "latitude": -1.289016,
+          "longitude": 36.744998
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "047",
-        "branch_name": "Kayole"
+        "branch_name": "Kayole",
+        "address": {
+          "latitude": -1.270979,
+          "longitude": 36.912734
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "048",
-        "branch_name": "Matuu"
+        "branch_name": "Matuu",
+        "address": {
+          "latitude": -1.146827,
+          "longitude": 37.54886
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "049",
-        "branch_name": "Mwea"
+        "branch_name": "Mwea",
+        "address": {
+          "latitude": -0.679595,
+          "longitude": 37.356012
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "050",
-        "branch_name": "Makutano"
+        "branch_name": "Makutano",
+        "address": {
+          "latitude": -1.3116928869126196,
+          "longitude": 36.77946383449724
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "051",
-        "branch_name": "Mumias"
+        "branch_name": "Mumias",
+        "address": {
+          "latitude": 0.3348,
+          "longitude": 34.4886
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:30am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "052",
-        "branch_name": "Kiserian"
+        "branch_name": "Kiserian",
+        "address": {
+          "latitude": -1.474112,
+          "longitude": 36.973231
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "053",
-        "branch_name": "Rongai"
+        "branch_name": "Rongai",
+        "address": {
+          "latitude": -1.3965444216297103,
+          "longitude": 36.753263817504184
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "055",
-        "branch_name": "Migori"
+        "branch_name": "Migori",
+        "address": {
+          "latitude": -1.067688,
+          "longitude": 34.47152
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "062",
-        "branch_name": "Kilifi"
+        "branch_name": "Kilifi",
+        "address": {
+          "latitude": -3.631921,
+          "longitude": 39.848761
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "080",
-        "branch_name": "Kibera"
+        "branch_name": "Kibera",
+        "address": {
+          "latitude": -1.3105241656502018,
+          "longitude": 36.77424692700364
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "084",
-        "branch_name": "Moi Avenue MSA"
+        "branch_name": "Moi Avenue MSA",
+        "address": {
+          "latitude": -4.062233,
+          "longitude": 39.670659
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "079",
-        "branch_name": "Kimathi St"
+        "branch_name": "Kimathi Street",
+        "address": {
+          "latitude": -1.284301,
+          "longitude": 36.823712
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "005",
-        "branch_name": "Machakos"
+        "branch_name": "Machakos",
+        "address": {
+          "latitude": -1.518337975875137,
+          "longitude": 37.26648160884528
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "006",
-        "branch_name": "Ngong Road"
+        "branch_name": "Ngong Road",
+        "address": {
+          "latitude": -1.300485,
+          "longitude": 36.785099
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "002",
-        "branch_name": "OTC"
+        "branch_name": "OTC",
+        "address": {
+          "latitude": -1.2843606545584563,
+          "longitude": 36.8313712995718
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "007",
-        "branch_name": "Kiambu"
+        "branch_name": "Kiambu",
+        "address": {
+          "latitude": -1.173473716160061,
+          "longitude": 36.83175461416905
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "008",
-        "branch_name": "Nakuru"
+        "branch_name": "Nakuru",
+        "address": {
+          "latitude": -0.283721,
+          "longitude": 36.073859
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "009",
-        "branch_name": "Nyahururu"
+        "branch_name": "Nyahururu",
+        "address": {
+          "latitude": 0.0389675901326184,
+          "longitude": 36.36413097411217
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "010",
-        "branch_name": "Molo"
+        "branch_name": "Molo",
+        "address": {
+          "latitude": -0.245717,
+          "longitude": 35.730085
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "013",
-        "branch_name": "Naivasha"
+        "branch_name": "Naivasha",
+        "address": {
+          "latitude": -0.719001,
+          "longitude": 36.435789
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "015",
-        "branch_name": "Eldoret"
+        "branch_name": "Eldoret",
+        "address": {
+          "latitude": 0.516304,
+          "longitude": 35.280674
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 5:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "016",
-        "branch_name": "Bungoma"
+        "branch_name": "Bungoma",
+        "address": {
+          "latitude": 0.5689736179201994,
+          "longitude": 34.55947067533327
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "017",
-        "branch_name": "Kitale"
+        "branch_name": "Kitale",
+        "address": {
+          "latitude": 1.0156312393266147,
+          "longitude": 35.00397689637692
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "018",
-        "branch_name": "Mois Bridge"
+        "branch_name": "Mois Bridge",
+        "address": {
+          "latitude": 0.873965,
+          "longitude": 35.12138
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "019",
-        "branch_name": "Kisumu"
+        "branch_name": "Kisumu",
+        "address": {
+          "latitude": -0.10182329518772641,
+          "longitude": 34.75282571587304
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "020",
-        "branch_name": "Nyeri"
+        "branch_name": "Nyeri",
+        "address": {
+          "latitude": -0.4246947494709408,
+          "longitude": 36.956625763240964
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "021",
-        "branch_name": "Thika"
+        "branch_name": "Thika",
+        "address": {
+          "latitude": -1.036457589566251,
+          "longitude": 37.07433358992055
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "022",
-        "branch_name": "Meru"
+        "branch_name": "Meru",
+        "address": {
+          "latitude": 0.133027,
+          "longitude": 37.724214
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "025",
-        "branch_name": "Malindi"
+        "branch_name": "Malindi",
+        "address": {
+          "latitude": -3.211052,
+          "longitude": 40.11797
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "027",
-        "branch_name": "Kitengela"
+        "branch_name": "Kitengela",
+        "address": {
+          "latitude": -1.475245,
+          "longitude": 36.962089
+        },
+        "operatingHours": {
+          "weekdays": "9:00am - 4:00pm",
+          "saturdays": "9:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "023",
-        "branch_name": "Embu"
+        "branch_name": "Embu",
+        "address": {
+          "latitude": -0.5273,
+          "longitude": 37.4513
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "024",
-        "branch_name": "Mombasa Central"
+        "branch_name": "Mombasa Central",
+        "address": {
+          "latitude": -4.053601717965505,
+          "longitude": 39.66728255493517
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "029",
-        "branch_name": "Narok"
+        "branch_name": "Narok",
+        "address": {
+          "latitude": -1.090196,
+          "longitude": 35.87344
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "031",
-        "branch_name": "Kabarnet"
+        "branch_name": "Kabarnet",
+        "address": {
+          "latitude": 0.492401,
+          "longitude": 35.74318
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "032",
-        "branch_name": "Karatina"
+        "branch_name": "Karatina",
+        "address": {
+          "latitude": 0.492401,
+          "longitude": 35.74318
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "035",
-        "branch_name": "Muranga"
+        "branch_name": "Muranga",
+        "address": {
+          "latitude": -0.7208230382215177,
+          "longitude": 37.159597898024124
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 8:30am",
+          "saturdays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "036",
-        "branch_name": "Nanyuki"
+        "branch_name": "Nanyuki",
+        "address": {
+          "latitude": 0.011851517369599277,
+          "longitude": 37.07646172596526
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "039",
-        "branch_name": "Maua"
+        "branch_name": "Maua",
+        "address": {
+          "latitude": -1.3116928869126196,
+          "longitude": 36.77946383449724
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "042",
-        "branch_name": "Litein"
+        "branch_name": "Litein",
+        "address": {
+          "latitude": -0.582528,
+          "longitude": 35.191016
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "043",
-        "branch_name": "Kengeleni"
+        "branch_name": "Kengeleni",
+        "address": {
+          "latitude": -4.0187488052501905,
+          "longitude": 39.72871669045545
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "083",
-        "branch_name": "Jevanjee"
+        "branch_name": "Jevanjee Gardens",
+        "address": {
+          "latitude": -1.2809,
+          "longitude": 36.8193
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "034",
-        "branch_name": "Kitui"
+        "branch_name": "Kitui",
+        "address": {
+          "latitude": -1.366597,
+          "longitude": 38.010634
+        },
+        "operatingHours": {
+          "weekdays": "9:30am - 2:00am",
+          "saturdays": "10:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "033",
-        "branch_name": "Mwingi"
+        "branch_name": "Mwingi",
+        "address": {
+          "latitude": -0.9338,
+          "longitude": 38.0607
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "041",
-        "branch_name": "Kakamega"
+        "branch_name": "Kakamega",
+        "address": {
+          "latitude": 0.283219,
+          "longitude": 34.754851
+        },
+        "operatingHours": {
+          "weekdays": "9:00am - 4:00pm",
+          "saturdays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "011",
-        "branch_name": "Bomet"
+        "branch_name": "Bomet",
+        "address": {
+          "latitude": -0.784074,
+          "longitude": 35.339257
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "044",
-        "branch_name": "Changamwe"
+        "branch_name": "Changamwe",
+        "address": {
+          "latitude": -4.029979,
+          "longitude": 39.631769
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "058",
-        "branch_name": "Ukunda"
+        "branch_name": "Ukunda",
+        "address": {
+          "latitude": -4.286672,
+          "longitude": 39.566123
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "054",
-        "branch_name": "Bondo"
+        "branch_name": "Bondo",
+        "address": {
+          "latitude": -0.102549,
+          "longitude": 34.274082
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "086",
-        "branch_name": "Gikomba"
+        "branch_name": "Gikomba",
+        "address": {
+          "latitude": -1.2857,
+          "longitude": 36.8384
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "056",
-        "branch_name": "Ugunja"
+        "branch_name": "Ugunja",
+        "address": {
+          "latitude": 0.1816,
+          "longitude": 34.2964
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "065",
-        "branch_name": "Kapenguria"
+        "branch_name": "Kapenguria",
+        "address": {
+          "latitude": 1.0271,
+          "longitude": 35.0233
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "045",
-        "branch_name": "Voi"
+        "branch_name": "Voi",
+        "address": {
+          "latitude": -3.3938932200507765,
+          "longitude": 38.56108931210102
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "085",
-        "branch_name": "Homabay"
+        "branch_name": "Homabay",
+        "address": {
+          "latitude": -1.3116928869126196,
+          "longitude": 36.77946383449724
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturdays": "8:30am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        },
+        "comments": "Was closed down in 2023"
       },
       {
         "branch_code": "074",
-        "branch_name": "Busia"
+        "branch_name": "Busia",
+        "address": {
+          "latitude": 0.462791,
+          "longitude": 34.1071
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "060",
-        "branch_name": "Limuru"
+        "branch_name": "Limuru",
+        "address": {
+          "latitude": -1.10851,
+          "longitude": 36.641338
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "012",
-        "branch_name": "Kericho"
+        "branch_name": "Kericho",
+        "address": {
+          "latitude": -0.369858,
+          "longitude": 35.28311
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       }
     ],
     "icon": "data:image/jpeg;base64,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"
@@ -8325,31 +10189,101 @@
     "branches": [
       {
         "branch_code": "001",
-        "branch_name": "Head Office"
+        "branch_name": "Head Office",
+        "address": {
+          "latitude": -1.2867307931171021,
+          "longitude": 36.82032659548767
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 5:00pm",
+          "saturdays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "002",
-        "branch_name": "Cardinal Otunga Plaza"
+        "branch_name": "Cardinal Otunga Plaza",
+        "address": {
+          "latitude": -1.2867307931171021,
+          "longitude": 36.82032659548767
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:30pm",
+          "saturdays": "8:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "003",
-        "branch_name": "Cardinal Otunga Annex"
+        "branch_name": "Cardinal Otunga Annex",
+        "address": {
+          "latitude": -1.2867307931171021,
+          "longitude": 36.82032659548767
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:30pm",
+          "saturdays": "8:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "004",
-        "branch_name": "Kawangware"
+        "branch_name": "Kawangware",
+        "address": {
+          "latitude": -1.2843215390899057,
+          "longitude": 36.7374473991737
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:30pm",
+          "saturdays": "8:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "005",
-        "branch_name": "Donholm"
+        "branch_name": "Donholm",
+        "address": {
+          "latitude": -1.2963840980533943,
+          "longitude": 36.887073264137044
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:30pm",
+          "saturdays": "8:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "006",
-        "branch_name": "Thika"
+        "branch_name": "Thika",
+        "address": {
+          "latitude": -1.0395767774833495,
+          "longitude": 37.07235104374896
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:30pm",
+          "saturdays": "8:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "007",
-        "branch_name": "Karuri"
+        "branch_name": "Karuri",
+        "address": {
+          "latitude": -1.17583325142117,
+          "longitude": 36.756667759780775
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:30pm",
+          "saturdays": "8:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "008",
@@ -8357,7 +10291,17 @@
       },
       {
         "branch_code": "009",
-        "branch_name": "Nyeri"
+        "branch_name": "Nyeri",
+        "address": {
+          "latitude": -0.4214659992772071,
+          "longitude": 36.9508618150022
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:30pm",
+          "saturdays": "8:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       }
     ],
     "icon": "data:image/png;base64,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"
