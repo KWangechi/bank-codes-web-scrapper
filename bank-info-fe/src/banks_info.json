@@ -5541,71 +5541,194 @@
     "branches": [
       {
         "branch_code": "000",
-        "branch_name": "Head Office"
+        "branch_name": "Head Office",
+        "address": {
+          "latitude": -1.2621113920735394,
+          "longitude": 36.800257518127765
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "001",
-        "branch_name": "Kimathi Street"
+        "branch_name": "Kimathi Street",
+        "address": {
+          "latitude": -1.282591,
+          "longitude": 36.821582
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "002",
-        "branch_name": "Ind Area"
+        "branch_name": "Industrial Area",
+        "address": {
+          "latitude": -1.301786,
+          "longitude": 36.838117
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "003",
-        "branch_name": "Westlands"
+        "branch_name": "Apic Center",
+        "address": {
+          "latitude": -1.301786,
+          "longitude": 36.838117,
+          "name": "Westlands, Mpaka Road"
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturays": "10:00am - 2:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "008",
-        "branch_name": "Muthaiga"
+        "branch_name": "Muthaiga",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "009",
-        "branch_name": "Nanyuki"
+        "branch_name": "Nanyuki",
+        "address": {
+          "latitude": 0.013209378152065297,
+          "longitude": 37.077782569772076,
+          "name": "Kenyatta Street, Kassim Plaza"
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "010",
-        "branch_name": "Thika"
+        "branch_name": "Thika",
+        "address": {
+          "latitude": -1.035123,
+          "longitude": 37.074541,
+          "name": "Kigio Plaza, Charles Rubia Rd"
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "011",
-        "branch_name": "Gikomba"
+        "branch_name": "Gikomba",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "012",
-        "branch_name": "Ngong Road"
+        "branch_name": "Ngong Road",
+        "address": {
+          "latitude": -1.3005363058158697,
+          "longitude": 36.78177642150709,
+          "name": "Ground Floor, Greenhouse Mall"
+        },
+        "operatingHours": {
+          "weekdays": "9:00am - 4:00pm",
+          "saturays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "013",
-        "branch_name": "Meru"
+        "branch_name": "Meru",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "014",
-        "branch_name": "Nyali"
+        "branch_name": "Nyali",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "015",
-        "branch_name": "Sky Park"
+        "branch_name": "Sky Park",
+        "address": {
+          "latitude": -1.2621113920735394,
+          "longitude": 36.800257518127765
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "016",
-        "branch_name": "Karen"
+        "branch_name": "Karen",
+        "address": {
+          "latitude": -1.3204568451289147,
+          "longitude": 36.70499391308558,
+          "name": "Africa Reit Lane"
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "004",
-        "branch_name": "Lavington"
+        "branch_name": "Lavington",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "005",
-        "branch_name": "Nkrumah Road , Mombasa"
+        "branch_name": "Mombasa",
+        "address": {
+          "latitude": -4.0621958068065265,
+          "longitude": 39.670299611460045,
+          "name": "Pan African Building, Meru Rd"
+        },
+        "operatingHours": {
+          "weekdays": "9:00am - 4:00pm",
+          "saturays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "006",
-        "branch_name": "Nakuru"
+        "branch_name": "Nakuru",
+        "address": {
+          "latitude": -0.28608917616448715,
+          "longitude": 36.06541720217912,
+          "name": "Kenyatta Avenue, Ground Floor, Polo Center"
+        },
+        "operatingHours": {
+          "weekdays": "9:00am - 4:00pm",
+          "saturays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "007",
-        "branch_name": "Eldoret"
+        "branch_name": "Eldoret",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       }
     ],
     "icon": "data:image/png;base64,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"
@@ -5682,6 +5805,21 @@
           "latitude": -1.3087471836271511,
           "longitude": 36.86063251707317,
           "name": "Victoria at Two Rivers, 7th Floor"
+        },
+        "operatingHours": {
+          "weekdays": "9:00am - 3:30pm",
+          "saturays": "Closed",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
+      },
+      {
+        "branch_code": "006",
+        "branch_name": "Nyali",
+        "address": {
+          "latitude": -4.022094335593621,
+          "longitude": 39.71958800740998,
+          "name": "Nyali Center, 5th Floor"
         },
         "operatingHours": {
           "weekdays": "9:00am - 3:30pm",
