@@ -5407,127 +5407,427 @@
     "branches": [
       {
         "branch_code": "409",
-        "branch_name": "Kisii"
+        "branch_name": "Kisii",
+        "address": {
+          "latitude": -4.0621958068065265, 
+          "longitude": 39.670299611460045,
+          "name": "Ground Floor, Mocha Place, Opposite Quickmart Supermarket"
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "502",
-        "branch_name": "Ongata Rongai"
+        "branch_name": "Ongata Rongai",
+        "address": {
+          "latitude": -1.3962046522533884, 
+          "longitude": 36.75307539811654,
+          "name": "Brisma Towers, Ground Flr, Opp. Tuskys Supermarket"
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "503",
-        "branch_name": "Kitengela"
+        "branch_name": "Kitengela",
+        "address": {
+          "latitude": -1.4812256993803428, 
+          "longitude": 36.95729786122046 ,
+          "name": "Newton house, Opp Naivas Supermarket" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "507",
-        "branch_name": "Nakuru"
+        "branch_name": "Nakuru",
+        "address": {
+          "latitude": -0.284960, 
+          "longitude": 36.068735,
+          "name": "Light House, Kenyatta Avenue, Opposite Nyayo Gardens" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "603",
-        "branch_name": "Mombasa"
+        "branch_name": "Mombasa",
+        "address": {
+          "latitude": -4.062112, 
+          "longitude": 39.670230,
+          "name": "Khamisi Building, Opp.Castle Hotel, Moi Avenue, Ground Floor" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "000",
-        "branch_name": "Head Office"
+        "branch_name": "Head Office",
+        "address": {
+          "latitude": -1.292886, 
+          "longitude": 36.789735,
+          "name": "Khamisi Building, Opp.Castle Hotel, Moi Avenue, Ground Floor" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "001",
-        "branch_name": "Koinange Street"
+        "branch_name": "Koinange Street",
+        "address": {
+          "latitude": -1.292886, 
+          "longitude": 36.789735,
+          "name": "Winsor House, Ground Floor" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "100",
-        "branch_name": "Kiongozi"
+        "branch_name": "Kiongozi",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "101",
-        "branch_name": "Kayole"
+        "branch_name": "Kayole",
+        "address": {
+          "latitude": -1.2742419072236293, 
+          "longitude": 36.910861266192526,
+          "name": "Pinnacle Centre, Spine Road" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "102",
-        "branch_name": "Eastleigh"
+        "branch_name": "Eastleigh",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "105",
-        "branch_name": "Kawangware"
+        "branch_name": "Kawangware",
+        "address": {
+          "latitude": -1.2848759122328248, 
+          "longitude": 36.737493735321266,
+          "name": "Mbugua Plaza, Naivasha Road" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "106",
-        "branch_name": "Kibera"
+        "branch_name": "Kibera",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "107",
-        "branch_name": "Kariobangi"
+        "branch_name": "Kariobangi",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "114",
-        "branch_name": "Funzi Road"
+        "branch_name": "Funzi Road",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "115",
-        "branch_name": "Ngong Road"
+        "branch_name": "Ngong Road",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "116",
-        "branch_name": "Kirinyaga Road"
+        "branch_name": "Kirinyaga Road",
+        "address": {
+          "latitude": -1.2806688525098764, 
+          "longitude": 36.82732344635643,
+          "name": "Bits House" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "209",
-        "branch_name": "Machakos"
+        "branch_name": "Machakos",
+        "address": {
+          "latitude": -1.5184334320145585, 
+          "longitude": 37.266780758161474,
+          "name": "Kingdom Bank Building, Mbolu Malu Road" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        },
+        "comments": "Location is not accurate. Subject to change"
       },
       {
         "branch_code": "210",
-        "branch_name": "Mtwapa"
+        "branch_name": "Mtwapa",
+        "address": {
+          "latitude": -3.951776, 
+          "longitude": 39.744310,
+          "name": "Malindi Highway, Mzambarauni" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "213",
-        "branch_name": "Kiritiri"
+        "branch_name": "Kiritiri",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "301",
-        "branch_name": "Thika"
+        "branch_name": "Thika",
+        "address": {
+          "latitude": -1.040457, 
+          "longitude": 37.071574,
+          "name": "Thika Town Opposite Quickmart Supermarket" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "303",
-        "branch_name": "Muranga"
+        "branch_name": "Muranga",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "305",
-        "branch_name": "Wangige"
+        "branch_name": "Wangige",
+        "address": {
+          "latitude": -1.218004, 
+          "longitude": 36.712927,
+          "name": "Wangige Shopping Centre, Walokana Petrol Station" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "306",
-        "branch_name": "Kikuyu"
+        "branch_name": "Kikuyu",
+        "address": {
+          "latitude": -1.244896, 
+          "longitude": 36.663934,
+          "name": "Red Brick House, Opp PCEA Kikuyu Township" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "307",
-        "branch_name": "Banana"
+        "branch_name": "Banana",
+        "comments": "Branch doesn't exist on bank's website. Contact bank for more details"
       },
       {
         "branch_code": "308",
-        "branch_name": "Kiambu"
+        "branch_name": "Kiambu",
+        "address": {
+          "latitude": -1.1726939243606536, 
+          "longitude": 36.83055730766783,
+          "name": "Githunguri Nyakinywa Women Group Building" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "310",
-        "branch_name": "Utawala"
+        "branch_name": "Utawala",
+        "address": {
+          "latitude": -1.2828507252861518, 
+          "longitude": 36.959553280064725,
+          "name": "Mashariki Shopping mall, Eastern bypass Next to APTC College" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "316",
-        "branch_name": "Nyeri"
+        "branch_name": "Nyeri",
+        "address": {
+          "latitude": -0.425710, 
+          "longitude": 36.956500, 
+          "name": "Mashariki Shopping mall, Eastern bypass Next to APTC College" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "402",
-        "branch_name": "Kisumu"
+        "branch_name": "Kisumu",
+        "address": {
+          "latitude": -0.102081, 
+          "longitude": 34.752348, 
+          "name": "Jubilee House at the junction of Oginga Odinga and Angawa Street" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "318",
-        "branch_name": "SACCO Clearing Centre"
+        "branch_name": "SACCO Clearing Centre",
+        "address": {
+          "latitude": -1.292886, 
+          "longitude": 36.789735,
+          "name": "Khamisi Building, Opp.Castle Hotel, Moi Avenue, Ground Floor" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        },
+        "comments": "Defaulted to HQ. Kindly confirm with bank"
       },
       {
         "branch_code": "111",
-        "branch_name": "Central Clearing Center"
+        "branch_name": "Central Clearing Center",
+        "address": {
+          "latitude": -1.292886, 
+          "longitude": 36.789735,
+          "name": "Khamisi Building, Opp.Castle Hotel, Moi Avenue, Ground Floor" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        },
+        "comments": "Defaulted to HQ. Kindly confirm with bank"
       },
       {
         "branch_code": "401",
-        "branch_name": "Eldoret"
+        "branch_name": "Eldoret",
+        "address": {
+          "latitude": 0.515244, 
+          "longitude": 35.274741,
+          "name": "Kenyatta Street, Corner House Opposite School Depot" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
+      },
+      {
+        "branch_code": "N/A",
+        "branch_name": "Gikomba",
+        "address": {
+          "latitude": -1.2840660538634752,
+          "longitude":  36.835740166724904,
+          "name": "Kombo Munyiri Road Nafuu General Hardware Building, 1st Floor" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
+      },
+      {
+        "branch_code": "N/A",
+        "branch_name": "Kitale",
+        "address": {
+          "latitude": 1.017624, 
+          "longitude":  35.002046,
+          "name": "Kenyatta Street Ground Floor, GH Tanna Building" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
+      },
+      {
+        "branch_code": "N/A",
+        "branch_name": "Meru",
+        "address": {
+          "latitude": 0.04701638052310584, 
+          "longitude":  37.65786328262163,
+          "name": "Tom Mboya Street, Ground & 1st Floor, Ntima Building" 
+        },
+        "operatingHours": {
+          "weekdays": "8:00am - 4:00pm",
+          "saturays": "8:00am - 1:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        },
+        "comments": "Location is not accurate. Subject to change"
       }
     ],
     "icon": "data:image/png;base64,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"
