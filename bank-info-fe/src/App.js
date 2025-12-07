@@ -14,7 +14,7 @@ import usePagination from "hooks/usePagination";
 function App() {
   const totalResults = useRef(0);
   const [search, setSearch] = useState("");
-  const searchTerm = useDebounce(search, 10);
+  const searchTerm = useDebounce(search, 5);
   const [loading, setLoading] = useState(true);
   const [newFilteredBanks, setNewFilteredBanks] = useState([]);
 

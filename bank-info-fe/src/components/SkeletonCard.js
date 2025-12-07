@@ -6,45 +6,62 @@ const SkeletonCard = () => {
     <>
       {Array(6)
         .fill()
-        .map((item, index) => (
+        .map((_, index) => (
           <div
             key={index}
-            className="grow rounded-lg w-10/12 md:w-11/12 mx-auto shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 mb-6 w-full"
+            className="rounded-lg shadow-lg bg-gray-50 p-6 mb-6 w-full md:w-11/12 mx-auto"
           >
-            <div className="flex items-center mb-4">
-              <Skeleton circle={true} height={64} width={64} />
-              <div className="ml-4 flex-grow">
-                <Skeleton height={24} width="60%" />
-                <div className="flex items-center text-gray-600">
-                  <Skeleton height={20} width="40%" />
-                  <span className="mx-2">•</span>
-                  <Skeleton height={20} width="20%" />
+            {/* TOP ROW: Logo + Branch Title + Status */}
+            <div className="flex items-start justify-between mb-4">
+              {/* Logo + Name */}
+              <div className="flex items-center">
+                <Skeleton circle height={48} width={48} />
+
+                <div className="ml-4">
+                  {/* Branch Name */}
+                  <Skeleton height={20} width={180} />
+                  {/* Branch Code */}
+                  <Skeleton height={16} width={120} />
                 </div>
               </div>
-              <div className="flex text-right">
-                <Skeleton height={24} width="40%" />
+
+              {/* Status */}
+              <div className="text-right">
+                <Skeleton height={20} width={70} />
               </div>
             </div>
-            <div className="border-t border-gray-200 pt-4">
-              <div className="flex justify-between items-center mb-4">
-                <div>
-                  <Skeleton height={20} width="80%" />
-                  <Skeleton height={20} width="40%" />
-                </div>
-                <div className="text-right">
-                  <Skeleton height={20} width="80%" />
-                  <Skeleton height={20} width="60%" />
-                  <Skeleton height={20} width="60%" />
-                </div>
+
+            <div className="border-t border-gray-200 my-4" />
+
+            {/* BANK DETAILS + WORKING HOURS */}
+            <div className="flex justify-between gap-6 mb-4">
+              {/* Left Side */}
+              <div className="flex-1">
+                {/* Bank Name */}
+                <Skeleton height={20} width={220} />
+                {/* Bank Code */}
+                <Skeleton height={14} width={120} className="mt-2" />{" "}
+                {/* Swift Code */}
+                <Skeleton height={14} width={180} className="mt-2" />{" "}
               </div>
-              <div className="flex justify-between items-center mb-4 mt-4">
-                <div>
-                  <Skeleton height={20} width="80%" />
-                  <Skeleton height={20} width="60%" />
-                </div>
-                <div>
-                  <Skeleton height={20} width="40%" />
-                </div>
+
+              {/* Right Side: Working Hours */}
+              <div className="text-right flex-1">
+                <Skeleton height={14} width={150} />
+                <Skeleton height={14} width={150} className="mt-2" />
+                <Skeleton height={14} width={200} className="mt-2" />
+              </div>
+            </div>
+
+            <div className="border-t border-gray-200 my-4" />
+
+            {/* CONTACT INFO */}
+            <div className="flex gap-10">
+              <div className="flex-1">
+                {/* Phone */}
+                <Skeleton height={16} width={180} />
+                <Skeleton height={16} width={160} className="mt-2" />{" "}
+                {/* Email */}
               </div>
             </div>
           </div>
