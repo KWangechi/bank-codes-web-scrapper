@@ -4,6 +4,7 @@
     "bank_name": "Kenya Commercial Bank Limited",
     "aliases": ["KCB"],
     "bank_code": "01",
+    "swift_code": "KCBLKENXXXX",
     "contactInfo": {
       "phone1": "0711087000",
       "phone2": "0732187000",
@@ -1680,6 +1681,7 @@
     "bank_name": "Standard Chartered Bank Kenya Ltd",
     "aliases": ["Stanchart", "StanChartered"],
     "bank_code": "02",
+    "swift_code": "SCBLKENXXXX",
     "contactInfo": {
       "phone1": "020 243 7730",
       "phone2": "020 243 7731",
@@ -1851,6 +1853,7 @@
     "bank_name": "Absa Bank Kenya Plc",
     "aliases": ["Barclays", "Absa"],
     "bank_code": "03",
+    "swift_code": "BARCKENXXXX",
     "headquarters": "Waiyaki Way, Nairobi",
     "branches": [
       {
@@ -2341,6 +2344,7 @@
     "bank_name": "Bank of India",
     "aliases": ["BOI"],
     "bank_code": "05",
+    "swift_code": "BKIDKENAXXX",
     "branches": [
       {
         "branch_code": "000",
@@ -2370,6 +2374,7 @@
     "bank_name": "Bank of Baroda(Kenya Ltd)",
     "aliases": ["BOB"],
     "bank_code": "06",
+    "swift_code": "BARBKENAXXX",
     "headquarters": "Baroda House, Koinange Street, Nairobi",
     "branches": [
       {
@@ -2436,6 +2441,7 @@
     "bank_name": "NCBA Bank Kenya Plc",
     "aliases": ["NCBA"],
     "bank_code": "07",
+    "swift_code": "CBAFKENXXXX",
     "headquarters": "CBA Building, Nairobi",
     "branches": [
       {
@@ -2862,6 +2868,7 @@
     "bank_name": "Central Bank Of Kenya",
     "aliases": ["CBK"],
     "bank_code": "09",
+    "swift_code": "CBKEKENXXXX",
     "headquarters": "CBA Building, Nairobi",
     "branches": [
       {
@@ -2900,6 +2907,7 @@
     "bank_name": "Prime Bank Limited",
     "aliases": ["Prime"],
     "bank_code": "10",
+    "swift_code": "PRIEKENXXXX",
     "headquarters": "Riverside Drive, Nairobi",
     "branches": [
       {
@@ -3014,6 +3022,7 @@
     "bank_name": "Co-operative Bank of Kenya Limited",
     "aliases": ["Coop", "Cooperative"],
     "bank_code": "11",
+    "swift_code": "KCOOKENAXXX",
     "headquarters": "Co-operative House, Haile Selassie Avenue, Nairobi",
     "branches": [
       {
@@ -3724,6 +3733,7 @@
     "bank_name": "National Bank Of Kenya",
     "aliases": ["NBK"],
     "bank_code": "12",
+    "swift_code": "NBKEKENXXXX",
     "headquarters": "Harambee Avenue, Nairobi",
     "branches": [
       {
@@ -4345,6 +4355,7 @@
     "id": 11,
     "bank_name": "M-Oriental Bank Limited",
     "bank_code": "14",
+    "swift_code": "MORBKENAXXX",
     "headquarters": "Finance House, Koinange Street, Nairobi",
     "branches": [
       {
@@ -4386,6 +4397,7 @@
     "id": 12,
     "bank_name": "CITI BANK N A",
     "bank_code": "16",
+    "swift_code": "CITIKENAXXX",
     "headquarters": "Citi Bank House, Upperhill Nairobi",
     "branches": [
       {
@@ -4411,6 +4423,7 @@
     "id": 13,
     "bank_name": "Habib Bank AG Zurich",
     "bank_code": "17",
+    "swift_code": "HBZUKENAXXX",
     "aliases": ["HBZ"],
     "headquarters": "Habib House, Koinange Street, Nairobi",
     "branches": [
@@ -4442,6 +4455,7 @@
     "bank_name": "Middle East Bank Kenya Limited",
     "aliases": ["MEB"],
     "bank_code": "18",
+    "swift_code": "MIEKKENAXXX",
     "headquarters": "Jakaya Kikwete Rd, Nairobi",
     "branches": [
       {
@@ -4476,6 +4490,7 @@
     "bank_name": "Bank of Africa Kenya Limited",
     "aliases": ["BOK"],
     "bank_code": "19",
+    "swift_code": "AFRIKENXXXX",
     "headquarters": "BOA House, Karuna Cl, Nairobi",
     "branches": [
       {
@@ -4645,6 +4660,7 @@
     "id": 16,
     "bank_name": "Consolidated Bank of Kenya Ltd",
     "bank_code": "23",
+    "swift_code": "CONKKENAXXX",
     "headquarters": "Consolidated Bank House, Koinange Street, Nairobi",
     "branches": [
       {
@@ -4730,6 +4746,7 @@
     "id": 17,
     "bank_name": "Credit Bank PLC",
     "bank_code": "25",
+    "swift_code": "CRBTKENAXXX",
     "headquarters": "14th Floor, One Africa Place, Waiyaki Way",
     "branches": [
       {
@@ -4819,6 +4836,7 @@
     "id": 18,
     "bank_name": "Access Bank Kenya PLC",
     "bank_code": "26",
+    "swift_code": "ABNGKENAXXX",
     "headquarters": "11th Floor, The Address, Nairobi",
     "branches": [
       {
@@ -4940,6 +4958,7 @@
     "id": 19,
     "bank_name": "Stanbic Bank Plc",
     "bank_code": "31",
+    "swift_code": "SBICKENXXXX",
     "headquarters": "Stanbic Bank Centre, Westlands Road, Chiromo, Nairobi",
     "branches": [
       {
@@ -5082,6 +5101,7 @@
     "bank_name": "African Banking Corporation Limited",
     "aliases": ["ABC"],
     "bank_code": "35",
+    "swift_code": "ABCLKENAXXX",
     "headquarters": "ABC Bank House, Woodvale Grove, Westlands, Nairobi",
     "branches": [
       {
@@ -5156,6 +5176,7 @@
     "bank_name": "ECO Bank Kenya LTD",
     "aliases": ["Ecobank"],
     "bank_code": "43",
+    "swift_code": "ECOCKENAXXX",
     "headquarters": "Fortis Office Park, Muthangari Drive, Nairobi",
     "branches": [
       {
@@ -5293,6 +5314,7 @@
     "id": 22,
     "bank_name": "Spire Bank",
     "bank_code": "49",
+    "swift_code": "SPBLKENAXXX",
     "headquarters": "Mwalimu Towers, Hill Lane, Upper Hill",
     "branches": [
       {
@@ -5353,7 +5375,18 @@
       },
       {
         "branch_code": "016",
-        "branch_name": "Ongata Rongai"
+        "branch_name": "Ongata Rongai",
+        "address": {
+          "latitude": -1.2621113920735394,
+          "longitude": 36.800257518127765,
+          "name": "Sound Plaza - Ground Floor, Woodvale Grove, Westlands"
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       }
     ],
     "icon": "data:image/png;base64,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"
@@ -5362,11 +5395,23 @@
     "id": 23,
     "bank_name": "Paramount Bank Limited",
     "bank_code": "50",
+    "swift_code": "PAUTKENAXXX",
     "headquarters": "Sound Plaza - 4th Floor, Woodvale Grove, Westlands, Nairobi",
     "branches": [
       {
         "branch_code": "001",
-        "branch_name": "Westlands"
+        "branch_name": "Westlands",
+        "address": {
+          "latitude": -1.2621113920735394,
+          "longitude": 36.800257518127765,
+          "name": "Sound Plaza - Ground Floor, Woodvale Grove, Westlands"
+        },
+        "operatingHours": {
+          "weekdays": "8:30am - 4:00pm",
+          "saturays": "9:00am - 12:00pm",
+          "sundays": "Closed",
+          "holidays": "Closed"
+        }
       },
       {
         "branch_code": "002",
@@ -5403,13 +5448,14 @@
     "id": 24,
     "bank_name": "Kingdom Bank Limited",
     "bank_code": "51",
+    "swift_code": "CIFIKENAXXX",
     "headquarters": "Argwings Kodhek Road, Kilimani, Nairobi",
     "branches": [
       {
         "branch_code": "409",
         "branch_name": "Kisii",
         "address": {
-          "latitude": -4.0621958068065265, 
+          "latitude": -4.0621958068065265,
           "longitude": 39.670299611460045,
           "name": "Ground Floor, Mocha Place, Opposite Quickmart Supermarket"
         },
@@ -5424,7 +5470,7 @@
         "branch_code": "502",
         "branch_name": "Ongata Rongai",
         "address": {
-          "latitude": -1.3962046522533884, 
+          "latitude": -1.3962046522533884,
           "longitude": 36.75307539811654,
           "name": "Brisma Towers, Ground Flr, Opp. Tuskys Supermarket"
         },
@@ -5439,9 +5485,9 @@
         "branch_code": "503",
         "branch_name": "Kitengela",
         "address": {
-          "latitude": -1.4812256993803428, 
-          "longitude": 36.95729786122046 ,
-          "name": "Newton house, Opp Naivas Supermarket" 
+          "latitude": -1.4812256993803428,
+          "longitude": 36.95729786122046,
+          "name": "Newton house, Opp Naivas Supermarket"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5454,9 +5500,9 @@
         "branch_code": "507",
         "branch_name": "Nakuru",
         "address": {
-          "latitude": -0.284960, 
+          "latitude": -0.28496,
           "longitude": 36.068735,
-          "name": "Light House, Kenyatta Avenue, Opposite Nyayo Gardens" 
+          "name": "Light House, Kenyatta Avenue, Opposite Nyayo Gardens"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5469,9 +5515,9 @@
         "branch_code": "603",
         "branch_name": "Mombasa",
         "address": {
-          "latitude": -4.062112, 
-          "longitude": 39.670230,
-          "name": "Khamisi Building, Opp.Castle Hotel, Moi Avenue, Ground Floor" 
+          "latitude": -4.062112,
+          "longitude": 39.67023,
+          "name": "Khamisi Building, Opp.Castle Hotel, Moi Avenue, Ground Floor"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5484,9 +5530,9 @@
         "branch_code": "000",
         "branch_name": "Head Office",
         "address": {
-          "latitude": -1.292886, 
+          "latitude": -1.292886,
           "longitude": 36.789735,
-          "name": "Khamisi Building, Opp.Castle Hotel, Moi Avenue, Ground Floor" 
+          "name": "Khamisi Building, Opp.Castle Hotel, Moi Avenue, Ground Floor"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5499,9 +5545,9 @@
         "branch_code": "001",
         "branch_name": "Koinange Street",
         "address": {
-          "latitude": -1.292886, 
+          "latitude": -1.292886,
           "longitude": 36.789735,
-          "name": "Winsor House, Ground Floor" 
+          "name": "Winsor House, Ground Floor"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5519,9 +5565,9 @@
         "branch_code": "101",
         "branch_name": "Kayole",
         "address": {
-          "latitude": -1.2742419072236293, 
+          "latitude": -1.2742419072236293,
           "longitude": 36.910861266192526,
-          "name": "Pinnacle Centre, Spine Road" 
+          "name": "Pinnacle Centre, Spine Road"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5539,9 +5585,9 @@
         "branch_code": "105",
         "branch_name": "Kawangware",
         "address": {
-          "latitude": -1.2848759122328248, 
+          "latitude": -1.2848759122328248,
           "longitude": 36.737493735321266,
-          "name": "Mbugua Plaza, Naivasha Road" 
+          "name": "Mbugua Plaza, Naivasha Road"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5574,9 +5620,9 @@
         "branch_code": "116",
         "branch_name": "Kirinyaga Road",
         "address": {
-          "latitude": -1.2806688525098764, 
+          "latitude": -1.2806688525098764,
           "longitude": 36.82732344635643,
-          "name": "Bits House" 
+          "name": "Bits House"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5589,9 +5635,9 @@
         "branch_code": "209",
         "branch_name": "Machakos",
         "address": {
-          "latitude": -1.5184334320145585, 
+          "latitude": -1.5184334320145585,
           "longitude": 37.266780758161474,
-          "name": "Kingdom Bank Building, Mbolu Malu Road" 
+          "name": "Kingdom Bank Building, Mbolu Malu Road"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5605,9 +5651,9 @@
         "branch_code": "210",
         "branch_name": "Mtwapa",
         "address": {
-          "latitude": -3.951776, 
-          "longitude": 39.744310,
-          "name": "Malindi Highway, Mzambarauni" 
+          "latitude": -3.951776,
+          "longitude": 39.74431,
+          "name": "Malindi Highway, Mzambarauni"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5625,9 +5671,9 @@
         "branch_code": "301",
         "branch_name": "Thika",
         "address": {
-          "latitude": -1.040457, 
+          "latitude": -1.040457,
           "longitude": 37.071574,
-          "name": "Thika Town Opposite Quickmart Supermarket" 
+          "name": "Thika Town Opposite Quickmart Supermarket"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5645,9 +5691,9 @@
         "branch_code": "305",
         "branch_name": "Wangige",
         "address": {
-          "latitude": -1.218004, 
+          "latitude": -1.218004,
           "longitude": 36.712927,
-          "name": "Wangige Shopping Centre, Walokana Petrol Station" 
+          "name": "Wangige Shopping Centre, Walokana Petrol Station"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5660,9 +5706,9 @@
         "branch_code": "306",
         "branch_name": "Kikuyu",
         "address": {
-          "latitude": -1.244896, 
+          "latitude": -1.244896,
           "longitude": 36.663934,
-          "name": "Red Brick House, Opp PCEA Kikuyu Township" 
+          "name": "Red Brick House, Opp PCEA Kikuyu Township"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5680,9 +5726,9 @@
         "branch_code": "308",
         "branch_name": "Kiambu",
         "address": {
-          "latitude": -1.1726939243606536, 
+          "latitude": -1.1726939243606536,
           "longitude": 36.83055730766783,
-          "name": "Githunguri Nyakinywa Women Group Building" 
+          "name": "Githunguri Nyakinywa Women Group Building"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5695,9 +5741,9 @@
         "branch_code": "310",
         "branch_name": "Utawala",
         "address": {
-          "latitude": -1.2828507252861518, 
+          "latitude": -1.2828507252861518,
           "longitude": 36.959553280064725,
-          "name": "Mashariki Shopping mall, Eastern bypass Next to APTC College" 
+          "name": "Mashariki Shopping mall, Eastern bypass Next to APTC College"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5710,9 +5756,9 @@
         "branch_code": "316",
         "branch_name": "Nyeri",
         "address": {
-          "latitude": -0.425710, 
-          "longitude": 36.956500, 
-          "name": "Mashariki Shopping mall, Eastern bypass Next to APTC College" 
+          "latitude": -0.42571,
+          "longitude": 36.9565,
+          "name": "Mashariki Shopping mall, Eastern bypass Next to APTC College"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5725,9 +5771,9 @@
         "branch_code": "402",
         "branch_name": "Kisumu",
         "address": {
-          "latitude": -0.102081, 
-          "longitude": 34.752348, 
-          "name": "Jubilee House at the junction of Oginga Odinga and Angawa Street" 
+          "latitude": -0.102081,
+          "longitude": 34.752348,
+          "name": "Jubilee House at the junction of Oginga Odinga and Angawa Street"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5740,9 +5786,9 @@
         "branch_code": "318",
         "branch_name": "SACCO Clearing Centre",
         "address": {
-          "latitude": -1.292886, 
+          "latitude": -1.292886,
           "longitude": 36.789735,
-          "name": "Khamisi Building, Opp.Castle Hotel, Moi Avenue, Ground Floor" 
+          "name": "Khamisi Building, Opp.Castle Hotel, Moi Avenue, Ground Floor"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5756,9 +5802,9 @@
         "branch_code": "111",
         "branch_name": "Central Clearing Center",
         "address": {
-          "latitude": -1.292886, 
+          "latitude": -1.292886,
           "longitude": 36.789735,
-          "name": "Khamisi Building, Opp.Castle Hotel, Moi Avenue, Ground Floor" 
+          "name": "Khamisi Building, Opp.Castle Hotel, Moi Avenue, Ground Floor"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5772,9 +5818,9 @@
         "branch_code": "401",
         "branch_name": "Eldoret",
         "address": {
-          "latitude": 0.515244, 
+          "latitude": 0.515244,
           "longitude": 35.274741,
-          "name": "Kenyatta Street, Corner House Opposite School Depot" 
+          "name": "Kenyatta Street, Corner House Opposite School Depot"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5788,8 +5834,8 @@
         "branch_name": "Gikomba",
         "address": {
           "latitude": -1.2840660538634752,
-          "longitude":  36.835740166724904,
-          "name": "Kombo Munyiri Road Nafuu General Hardware Building, 1st Floor" 
+          "longitude": 36.835740166724904,
+          "name": "Kombo Munyiri Road Nafuu General Hardware Building, 1st Floor"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5802,9 +5848,9 @@
         "branch_code": "N/A",
         "branch_name": "Kitale",
         "address": {
-          "latitude": 1.017624, 
-          "longitude":  35.002046,
-          "name": "Kenyatta Street Ground Floor, GH Tanna Building" 
+          "latitude": 1.017624,
+          "longitude": 35.002046,
+          "name": "Kenyatta Street Ground Floor, GH Tanna Building"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5817,9 +5863,9 @@
         "branch_code": "N/A",
         "branch_name": "Meru",
         "address": {
-          "latitude": 0.04701638052310584, 
-          "longitude":  37.65786328262163,
-          "name": "Tom Mboya Street, Ground & 1st Floor, Ntima Building" 
+          "latitude": 0.04701638052310584,
+          "longitude": 37.65786328262163,
+          "name": "Tom Mboya Street, Ground & 1st Floor, Ntima Building"
         },
         "operatingHours": {
           "weekdays": "8:00am - 4:00pm",
@@ -5837,6 +5883,7 @@
     "bank_name": "Guaranty Trust Bank ( Kenya) Ltd",
     "aliases": ["GTB"],
     "bank_code": "53",
+    "swift_code": "GTBIKENAXXX",
     "headquarters": "Skypark, Parklands Road, Nairobi",
     "branches": [
       {
@@ -6038,6 +6085,7 @@
     "bank_name": "Victoria Commercial Bank",
     "aliases": ["VCB"],
     "bank_code": "54",
+    "swift_code": "VICMKENAXXX",
     "headquarters": " Victoria Towers Mezzanine Floor, Kilimanjaro Avenue, Upper Hill, Nairobi",
     "branches": [
       {
@@ -6136,6 +6184,7 @@
     "bank_name": "Guardian Bank Limited",
     "aliases": ["GBL"],
     "bank_code": "55",
+    "swift_code": "GUARKENAXXX",
     "headquarters": "Guardian Centre, Biashara Street, Nairobi",
     "branches": [
       {
@@ -6286,6 +6335,7 @@
     "bank_name": "I&M BANK (KENYA) LTD",
     "aliases": ["IM"],
     "bank_code": "57",
+    "swift_code": "IMBLKENAXXX",
     "headquarters": "1st Parklands Avenue, Nairobi",
     "branches": [
       {
@@ -6931,6 +6981,7 @@
     "bank_name": "Development Bank of Kenya Limited",
     "aliases": ["DBK"],
     "bank_code": "59",
+    "swift_code": "DEVKKENAXXX",
     "headquarters": "16th Floor, Finance House; Loita Street, Nairobi",
     "branches": [
       {
@@ -6983,6 +7034,7 @@
     "bank_name": "State Bank of Mauritius Kenya",
     "aliases": ["SBM"],
     "bank_code": "60",
+    "swift_code": "SBMKKENAXXX",
     "headquarters": "Riverside Mews, Riverside Drive, Nairobi",
     "branches": [
       {
@@ -7788,6 +7840,7 @@
     "bank_name": "Housing Finance Bank",
     "aliases": ["HFC"],
     "bank_code": "61",
+    "swift_code": "HFCOKENAXXX",
     "headquarters": "Rehani House, Koinange Street, Nairobi",
     "branches": [
       {
@@ -8147,6 +8200,7 @@
     "bank_name": "Kenya Post Office Savings Bank",
     "aliases": ["Posta", "KPOSB"],
     "bank_code": "62",
+    "swift_code": "KPOBKEN1XXX",
     "headquarters": "Postbank House, Banda Street, Nairobi",
     "branches": [
       {
@@ -9620,6 +9674,7 @@
     "bank_name": "Diamond Trust Bank Limited",
     "aliases": ["DTB"],
     "bank_code": "63",
+    "swift_code": "DTKEKENAXXX",
     "headquarters": "Diamond Trust Bank Centre, Mombasa Road, Nairobi",
     "branches": [
       {
@@ -10765,6 +10820,7 @@
     "bank_name": "Mayfair CIB Bank",
     "aliases": ["MCB"],
     "bank_code": "65",
+    "swift_code": "MYBKKENAXXX",
     "headquarters": "Kamhouse, Mwanzi Road, Westlands, Nairobi",
     "branches": [
       {
@@ -10886,6 +10942,7 @@
     "id": 35,
     "bank_name": "Sidian Bank Limited",
     "bank_code": "66",
+    "swift_code": "SIDNKENAXXX",
     "headquarters": "Ring Road Kilimani, Wood Ave, Nairobi",
     "branches": [
       {
@@ -11571,6 +11628,7 @@
     "id": 36,
     "bank_name": "Equity Bank Limited",
     "bank_code": "68",
+    "swift_code": "EQBLKENAXXX",
     "headquarters": "Britam Towers, Hospital Rd, Nairobi",
     "branches": [
       {
@@ -12360,6 +12418,7 @@
     "id": 37,
     "bank_name": "Family Bank Ltd",
     "bank_code": "70",
+    "swift_code": "FABLKENAXXX",
     "headquarters": "Family Bank Towers, Muindi MBingu Street, Nairobi",
     "branches": [
       {
@@ -13661,6 +13720,7 @@
     "id": 38,
     "bank_name": "Gulf African Bank Ltd",
     "bank_code": "72",
+    "swift_code": "GAFRKENAXXX",
     "headquarters": "Kilimanjaro Rd, Nairobi",
     "branches": [
       {
@@ -13923,6 +13983,7 @@
     "id": 39,
     "bank_name": "Premier Bank Kenya Limited",
     "bank_code": "74",
+    "swift_code": "IFCBKENAXXX",
     "headquarters": "Nginyo Towers, Koinange Street, Nairobi",
     "branches": [
       {
@@ -14234,6 +14295,7 @@
     "id": 40,
     "bank_name": "DIB Bank Kenya Limited",
     "bank_code": "75",
+    "swift_code": "DUIBKENAXXX",
     "headquarters": "Lower Hill Rd, Nairobi",
     "branches": [
       {
@@ -14341,6 +14403,7 @@
     "id": 41,
     "bank_name": "UBA Kenya Bank Ltd",
     "bank_code": "76",
+    "swift_code": "UNAFKENAXXX",
     "headquarters": "Imperial Court Westlands Ground Floor, Nairobi",
     "branches": [
       {
@@ -14435,6 +14498,7 @@
     "bank_name": "Kenya Women Microfinance Bank",
     "aliases": ["KWMB", "KWFT"],
     "bank_code": "78",
+    "swift_code": "KWMIKENXXXX",
     "headquarters": "KWFT Centre, Kiambere – Masaba Road Junction, Upper hill, Nairobi",
     "branches": [
       {
@@ -14922,6 +14986,7 @@
     "id": 43,
     "bank_name": "Faulu Microfinance Bank Ltd",
     "bank_code": "79",
+    "swift_code": "FAUMKENAXXX",
     "headquarters": "Ngong Lane, off Ngong Road, Nairobi",
     "branches": [
       {
@@ -15758,6 +15823,7 @@
     "id": 44,
     "bank_name": "Caritas Microfinance Bank Ltd",
     "bank_code": "80",
+    "swift_code": "CRMFKENAXXX",
     "headquarters": "Cardinal Otunga Plaza, 5th Floor along Cardinal Otunga Street",
     "branches": [
       {

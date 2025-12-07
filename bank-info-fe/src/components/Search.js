@@ -10,18 +10,17 @@ function Search({ searchTerm, setSearchTerm }) {
   }
 
   return (
-    <div className="header h-90 bg-gray-100 pb-4">
-      <div className="font-semibold text-4xl text-center text-[#695958] pt-5">
-        Kenya Bank Code Search
+    <div className="header h-90 pb-4 pt-2">
+      <div className="text-center pt-5">
+        <h1 className="font-bold text-3xl">Find Bank Branches in Kenya</h1>
+        <p className="mt-2 text-gray-600 max-w-lg mx-auto text-md">
+          Easily search for bank and branch information, including SWIFT codes,
+          across the country.
+        </p>
       </div>
-      <div className="bg-[#B6C8A9] text-center py-8 mt-5 shadow-sm">
-        <h4 className="italic text-md mt-4 text-[#695958] mx-[5%]">
-          Search for all the Banks in Kenya, their codes, their branches info,
-          and additional details such as Opening Hours. You can filter by Bank
-          Name and Location.
-        </h4>
-        <div className="mt-6 flex justify-center">
-          <div className="relative md:w-1/2 items-center w-full sm:w-auto mx-[5%]">
+      <div className="mx-4 pb-5 pt-4 mt-8 text-center shadow-sm bg-white rounded-2xl">
+        <div className="mt-6 flex items-center">
+          <div className="relative md:w-full items-center w-full sm:w-auto mx-6">
             <div className="absolute right-0 inset-y-0 flex items-center pr-3">
               {searchTerm ? (
                 <button onClick={onClearSearch}>
@@ -63,9 +62,28 @@ function Search({ searchTerm, setSearchTerm }) {
               id="username"
               value={searchTerm}
               onChange={onSearchChange}
-              placeholder="Search Bank/Branch Name... e.g KCB"
-              className="appearance-none border-2 border-gray-300 hover:border-gray-400 transition-colors rounded-md w-full py-4 px-3 pl-10 pr-10 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-[#695958] focus:border-[#695958] focus:shadow-outline"
+              placeholder="Search Bank, Branch Name, or SWIFT Code..."
+              className="bg-[#F0F1F5] appearance-none border-2 border-gray-300 hover:border-gray-400 transition-colors rounded-md w-full py-2 px-10 text-gray-800 leading-tight focus:outline-none focus:shadow-outline border-none"
             />
+          </div>
+
+          <div className="flex items-center justify-between mx-6 gap-x-8">
+            <div className="flex gap-x-4">
+              <select className="bg-[#F0F1F5] py-2 rounded-md border-2 border-gray-300 hover:border-gray-400 transition-colors border-none text-sm font-medium px-3">
+                <option value="ALL">Filter By Bank</option>
+                <option value="KE">KE</option>
+                <option value="US">US</option>
+                <option value="UK">UK</option>
+              </select>
+
+
+              <select className="bg-[#F0F1F5] py-2 rounded-md border-2 border-gray-300 hover:border-gray-400 transition-colors border-none text-sm font-medium px-3">
+                <option value="ALL">Sort by Bank Name(A-Z)</option>
+                <option value="KE">KE</option>
+                <option value="US">US</option>
+                <option value="UK">UK</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ function highlightText(text, highlight) {
     });
     if (match) {
       return (
-        <span key={index} className="bg-yellow-300">
+        <span key={index} className="bg-[#175430] px-1">
           {part}
         </span>
       );

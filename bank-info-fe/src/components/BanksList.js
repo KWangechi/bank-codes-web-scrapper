@@ -32,7 +32,7 @@ function BanksList() {
     <>
       <div className="flex justify-center mt-6 h-full">
         {loading ? null : (
-          <span className="font-semibold text-xl italic text-[#695958]">
+          <span className="font-semibold text-xl italic text-[#D0BB95]">
             {totalResults.current > 0 ? (
               `${totalResults.current} Results Found`
             ) : !loading ? (

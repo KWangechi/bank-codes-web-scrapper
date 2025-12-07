@@ -37,25 +37,25 @@ const CopyToClipboard = (branchCode) => {
 }
 
   return (
-    <div className="grow shrink mt-12 mb-2 w-auto md:w-11/12 mx-auto" onClick={() => CopyToClipboard(branch?.branch_code)}>
-      <div className="grow rounded-lg shadow-lg bg-gray-50 p-6 shadow-[#695958]-500/40 ">
+    <div className="grow shrink mt-6 mb-2 w-auto md:w-full mx-auto gap-x-4 rounded-2xl" onClick={() => CopyToClipboard(branch?.branch_code)}>
+      <div className="grow rounded-2xl shadow-lg bg-white p-6 shadow-[#D0BB95]-500/40 ">
         <div className="flex flex-col sm:flex-row items-center mb-4">
           <img
             src={bank?.icon}
             alt="Bank Logo"
-            className="h-16 w-17 rounded-lg bg-none"
+            className="h-10 w-15 rounded-lg bg-none"
           />
-          <div className="ml-4 flex-grow">
-            <h2 className="italic text-xl text-[#695958]">
+          <div className="ml-4 flex-grow ">
+            <h2 className="italic text-lg text-[#D0BB95] font-bold">
               {highlightText(branch?.branch_name, searchTerm)}
             </h2>
             <div className="flex items-center text-gray-600">
-              <span className="text-lg font-bold">
+              <span className="text-md font-bold">
                 Branch Code: {highlightText(branch?.branch_code, searchTerm)}
               </span>
               <span className="mx-2">•</span>
               <span
-                className="font-bold"
+                className="font-bold text-md"
                 style={{
                   color: isOpen() === "Open" ? "#16a34a" : "#dc2626",
                   fontWeight: "bold",
@@ -65,7 +65,8 @@ const CopyToClipboard = (branchCode) => {
               </span>
             </div>
           </div>
-          <div className="flex text-right">
+          
+          <div className="flex">
             <svg
               className="w-6 h-6 text-gray-400"
               fill="currentColor"
@@ -79,11 +80,12 @@ const CopyToClipboard = (branchCode) => {
         <div className="border-t border-gray-200 pt-4">
           <div className="flex justify-between items-start mb-4 flex-col sm:flex-row">
             <div>
-              <p className="font-semibold text-[#695958]">{highlightText(bank.bank_name, searchTerm)}</p>
+              <p className="font-semibold text-[#D0BB95]">{highlightText(bank.bank_name, searchTerm)}</p>
               <span className="text-gray-600">Bank Code: {bank.bank_code}</span>
+              <p className="text-gray-600">Swift Code: {bank.swift_code}</p>
             </div>
             <div className="text-left sm:text-right mt-1.5 sm:mt-0">
-              <p className="font-semibold text-[#695958]">Working Hours</p>
+              <p className="font-semibold text-[#D0BB95]">Working Hours</p>
               <span className="text-gray-600">
                 {startingTimeEveryday} - {endingTimeWeekdays} - Weekdays
               </span>
@@ -96,7 +98,7 @@ const CopyToClipboard = (branchCode) => {
           </div>
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 mt-4">
             <div>
-              <p className="font-semibold text-[#695958]">Contact Info</p>
+              <p className="font-semibold text-[#D0BB95]">Contact Info</p>
               <div className="flex justify-between">
                 <span className="flex justify-between items-center mt-1 text-gray-600">
                   <svg

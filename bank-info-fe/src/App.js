@@ -6,20 +6,25 @@ import { NoResultCard } from "./components/NoResultCard";
 import SkeletonCard from "./components/SkeletonCard";
 import banks from "./banks_info.json";
 import { ResultCard } from "./components/ResultCard";
-import Pagination from "./components/Pagination";
+// import Pagination from "./components/Pagination";
 import Header from "components/Header";
 import Footer from "components/Footer";
-// import { Link } from "react-router-dom";
+import usePagination from "hooks/usePagination";
 
 function App() {
-  const rowsPerPage = useRef(0);
   const totalResults = useRef(0);
   const [search, setSearch] = useState("");
   const searchTerm = useDebounce(search, 10);
   const [loading, setLoading] = useState(true);
   const [newFilteredBanks, setNewFilteredBanks] = useState([]);
-  const [pagination, setPagination] = useState({});
-  const [currentPage] = useState(1);
+
+  // pagination
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const rowsPerPage = 20;
+
+  const totalResultsCount = totalResults.current;
+  const pagination = usePagination(totalResultsCount, rowsPerPage, currentPage);
 
   useFilteredBanks(
     banks,
@@ -27,57 +32,70 @@ function App() {
     setLoading,
     totalResults,
     setNewFilteredBanks,
-    setPagination,
     pagination,
     currentPage
   );
-  rowsPerPage.current = pagination?.rowsPerPage;
 
   return (
-    <div>
+    <div className="flex flex-col h-screen">
       <Header></Header>
-      <Search searchTerm={search} setSearchTerm={setSearch} />
-      <div className="flex justify-center mt-6 h-full">
-        {loading ? null : (
-          <span className="font-semibold text-xl italic text-[#695958]">
-            {totalResults.current > 0 ? (
-              `${totalResults.current} Results Found`
-            ) : !loading ? (
-              <NoResultCard query={search} />
-            ) : (
-              ""
-            )}
-          </span>
-        )}
-      </div>
-      <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 sm:grid-cols-1">
-        {loading ? (
-          <SkeletonCard />
-        ) : (
-          newFilteredBanks.map((bank) =>
-            bank.branches.map((branch) => (
-              <ResultCard
-                key={`${bank.bank_code}-${branch.branch_code}`}
-                bank={bank}
-                branch={branch}
-                searchTerm={searchTerm}
-              />
-            ))
-          )
-        )}
-      </div>
-      {totalResults.current ? (
-        <div>
-          <Pagination
-            rowsPerPage={rowsPerPage}
-            totalResultsCount={totalResults.current}
-            setPagination={setPagination}
-          />
-        </div>
-      ) : null}
+      <div className="bg-[#f7f7f5] flex flex-col flex-1">
+        <Search searchTerm={search} setSearchTerm={setSearch} />
+        <div
+          className={`flex ${
+            totalResults.current > 0 ? "justify-between" : "justify-center"
+          } items-center mx-4 mt-4`}
+        >
+          {loading ? null : (
+            <span className="font-semibold text-xl text-black">
+              {totalResults.current > 0 ? (
+                <div>Showing {totalResults.current} Result(s)</div>
+              ) : (
+                <div className="text-center">
+                  <NoResultCard query={search} />
+                </div>
+              )}
+            </span>
+          )}
 
-      <div>
-        <Footer></Footer>
+          {totalResults.current > 0 && (
+            <div className="flex gap-x-4">
+              <button className="bg-white hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-md transition-colors">
+                List View
+              </button>
+              <button className="bg-white hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-md transition-colors">
+                Map View
+              </button>
+            </div>
+          )}
+        </div>
+        <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 sm:grid-cols-1 overflow-y-auto flex-1">
+          {loading ? (
+            <SkeletonCard />
+          ) : (
+            newFilteredBanks
+            // .slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage)
+            .map((bank) =>
+              bank.branches.map((branch) => (
+                <ResultCard
+                  key={`${bank.bank_code}-${branch.branch_code}`}
+                  bank={bank}
+                  branch={branch}
+                  searchTerm={searchTerm}
+                />
+              ))
+            )
+          )}
+        </div>
+        {/* {totalResults.current ? (
+          <div>
+            <Pagination pagination={pagination} onPageChange={setCurrentPage} />
+          </div>
+        ) : null} */}
+
+        <div>
+          <Footer></Footer>
+        </div>
       </div>
     </div>
   );
