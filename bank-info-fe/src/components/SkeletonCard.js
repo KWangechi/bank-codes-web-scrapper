@@ -9,7 +9,7 @@ const SkeletonCard = () => {
         .map((_, index) => (
           <div
             key={index}
-            className="rounded-lg shadow-lg bg-gray-50 p-6 mb-6 w-full md:w-11/12 mx-auto"
+            className="rounded-lg shadow-lg bg-white p-6 mb-6 w-full mx-auto"
           >
             {/* TOP ROW: Logo + Branch Title + Status */}
             <div className="flex items-start justify-between mb-4">
@@ -26,8 +26,10 @@ const SkeletonCard = () => {
               </div>
 
               {/* Status */}
-              <div className="text-right">
+              <div className="text-right gap-y-2 flex flex-col">
+                <Skeleton height={20} width={120} />
                 <Skeleton height={20} width={70} />
+                
               </div>
             </div>
 
@@ -48,6 +50,7 @@ const SkeletonCard = () => {
               {/* Right Side: Working Hours */}
               <div className="text-right flex-1">
                 <Skeleton height={14} width={150} />
+                <Skeleton height={14} width={150} className="mt-2" /> 
                 <Skeleton height={14} width={150} className="mt-2" />
                 <Skeleton height={14} width={200} className="mt-2" />
               </div>

@@ -7,9 +7,6 @@ import SkeletonCard from "./SkeletonCard";
 import banks from "./../banks_info.json";
 import { ResultCard } from "./ResultCard";
 import Pagination from "./Pagination";
-// import Header from "components/Header";
-// import Footer from "components/Footer";
-// import { Link } from "react-router-dom";
 
 function BanksList() {
   const rowsPerPage = useRef(0);

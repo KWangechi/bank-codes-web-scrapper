@@ -1,3 +1,4 @@
+import { MagnifyingGlassIcon, XCircleIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
 function Search({ searchTerm, setSearchTerm }) {
@@ -12,7 +13,7 @@ function Search({ searchTerm, setSearchTerm }) {
   return (
     <div className="header h-90 pb-4 pt-2">
       <div className="text-center pt-5">
-        <h1 className="font-bold text-3xl">Find Bank Branches in Kenya</h1>
+        <h1 className="font-bold text-3xl">Find Bank and Branch Codes in Kenya</h1>
         <p className="mt-2 text-gray-600 max-w-lg mx-auto text-md">
           Easily search for bank and branch information, including SWIFT codes,
           across the country.
@@ -24,38 +25,12 @@ function Search({ searchTerm, setSearchTerm }) {
             <div className="absolute right-0 inset-y-0 flex items-center pr-3">
               {searchTerm ? (
                 <button onClick={onClearSearch}>
-                  <svg
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-gray-400 hover:text-gray-500 cursor-pointer"
-                  >
-                    <path
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
+                  <XCircleIcon className="h-6 w-6 text-gray-600 hover:text-gray-500 cursor-pointer" />
                 </button>
               ) : null}
             </div>
             <div className="absolute left-0 inset-y-0 flex items-center pl-3">
-              <svg
-                fill="none"
-                viewBox="0 0 26 26"
-                stroke="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-gray-600 hover:text-gray-500 cursor-pointer"
-              >
-                <path
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
+              <MagnifyingGlassIcon className="h-6 w-6 text-gray-600" />
             </div>
             <input
               type="text"
