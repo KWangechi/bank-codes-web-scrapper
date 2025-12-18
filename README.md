@@ -19,12 +19,12 @@ So this section is for those who want to try this out and also tweak it a bit
 
 A virtual environment is necessary.
 
-#### Setting up pip 
+#### Setting up pip `
 
 On Windows:
 - You must have pip installed - python -m venv venv
 - Navigate to the `/venv/Scripts`: `cd venv/Scripts`
-- Activate the virtual env: `.\activate`
+- Activate the virtual env: `.\activate``
 - Install dependencies: `pip install -r requirements.txt`
 
 On Linux:
