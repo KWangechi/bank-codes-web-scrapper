@@ -1,16 +1,20 @@
 import json
+import os
 import psycopg2
 from psycopg2.extras import Json
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # -----------------------------
 # DB CONFIG
 # -----------------------------
 DB_CONFIG = {
-    "host": "localhost",
-    "dbname": "kenya_bank_code_app",
-    "user": "admin",
-    "password": "admin12345",
-    "port": 5432
+    "host": os.getenv("DB_HOST"),
+    "dbname": os.getenv("DB_NAME"),
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASSWORD"),
+    "port": int(os.getenv("DB_PORT", 5432))
 }
 
 # -----------------------------
