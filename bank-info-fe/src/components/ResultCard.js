@@ -106,6 +106,16 @@ export function ResultCard({ bank, branch, searchTerm }) {
               <p className="text-gray-600 mt-2">
                 Swift Code: {bank.swift_code}
               </p>
+              {bank?.ussd_code && (
+                <p className="text-gray-600 mt-2">
+                  USSD Code: {bank?.ussd_code}
+                </p>
+              )}
+              {bank?.mpesa_paybill_no && (
+                <p className="text-gray-600 mt-2">
+                  MPESA Paybill No: {bank?.mpesa_paybill_no}
+                </p>
+              )}
             </div>
             <div className="text-left sm:text-right mt-1.5 sm:mt-0">
               <p className="font-semibold text-[#D0BB95]">Working Hours</p>
