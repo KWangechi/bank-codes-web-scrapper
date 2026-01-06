@@ -20,11 +20,14 @@ class BankSchema(BaseModel):
     name: str
     bank_code: str
     swift_code: str
+    ussd_code: Optional[str]
+    mpesa_paybill_no: Optional[str]
     headquarters: Optional[str]
     alias: List[str]
     telephone1: Optional[str]
     telephone2: Optional[str]
     email: Optional[str]
+    
     
 
     class Config:

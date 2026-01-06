@@ -12,6 +12,8 @@ class Bank(Base):
     name = Column(String, nullable=False)
     bank_code = Column(String, unique=True, nullable=False)
     swift_code = Column(String, unique=True, nullable=False)
+    ussd_code = Column(String, unique=True, nullable=True)
+    mpesa_paybill_no = Column(String, unique=True, nullable=True)
     headquarters = Column(String, nullable=True)
     alias = Column(ARRAY(Text), nullable=True)
     telephone1 = Column(String, nullable=True)
