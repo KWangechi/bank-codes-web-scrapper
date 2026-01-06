@@ -5,7 +5,7 @@ export default function Header() {
     <div className="flex justify-between mx-4 my-2">
       <div className="flex items-center space-x-4 font-bold text-xl">
         <img src="/bank16.png" alt="Bank Logo" className="h-5 w-5" />
-        <span>Kenya Bank Branch Code Finder</span>
+        <span>Kenya Banks Info Finder</span>
       </div>
       <div className="flex items-center space-x-2">
         <InformationCircleIcon className="h-3 w-3 text-yellow-500" />

@@ -95,4 +95,4 @@ conn.commit()
 cur.close()
 conn.close()
 
-print("✅ Bank and Branches data successfully migrated to PostgreSQL")
+print("Bank and Branches data successfully migrated to PostgreSQL")
