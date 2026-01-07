@@ -10,6 +10,8 @@ import { ResultCard } from "./components/ResultCard";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import usePagination from "hooks/usePagination";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
+import { downloadAsJson } from "hooks/useFilteredBanks";
 
 function App() {
   const totalResults = useRef(0);
@@ -60,41 +62,43 @@ function App() {
 
           {totalResults.current > 0 && (
             <div className="flex gap-x-4">
-              <button className="bg-white hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-md transition-colors">
+              <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-md transition-colors text-sm">
                 List View
               </button>
-              <button className="bg-white hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-md transition-colors">
+              <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-md transition-colors text-sm">
                 Map View
+              </button>
+              <button
+                className="bg-gray-200 hover:bg-[#D0BB95] text-gray-800 font-semibold py-2 px-4 rounded-md transition-colors flex gap-x-4 align-middle text-sm"
+                onClick={downloadAsJson}
+              >
+                <ArrowDownTrayIcon height="17" width="17" />
+                Download as JSON
               </button>
             </div>
           )}
         </div>
-        <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 sm:grid-cols-1 overflow-y-auto flex-1">
+        <div className="grid md:grid-cols-2 gap-6 ms-4 me-4 sm:grid-cols-1 overflow-y-auto mt-5 flex-1 max-h-[calc(100vh-200px)]">
           {loading ? (
             <SkeletonCard />
           ) : (
             newFilteredBanks
-            // .slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage)
-            .map((bank) =>
-              bank.branches.map((branch) => (
-                <ResultCard
-                  key={`${bank.bank_code}-${branch.branch_code}`}
-                  bank={bank}
-                  branch={branch}
-                  searchTerm={searchTerm}
-                />
-              ))
-            )
+              // .slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage)
+              .map((bank) =>
+                bank.branches.map((branch) => (
+                  <ResultCard
+                    key={`${bank.bank_code}-${branch.branch_code}`}
+                    bank={bank}
+                    branch={branch}
+                    searchTerm={searchTerm}
+                  />
+                ))
+              )
           )}
         </div>
-        {/* {totalResults.current ? (
-          <div>
-            <Pagination pagination={pagination} onPageChange={setCurrentPage} />
-          </div>
-        ) : null} */}
 
         <div>
-          <Footer></Footer>
+          <Footer />
         </div>
       </div>
     </div>

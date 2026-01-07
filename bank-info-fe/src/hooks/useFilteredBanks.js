@@ -69,4 +69,8 @@ function useFilteredBanks(
   }, [setLoading, filteredBanks, setFilteredBanks, totalResults]);
 }
 
+export function downloadAsJson() {
+  console.log('This will download results as JSON');
+}
+
 export default useFilteredBanks;
