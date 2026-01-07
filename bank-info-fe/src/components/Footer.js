@@ -5,7 +5,7 @@ function Footer() {
     <footer className="bg-gray-800 p-4 text-gray-300">
       <div className="flex justify-between items-center">
         <div>
-          &copy; {currentYear} Kenya Bank Search App by Rachel Karanja. All
+          &copy; {currentYear} Kenya Bank Info Finder by Rachel Karanja. All
           rights reserved.
         </div>
         <div className="flex items-center space-x-4">
