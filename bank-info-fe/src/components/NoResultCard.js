@@ -9,7 +9,7 @@ export function NoResultCard({ query}) {
           No Results
         </h1>
         <p className="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
-          No Results were found with the search query <span className="font-bold italic">{query}</span>
+          No Results were found with the search query: <span className="font-bold italic">{query}</span>
         </p>
       </div>
     </section>

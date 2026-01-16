@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "axios": "^1.13.2",
+    "zustand": "^5.0.10"
+  }
+}

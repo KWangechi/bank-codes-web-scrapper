@@ -17,6 +17,7 @@ class Bank(Base):
     telephone1 = Column(String, nullable=True)
     telephone2 = Column(String, nullable=True)
     email = Column(String, nullable=True)
+    logo_url = Column(String, nullable=False)
 
     branches = relationship("Branch", back_populates="bank")
 

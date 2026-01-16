@@ -1,65 +1,109 @@
 import { MagnifyingGlassIcon, XCircleIcon } from "@heroicons/react/24/solid";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Select from "react-select";
+import { useApiStore } from "stores/apiStore";
+import { Option } from "./BankSelectOption";
 
-function Search({ searchTerm, setSearchTerm }) {
+function Search() {
+  const {
+    banks,
+    fetchAllBanks,
+    searchInfo,
+    setSearchTerm,
+    searchTerm,
+    isLoading,
+  } = useApiStore();
+
+  const [bankName, setBankName] = useState(null);
+
   function onClearSearch() {
     setSearchTerm("");
   }
 
+  function onSelectBankChange(selectedValue) {
+    setBankName(selectedValue);
+    searchInfo(selectedValue);
+  }
+
   function onSearchChange(e) {
     setSearchTerm(e.target.value);
+
+    // make a call to the backendR
+    searchInfo(bankName);
+    // if (searchTerm.length > 3) {
+    // }
   }
+
+  // load the banks on loading this component
+  useEffect(() => {
+    fetchAllBanks();
+    searchInfo();
+  }, []);
 
   return (
     <div className="header h-90 pb-4 pt-2">
       <div className="text-center pt-5">
-        <h1 className="font-bold text-3xl">Find Bank and Branch Codes in Kenya</h1>
+        <h1 className="font-bold text-3xl">
+          Find Bank and Branch Info in Kenya
+        </h1>
         <p className="mt-2 text-gray-600 max-w-lg mx-auto text-md">
           Easily search for bank and branch information, including SWIFT codes,
           across the country.
         </p>
       </div>
-      <div className="mx-4 pb-5 pt-4 mt-8 text-center shadow-sm bg-white rounded-2xl">
-        <div className="mt-6 flex items-center">
-          <div className="relative md:w-full items-center w-full sm:w-auto mx-6">
-            <div className="absolute right-0 inset-y-0 flex items-center pr-3">
-              {searchTerm ? (
-                <button onClick={onClearSearch}>
-                  <XCircleIcon className="h-6 w-6 text-gray-600 hover:text-gray-500 cursor-pointer" />
-                </button>
-              ) : null}
-            </div>
-            <div className="absolute left-0 inset-y-0 flex items-center pl-3">
-              <MagnifyingGlassIcon className="h-6 w-6 text-gray-600" />
-            </div>
-            <input
-              type="text"
-              id="username"
-              value={searchTerm}
-              onChange={onSearchChange}
-              placeholder="Search Bank, Branch Name, or SWIFT Code..."
-              className="bg-[#F0F1F5] appearance-none border-2 border-gray-300 hover:border-gray-400 transition-colors rounded-md w-full py-2 px-10 text-gray-800 leading-tight focus:outline-none focus:shadow-outline border-none"
-            />
+
+      <div className="bg-white py-6 rounded-md mx-4 mt-6 flex items-center gap-x-6">
+        {/* Search Input */}
+        <div className="relative md:w-[60%] w-full mx-6">
+          <div className="absolute right-0 inset-y-0 flex items-center pr-3">
+            {searchTerm && (
+              <button onClick={onClearSearch}>
+                <XCircleIcon className="h-6 w-6 text-gray-600 hover:text-gray-500" />
+              </button>
+            )}
           </div>
 
-          <div className="flex items-center justify-between mx-6 gap-x-8">
-            <div className="flex gap-x-4">
-              <select className="bg-[#F0F1F5] py-2 rounded-md border-2 border-gray-300 hover:border-gray-400 transition-colors border-none text-sm font-medium px-3">
-                <option value="ALL">Filter By Bank</option>
-                <option value="KE">KE</option>
-                <option value="US">US</option>
-                <option value="UK">UK</option>
-              </select>
-
-
-              <select className="bg-[#F0F1F5] py-2 rounded-md border-2 border-gray-300 hover:border-gray-400 transition-colors border-none text-sm font-medium px-3">
-                <option value="ALL">Sort by Bank Name(A-Z)</option>
-                <option value="KE">KE</option>
-                <option value="US">US</option>
-                <option value="UK">UK</option>
-              </select>
-            </div>
+          <div className="absolute left-0 inset-y-0 flex items-center pl-3">
+            <MagnifyingGlassIcon className="h-6 w-6 text-gray-600" />
           </div>
+
+          <input
+            id="search-bank"
+            type="text"
+            value={searchTerm}
+            onChange={onSearchChange}
+            placeholder="Search Bank, Branch Name, or SWIFT Code..."
+            className="bg-[#F0F1F5] w-full py-2 px-10 rounded-md focus:outline-none focus:border-gray-900 focus:border hover:border-gray-900 hover:border"
+          />
+        </div>
+
+        {/* Bank Select */}
+        <div className="w-full max-w-[320px] flex-shrink-0">
+          <Select
+            isClearable
+            options={banks.map((bank) => ({
+              value: bank.name,
+              label: bank.name,
+              logo: bank.logo_url,
+            }))}
+            placeholder="Filter by Bank"
+            isLoading={isLoading}
+            onChange={(e) => onSelectBankChange(e?.value)}
+            components={{ Option }}
+            classNamePrefix="react-select"
+            styles={{
+              control: (baseStyles, state) => ({
+                ...baseStyles,
+                padding: "3px 3px",
+                backgroundColor: "#F0F1F5",
+                borderColor: state.isFocused ? "gray" : "#D1D5DB",
+                boxShadow: state.isFocused ? "0 0 0 1px gray" : "none",
+                "&:hover": {
+                  borderColor: "gray",
+                },
+              }),
+            }}
+          />
         </div>
       </div>
     </div>

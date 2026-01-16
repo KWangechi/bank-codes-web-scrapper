@@ -25,6 +25,7 @@ class BankSchema(BaseModel):
     telephone1: Optional[str]
     telephone2: Optional[str]
     email: Optional[str]
+    logo_url: str
     
 
     class Config:
