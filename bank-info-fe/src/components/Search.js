@@ -12,6 +12,8 @@ function Search() {
     setSearchTerm,
     searchTerm,
     isLoading,
+    searchPagination,
+    branchesPagination,
   } = useApiStore();
 
   const [bankName, setBankName] = useState(null);
@@ -29,10 +31,9 @@ function Search() {
   function onSearchChange(e) {
     setSearchTerm(e.target.value);
 
-    // make a call to the backendR
+    // make a call to the backend
     searchInfo(bankName);
-    // if (searchTerm.length > 3) {
-    // }
+
   }
 
   const sortedOptions = useMemo(() => {
@@ -92,11 +93,6 @@ function Search() {
         <div className="w-full max-w-[320px] flex-shrink-0">
           <Select
             isClearable
-            // options={banks.map((bank) => ({
-            //   value: bank.name,
-            //   label: bank.name,
-            //   logo: bank.logo_url,
-            // }))}
             options={sortedOptions}
             placeholder="Filter by Bank"
             isLoading={isLoading}

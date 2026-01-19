@@ -2,6 +2,7 @@ from pydantic import BaseModel
 from typing import List, Optional
 from uuid import UUID
 
+
 class BranchSchema(BaseModel):
     id: UUID
     bank_id: UUID
@@ -15,6 +16,7 @@ class BranchSchema(BaseModel):
     class Config:
         from_attributes = True
 
+
 class BankSchema(BaseModel):
     id: UUID
     name: str
@@ -26,7 +28,14 @@ class BankSchema(BaseModel):
     telephone2: Optional[str]
     email: Optional[str]
     logo_url: str
-    
+    ussd_code: Optional[str]
 
     class Config:
         from_attributes = True
+
+
+class PaginatedBranches(BaseModel):
+    page: int
+    page_size: int
+    total: int
+    data: List[BranchSchema]

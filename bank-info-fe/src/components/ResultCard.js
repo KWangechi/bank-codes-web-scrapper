@@ -121,7 +121,7 @@ export function ResultCard({ bank, branch }) {
                 {bank.mpesa_paybill_no || "N/A"}
               </p>
               <p className="text-gray-600">
-                <span className="text-md font-semibold">Swift Code:</span>
+                <span className="text-md font-semibold">USSD:</span>
                 &nbsp;
                 {bank.ussd_code || "N/A"}
               </p>

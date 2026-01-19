@@ -5,7 +5,7 @@ from typing import Optional, List
 from models import Bank, Base, Branch
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from schemas import BankSchema, BranchSchema
+from schemas import BankSchema, BranchSchema, PaginatedBranches
 from deps import get_db
 from database import engine
 from uuid import UUID
@@ -37,19 +37,35 @@ def get_all_banks(q: Optional[str] = Query(None), db: Session = Depends(get_db))
 
 @app.get("/banks/{bank_id}/branches", response_model=List[BranchSchema])
 def get_bank_branches(
-    bank_id: UUID, q: Optional[str] = Query(None), db: Session = Depends(get_db)
+    bank_id: UUID,
+    q: Optional[str] = Query(None),
+    page: int = Query(1, ge=1),
+    page_size: int = Query(20, ge=1, le=100),
+    db: Session = Depends(get_db),
 ):
     query = db.query(Branch).filter(Branch.bank_id == bank_id)
 
     if q:
         query = query.filter(Branch.name.ilike(f"%{q}%"))
 
+    # Total results
+    total = query.with_entities(func.count(func.distinct(Branch.id))).scalar()
+
+    # Pagination
+    offset = (page - 1) * page_size
+
+    data = query.limit(page_size).offset(offset).all()
+
     return query.all()
 
 
-@app.get("/search", response_model=list[BranchSchema])
+@app.get("/search", response_model=PaginatedBranches)
 def global_search(
-    q: str | None = None, bank_name: str | None = None, db: Session = Depends(get_db)
+    q: str | None = None,
+    bank_name: str | None = None,
+    page: int = Query(1, ge=1),
+    page_size: int = Query(20, ge=1, le=100),
+    db: Session = Depends(get_db),
 ):
     query = db.query(Branch).join(Branch.bank).options(joinedload(Branch.bank))
 
@@ -81,4 +97,23 @@ def global_search(
 
         query = query.filter(and_(*conditions))
 
-    return query.distinct(Branch.id).all()
+    # Total results
+    total = query.with_entities(func.count(func.distinct(Branch.id))).scalar()
+
+    # Pagination
+    offset = (page - 1) * page_size
+
+    data = query.distinct(Branch.id).limit(page_size).offset(offset).all()
+
+    return {"page": page, "page_size": page_size, "total": total, "data": data}
+
+
+# Download
+@app.get("/download/asJson", response_model=list[BranchSchema])
+def downloadDataAsJson():
+    return {}
+
+
+@app.get("/download/asExcel", response_model=list[BranchSchema])
+def downloadDataAsExcel():
+    return {}

@@ -1,4 +1,4 @@
-import {create} from "zustand";
+import { create } from "zustand";
 import axios from "axios";
 
 export const useApiStore = create((set) => ({
@@ -8,7 +8,10 @@ export const useApiStore = create((set) => ({
   branches: [],
   result: [],
   isLoading: false,
+  isFetching: false,
   error: null,
+  searchPagination: {},
+  branchesPagination: {},
 
   // setters
   setSearchTerm: (searchTerm) => set({ searchTerm }),
@@ -23,11 +26,19 @@ export const useApiStore = create((set) => ({
       const response = await axios.get("http://localhost:8000/search", {
         params: {
           q: searchTerm,
-          bank_name
+          bank_name,
         },
       });
 
-      set({ result: response.data, isLoading: false });
+      set({ result: response.data.data });
+      set({ isLoading: false });
+      set({
+        searchesPagination: {
+          total: response.data.total,
+          page_size: response.data.page_size,
+          page: response.data.page,
+        },
+      });
     } catch (err) {
       set({
         error: err.response?.data?.message || "Something went wrong",
@@ -56,7 +67,7 @@ export const useApiStore = create((set) => ({
     }
   },
 
-  // Fetch all banks
+  // Fetch all branches for a specific bank
   fetchAllBankBranches: async (bank_id, query) => {
     set({ isLoading: true, error: null });
 
@@ -70,7 +81,14 @@ export const useApiStore = create((set) => ({
         }
       );
 
-      set({ branches: response.data, isLoading: false });
+      set({ branches: response.data.data, isLoading: false });
+      set({
+        branchesPagination: {
+          total: response.data.total,
+          page_size: response.data.page_size,
+          page: response.data.page,
+        },
+      });
     } catch (err) {
       set({
         error: err.response?.data?.message || "Something went wrong",
@@ -78,4 +96,6 @@ export const useApiStore = create((set) => ({
       });
     }
   },
+
+  // Fetch
 }));
