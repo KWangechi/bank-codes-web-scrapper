@@ -1,5 +1,5 @@
 import { MagnifyingGlassIcon, XCircleIcon } from "@heroicons/react/24/solid";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Select from "react-select";
 import { useApiStore } from "stores/apiStore";
 import { Option } from "./BankSelectOption";
@@ -15,6 +15,7 @@ function Search() {
   } = useApiStore();
 
   const [bankName, setBankName] = useState(null);
+  const [sortOrder, setSortOrder] = useState("asc");
 
   function onClearSearch() {
     setSearchTerm("");
@@ -33,6 +34,16 @@ function Search() {
     // if (searchTerm.length > 3) {
     // }
   }
+
+  const sortedOptions = useMemo(() => {
+    return [...banks]
+      .map((bank) => ({
+        value: bank.name,
+        label: bank.name,
+        logo: bank.logo_url,
+      }))
+      .sort((a, b) => a.label.localeCompare(b.label));
+  }, [banks]);
 
   // load the banks on loading this component
   useEffect(() => {
@@ -81,16 +92,20 @@ function Search() {
         <div className="w-full max-w-[320px] flex-shrink-0">
           <Select
             isClearable
-            options={banks.map((bank) => ({
-              value: bank.name,
-              label: bank.name,
-              logo: bank.logo_url,
-            }))}
+            // options={banks.map((bank) => ({
+            //   value: bank.name,
+            //   label: bank.name,
+            //   logo: bank.logo_url,
+            // }))}
+            options={sortedOptions}
             placeholder="Filter by Bank"
             isLoading={isLoading}
             onChange={(e) => onSelectBankChange(e?.value)}
             components={{ Option }}
             classNamePrefix="react-select"
+            isSortable={true}
+            sortOrder={sortOrder}
+            setSortOrder={setSortOrder}
             styles={{
               control: (baseStyles, state) => ({
                 ...baseStyles,
