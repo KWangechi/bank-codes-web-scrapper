@@ -5,15 +5,14 @@ import { useDebounce } from "hooks/";
 import { NoResultCard } from "./components/NoResultCard";
 import SkeletonCard from "./components/SkeletonCard";
 import { ResultCard } from "./components/ResultCard";
-// import Pagination from "./components/Pagination";
+import Pagination from "./components/Pagination";
 import Header from "components/Header";
 import Footer from "components/Footer";
-// import usePagination from "hooks/usePagination";
 import { useApiStore } from "stores/apiStore";
 
 function App() {
-  const { searchTerm } = useApiStore();
-  const search = useDebounce(searchTerm, 5);
+  const { searchTerm, pagination } = useApiStore();
+  const search = useDebounce(searchTerm, 100);
 
   // use the banks in the store instead as a test
   const { isLoading, result, searchInfo } = useApiStore();
@@ -28,10 +27,6 @@ function App() {
     // your logic here
   };
 
-  // load the banks on loading this component
-  useEffect(() => {
-    searchInfo();
-  }, [search]);
 
   return (
     <div className="flex flex-col h-screen flex-1">
@@ -61,9 +56,6 @@ function App() {
               </button>
               <button className="bg-white hover:bg-gray-300 py-2 px-4 rounded-md">
                 Map View
-              </button> */}
-              {/* <button className="bg-white hover:bg-gray-300 py-2 px-4 rounded-md">
-                Download
               </button> */}
               <div className="relative">
                 <button
@@ -110,8 +102,6 @@ function App() {
               />
             ))}
 
-          
-
           {/* Dim overlay during refetch */}
           {isFetching && result.length > 0 && (
             <div className="absolute inset-0 bg-white/50 backdrop-blur-[1px] flex items-center justify-center z-10">
@@ -121,7 +111,10 @@ function App() {
         </div>
 
         {/* Pagination */}
-        
+        <Pagination
+          pagination={pagination}
+          onPageChange={(page) => searchInfo(null, page)}
+        />
 
         <div className="mt-6">
           <Footer />

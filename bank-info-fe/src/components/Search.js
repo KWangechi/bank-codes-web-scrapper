@@ -12,8 +12,6 @@ function Search() {
     setSearchTerm,
     searchTerm,
     isLoading,
-    searchPagination,
-    branchesPagination,
   } = useApiStore();
 
   const [bankName, setBankName] = useState(null);
@@ -21,6 +19,8 @@ function Search() {
 
   function onClearSearch() {
     setSearchTerm("");
+    searchInfo(bankName);
+
   }
 
   function onSelectBankChange(selectedValue) {
@@ -29,6 +29,7 @@ function Search() {
   }
 
   function onSearchChange(e) {
+    console.log('The bank name is: ', bankName)
     setSearchTerm(e.target.value);
 
     // make a call to the backend

@@ -9,7 +9,7 @@ from schemas import BankSchema, BranchSchema, PaginatedBranches
 from deps import get_db
 from database import engine
 from uuid import UUID
-
+from query_builders import build_branches_query, build_global_search_query
 
 app = FastAPI(title="Kenya Bank Code Search App")
 Base.metadata.create_all(bind=engine)
@@ -43,20 +43,8 @@ def get_bank_branches(
     page_size: int = Query(20, ge=1, le=100),
     db: Session = Depends(get_db),
 ):
-    query = db.query(Branch).filter(Branch.bank_id == bank_id)
-
-    if q:
-        query = query.filter(Branch.name.ilike(f"%{q}%"))
-
-    # Total results
-    total = query.with_entities(func.count(func.distinct(Branch.id))).scalar()
-
-    # Pagination
-    offset = (page - 1) * page_size
-
-    data = query.limit(page_size).offset(offset).all()
-
-    return query.all()
+    query = build_branches_query(db, bank_id=bank_id)
+    return paginate(query, page, page_size)
 
 
 @app.get("/search", response_model=PaginatedBranches)
@@ -67,53 +55,35 @@ def global_search(
     page_size: int = Query(20, ge=1, le=100),
     db: Session = Depends(get_db),
 ):
-    query = db.query(Branch).join(Branch.bank).options(joinedload(Branch.bank))
+    query = build_global_search_query(db, q, bank_name)
 
-    if bank_name:
-        query = query.filter(func.lower(Bank.name).ilike(f"%{bank_name.lower()}%"))
-
-    if q:
-        tokens = q.lower().split()
-
-        conditions = []
-        for token in tokens:
-            like = f"%{token}%"
-            conditions.append(
-                or_(
-                    func.lower(Branch.name).ilike(like),
-                    func.lower(Branch.location_name).ilike(like),
-                    Branch.code.ilike(like),
-                    func.lower(Bank.name).ilike(like),
-                    Bank.bank_code.ilike(like),
-                    Bank.swift_code.ilike(like),
-                    # aliases (text[])
-                    func.exists(
-                        select(1)
-                        .select_from(func.unnest(Bank.alias).alias("a"))
-                        .where(func.lower(text("a")).ilike(f"%{token}%"))
-                    ),
-                )
-            )
-
-        query = query.filter(and_(*conditions))
-
-    # Total results
-    total = query.with_entities(func.count(func.distinct(Branch.id))).scalar()
-
-    # Pagination
-    offset = (page - 1) * page_size
-
-    data = query.distinct(Branch.id).limit(page_size).offset(offset).all()
-
-    return {"page": page, "page_size": page_size, "total": total, "data": data}
+    return paginate(query, page, page_size)
 
 
 # Download
-@app.get("/download/asJson", response_model=list[BranchSchema])
+@app.get("/download/asJson", response_model=PaginatedBranches)
 def downloadDataAsJson():
     return {}
 
 
-@app.get("/download/asExcel", response_model=list[BranchSchema])
+@app.get("/download/asExcel", response_model=PaginatedBranches)
 def downloadDataAsExcel():
     return {}
+
+
+def paginate(
+    query,
+    page: int,
+    page_size: int,
+):
+    total = query.with_entities(func.count(func.distinct(Branch.id))).scalar()
+
+    offset = (page - 1) * page_size
+    data = query.distinct(Branch.id).limit(page_size).offset(offset).all()
+
+    return {
+        "page": page,
+        "page_size": page_size,
+        "total": total,
+        "data": data,
+    }
