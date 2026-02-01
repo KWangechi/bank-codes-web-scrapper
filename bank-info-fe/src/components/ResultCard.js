@@ -1,6 +1,5 @@
 import {
   parseTimeStringToDate,
-  isWeekend,
   formattedCurrentDateTime,
 } from "../utils/dateUtils";
 import { highlightText } from "utils/";
@@ -10,29 +9,72 @@ import {
   PhoneIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/solid";
-import { useApiStore } from "stores/apiStore";
 
-export function ResultCard({ bank, branch }) {
-  const startingTimeEveryday = "8:00am";
-  const endingTimeWeekdays = "4:00pm";
-  const endingTimeWeekends = "12:00pm";
+export function ResultCard({ bank, branch, searchTerm }) {
+
+  const operatingHours = branch?.operating_hours;
+
+  const defaultWeekdays = "8:30am - 4:00pm";
+  const defaultSaturdays = "8:30am - 12:00pm";
+  const defaultWeekends = "Closed";
+
+  // Extract times from operating_hours or use defaults
+  const weekdaysHours = operatingHours?.weekdays || defaultWeekdays;
+  const saturdaysHours = operatingHours?.saturdays || defaultSaturdays;
+  const sundaysHours = operatingHours?.sundays || defaultWeekends;
+  // const holidaysHours = operatingHours?.holidays || defaultWeekends;
+
+  const parseHours = (hoursString) => {
+    if (!hoursString || hoursString.toLowerCase() === "closed") {
+      return { start: null, end: null };
+    }
+
+    const timeMatch = hoursString.match(
+      /(\d{1,2}:\d{2}(?:am|pm))\s*-\s*(\d{1,2}:\d{2}(?:am|pm))/i,
+    );
+
+    if (timeMatch) {
+      return {
+        start: parseTimeStringToDate(timeMatch[1]),
+        end: parseTimeStringToDate(timeMatch[2]),
+      };
+    }
+    return { start: null, end: null };
+  };
+
   const isSunday = new Date().getDay() === 0;
+  const isWeekend = isSunday || new Date().getDay() === 6;
 
-  const { searchTerm } = useApiStore();
-
-  const startingDateTime = parseTimeStringToDate(startingTimeEveryday);
-  const endingDateTime = !isWeekend
-    ? parseTimeStringToDate(endingTimeWeekdays)
-    : parseTimeStringToDate(endingTimeWeekends);
+  const { start: startingDateTime, end: endingDateTime } = isSunday
+    ? { start: null, end: null }
+    : isWeekend
+      ? parseHours(saturdaysHours)
+      : parseHours(weekdaysHours);
 
   const isOpen = () => {
-    if (isSunday) {
+    if (isSunday || !startingDateTime || !endingDateTime) {
       return "Closed";
     }
     return formattedCurrentDateTime > startingDateTime &&
       formattedCurrentDateTime < endingDateTime
       ? "Open"
       : "Closed";
+  };
+
+  const isClosingSoon = () => {
+    if (isSunday || !startingDateTime || !endingDateTime) {
+      return false;
+    }
+
+    // Check if currently open and within 30 minutes of closing
+    const thirtyMinutes = 30 * 60 * 1000; // 30 minutes in milliseconds
+    const timeUntilClosing = endingDateTime - formattedCurrentDateTime;
+
+    return (
+      formattedCurrentDateTime > startingDateTime &&
+      formattedCurrentDateTime < endingDateTime &&
+      timeUntilClosing <= thirtyMinutes
+    );
   };
 
   // This helps: When user clicks the div, the bank code is automatically copied to the clipboard
@@ -66,7 +108,7 @@ export function ResultCard({ bank, branch }) {
             className="h-10 w-15 rounded-lg bg-none"
           />
           <div className="ml-4 flex-grow">
-            <h2 className="italic text-lg text-[#D0BB95] font-bold">
+            <h2 className="italic text-lg text-[#D0BB95] font-extrabold">
               {highlightText(branch?.name, searchTerm)}
             </h2>
             <div className="flex items-center text-gray-600 gap-x-2">
@@ -84,18 +126,34 @@ export function ResultCard({ bank, branch }) {
             <div className="flex max-w-sm text-wrap text-sm items-center">
               <MapPinIcon className="h-3 w-3 text-gray-500" />
               <span className="ml-1 text-gray-500">
-                {highlightText(branch?.name, searchTerm)}
+                {branch.location_name
+                  ? highlightText(branch?.location_name, searchTerm)
+                  : highlightText(branch?.name, searchTerm)}
               </span>
             </div>
 
-            <div
-              className="font-semibold text-sm text-right italic"
-              style={{
-                color: isOpen() === "Open" ? "#16a34a" : "#dc2626",
-                fontWeight: "semibold",
-              }}
-            >
-              <span className="text-right">{isOpen()}</span>
+            <div className="text-right">
+              {isClosingSoon() ? (
+                <span
+                  className="font-semibold text-sm italic"
+                  style={{
+                    color: "#f59e0b", // amber color
+                    fontWeight: "semibold",
+                  }}
+                >
+                  Closes Soon
+                </span>
+              ) : (
+                <span
+                  className="font-semibold text-sm italic"
+                  style={{
+                    color: isOpen() === "Open" ? "#16a34a" : "#dc2626",
+                    fontWeight: "semibold",
+                  }}
+                >
+                  {isOpen()}
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -128,17 +186,15 @@ export function ResultCard({ bank, branch }) {
             </div>
             <div className="text-left sm:text-right mt-1.5 sm:mt-0">
               <p className="font-semibold text-[#D0BB95]">Working Hours</p>
-              <span className="text-gray-600">
-                {startingTimeEveryday} - {endingTimeWeekdays} - Weekdays
-              </span>
+              <span className="text-gray-600">{weekdaysHours} - Weekdays</span>
               <p>
                 <span className="text-gray-600">
-                  {startingTimeEveryday} - {endingTimeWeekends} - Saturdays
+                  {saturdaysHours} - Saturdays
                 </span>
               </p>
               <p className="mt-1.5 sm:mt-0">
                 <span className="text-red-600 text-base">
-                  Closed - Sundays and Public Holidays
+                  {sundaysHours} - Sundays and Public Holidays
                 </span>
               </p>
             </div>

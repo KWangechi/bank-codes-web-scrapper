@@ -2,7 +2,7 @@ export default function Pagination({ pagination, onPageChange }) {
   const { page, page_size, total } = pagination;
 
   const totalPages = Math.ceil(total / page_size);
-  if (totalPages <= 1) return null;
+  if (!totalPages) return null;
 
   function getPageRange(current, total, delta = 2) {
     const range = [];
@@ -38,8 +38,6 @@ export default function Pagination({ pagination, onPageChange }) {
 
   return (
     <nav className="flex items-center justify-center pt-6">
-      {/* Center */}
-      {/* <div className="flex px-2"> */}
       <button
         disabled={page === 1}
         onClick={() => onPageChange(page - 1)}
@@ -59,7 +57,7 @@ export default function Pagination({ pagination, onPageChange }) {
             onClick={() => onPageChange(p)}
             className={
               p === page
-                ? "bg-[#D0BB95] px-4 py-2 rounded-md font-medium ml-2"
+                ? "bg-[#D0BB95] px-4 py-2 rounded-md font-medium ml-2 mr-2"
                 : "px-4 py-2"
             }
           >

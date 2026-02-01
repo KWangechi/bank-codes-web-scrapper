@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String, ForeignKey, Text, ARRAY
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.dialects.postgresql import UUID, JSONB
 from sqlalchemy.orm import relationship
 from database import Base
 import uuid
@@ -19,6 +19,7 @@ class Bank(Base):
     email = Column(String, nullable=True)
     logo_url = Column(String, nullable=False)
     ussd_code = Column(String, nullable=True)
+    mpesa_paybill_no=Column(String, nullable=True)
 
     branches = relationship("Branch", back_populates="bank")
 
@@ -34,6 +35,7 @@ class Branch(Base):
     latitude = Column(String, nullable=True)
     longitude = Column(String, nullable=True)
     location_name = Column(String, nullable=True)
+    operating_hours = Column(JSONB, nullable=True)
 
 
     bank = relationship("Bank", back_populates="branches")

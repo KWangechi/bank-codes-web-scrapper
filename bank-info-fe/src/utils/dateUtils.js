@@ -33,5 +33,4 @@ export function getFormattedCurrentTime() {
 
 const currentDate = new Date();
 export const formattedCurrentDateTime = getFormattedCurrentTime(currentDate);
-export const isWeekend = currentDate.getDay() === 6 || currentDate.getDay() === 0;
 

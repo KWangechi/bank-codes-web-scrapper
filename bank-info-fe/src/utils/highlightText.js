@@ -19,7 +19,7 @@ function highlightText(text, highlight) {
 
   return text?.split(regex).map((part, index) =>
     regex.test(part) ? (
-      <span key={index} className="bg-[#175430] px-1">
+      <span key={index} className="bg-[#939c1c] px-1">
         {part}
       </span>
     ) : (

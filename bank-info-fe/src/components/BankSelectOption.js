@@ -9,7 +9,7 @@ export function Option(props) {
         <img
           src={`/logos/${data.logo}`}
           alt={data.label}
-          className="w-5 h-5 object-contain"
+          className="w-7 h-7 object-contain rounded-md"
         />
         <span>{data.label}</span>
       </div>

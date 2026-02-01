@@ -1,40 +1,37 @@
-import { MagnifyingGlassIcon, XCircleIcon } from "@heroicons/react/24/solid";
+import { MagnifyingGlassIcon, XCircleIcon, CloudArrowDownIcon } from "@heroicons/react/24/solid";
 import React, { useEffect, useMemo, useState } from "react";
 import Select from "react-select";
-import { useApiStore } from "stores/apiStore";
+import { useBanks, useDownloadExcel, useDownloadJson } from "stores/queryStore";
 import { Option } from "./BankSelectOption";
 
-function Search() {
-  const {
-    banks,
-    fetchAllBanks,
-    searchInfo,
-    setSearchTerm,
-    searchTerm,
-    isLoading,
-  } = useApiStore();
+function Search({ searchTerm, onSearchChange, onBankChange, selectedBank }) {
+  const { data: banksData, isLoading: isLoadingBanks } = useBanks();
+  const { mutate: downloadExcel, isPending: isDownloadingExcel } = useDownloadExcel();
+  const { mutate: downloadJson, isPending: isDownloadingJson } = useDownloadJson();
 
-  const [bankName, setBankName] = useState(null);
   const [sortOrder, setSortOrder] = useState("asc");
 
-  function onClearSearch() {
-    setSearchTerm("");
-    searchInfo(bankName);
+  const banks = banksData || [];
 
+  function onClearSearch() {
+    onSearchChange("");
+    onBankChange(null);
   }
 
   function onSelectBankChange(selectedValue) {
-    setBankName(selectedValue);
-    searchInfo(selectedValue);
+    onBankChange(selectedValue);
   }
 
-  function onSearchChange(e) {
-    console.log('The bank name is: ', bankName)
-    setSearchTerm(e.target.value);
+  function onSearchChangeHandler(e) {
+    onSearchChange(e.target.value);
+  }
 
-    // make a call to the backend
-    searchInfo(bankName);
+  function handleDownloadExcel() {
+    downloadExcel({ searchTerm, bankName: selectedBank });
+  }
 
+  function handleDownloadJson() {
+    downloadJson({ searchTerm, bankName: selectedBank });
   }
 
   const sortedOptions = useMemo(() => {
@@ -47,11 +44,6 @@ function Search() {
       .sort((a, b) => a.label.localeCompare(b.label));
   }, [banks]);
 
-  // load the banks on loading this component
-  useEffect(() => {
-    fetchAllBanks();
-    searchInfo();
-  }, []);
 
   return (
     <div className="header h-90 pb-4 pt-2">
@@ -84,7 +76,7 @@ function Search() {
             id="search-bank"
             type="text"
             value={searchTerm}
-            onChange={onSearchChange}
+            onChange={onSearchChangeHandler}
             placeholder="Search Bank, Branch Name, or SWIFT Code..."
             className="bg-[#F0F1F5] w-full py-2 px-10 rounded-md focus:outline-none focus:border-gray-900 focus:border hover:border-gray-900 hover:border"
           />
@@ -96,8 +88,9 @@ function Search() {
             isClearable
             options={sortedOptions}
             placeholder="Filter by Bank"
-            isLoading={isLoading}
+            isLoading={isLoadingBanks}
             onChange={(e) => onSelectBankChange(e?.value)}
+            value={selectedBank ? { value: selectedBank, label: selectedBank } : null}
             components={{ Option }}
             classNamePrefix="react-select"
             isSortable={true}
@@ -116,6 +109,26 @@ function Search() {
               }),
             }}
           />
+        </div>
+
+        {/* Download Buttons */}
+        <div className="flex items-center gap-3 pr-2">
+          <button
+            onClick={handleDownloadExcel}
+            disabled={isDownloadingExcel}
+            className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <CloudArrowDownIcon className="h-5 w-5"/>
+            Excel
+          </button>
+          <button
+            onClick={handleDownloadJson}
+            disabled={isDownloadingJson}
+            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <CloudArrowDownIcon className="h-5 w-5" />
+            JSON
+          </button>
         </div>
       </div>
     </div>

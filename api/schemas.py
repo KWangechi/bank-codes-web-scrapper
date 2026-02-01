@@ -11,6 +11,7 @@ class BranchSchema(BaseModel):
     latitude: Optional[str]
     longitude: Optional[str]
     location_name: Optional[str]
+    operating_hours: Optional[object]
     bank: BankSchema
 
     class Config:
@@ -29,6 +30,7 @@ class BankSchema(BaseModel):
     email: Optional[str]
     logo_url: str
     ussd_code: Optional[str]
+    mpesa_paybill_no: Optional[str]
 
     class Config:
         from_attributes = True
