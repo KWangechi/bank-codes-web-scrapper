@@ -91,11 +91,14 @@ export function ResultCard({ bank, branch, searchTerm }) {
       .then(() => {
         toast.success("Branch Details Copied to ClipBoard", {
           position: "top-center",
+          duration: 3000
         });
       })
       .catch((err) => {
         toast.error(`Error, failed to copy to clipboard: ${err}`, {
           position: "top-center",
+          duration: 3000
+
         });
       });
   };
