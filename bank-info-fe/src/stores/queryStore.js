@@ -15,9 +15,9 @@ export const useBanks = (query = "") => {
   return useQuery({
     queryKey: [...QUERY_KEYS.banks, query],
     queryFn: () => api.fetchAllBanks(query),
-    enabled: true, // Always fetch banks
-    staleTime: 5 * 60 * 1000, // 5 minutes
-    cacheTime: 10 * 60 * 1000, // 10 minutes
+    enabled: true, 
+    staleTime: 5 * 60 * 1000,
+    cacheTime: 10 * 60 * 1000,
   });
 };
 

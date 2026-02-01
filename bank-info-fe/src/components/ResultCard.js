@@ -9,9 +9,9 @@ import {
   PhoneIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/solid";
+import toast from "react-hot-toast";
 
 export function ResultCard({ bank, branch, searchTerm }) {
-
   const operatingHours = branch?.operating_hours;
 
   const defaultWeekdays = "8:30am - 4:00pm";
@@ -77,7 +77,6 @@ export function ResultCard({ bank, branch, searchTerm }) {
     );
   };
 
-  // This helps: When user clicks the div, the bank code is automatically copied to the clipboard
   const copyToClipboard = (bank) => {
     const branchDetails = {
       bank_name: bank.bank_name,
@@ -90,11 +89,14 @@ export function ResultCard({ bank, branch, searchTerm }) {
     navigator.clipboard
       .writeText(JSON.stringify(branchDetails))
       .then(() => {
-        console.log("Branch Details copied to clipboard");
-        // alert(`Branch Details Copied to Clipboard`);
+        toast.success("Branch Details Copied to ClipBoard", {
+          position: "top-center",
+        });
       })
       .catch((err) => {
-        console.log(`Error, failed to copy to clipboard: ${err}`);
+        toast.error(`Error, failed to copy to clipboard: ${err}`, {
+          position: "top-center",
+        });
       });
   };
 
@@ -137,7 +139,7 @@ export function ResultCard({ bank, branch, searchTerm }) {
                 <span
                   className="font-semibold text-sm italic"
                   style={{
-                    color: "#f59e0b", // amber color
+                    color: "#f59e0b",
                     fontWeight: "semibold",
                   }}
                 >

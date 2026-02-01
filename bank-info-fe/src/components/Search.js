@@ -1,5 +1,5 @@
 import { MagnifyingGlassIcon, XCircleIcon, CloudArrowDownIcon } from "@heroicons/react/24/solid";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import Select from "react-select";
 import { useBanks, useDownloadExcel, useDownloadJson } from "stores/queryStore";
 import { Option } from "./BankSelectOption";
