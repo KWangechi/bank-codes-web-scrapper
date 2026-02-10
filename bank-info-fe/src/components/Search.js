@@ -1,4 +1,4 @@
-import { MagnifyingGlassIcon, XCircleIcon, CloudArrowDownIcon } from "@heroicons/react/24/solid";
+import { MagnifyingGlassIcon, XCircleIcon, CloudArrowDownIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 import React, { useMemo, useState } from "react";
 import Select from "react-select";
 import { useBanks, useDownloadExcel, useDownloadJson } from "stores/queryStore";
@@ -10,6 +10,7 @@ function Search({ searchTerm, onSearchChange, onBankChange, selectedBank }) {
   const { mutate: downloadJson, isPending: isDownloadingJson } = useDownloadJson();
 
   const [sortOrder, setSortOrder] = useState("asc");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const banks = banksData || [];
 
@@ -111,24 +112,45 @@ function Search({ searchTerm, onSearchChange, onBankChange, selectedBank }) {
           />
         </div>
 
-        {/* Download Buttons */}
-        <div className="flex items-center gap-3 pr-2">
+        {/* Download Dropdown */}
+        <div className="relative pr-2">
           <button
-            onClick={handleDownloadExcel}
-            disabled={isDownloadingExcel}
-            className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <CloudArrowDownIcon className="h-5 w-5"/>
-            Excel
-          </button>
-          <button
-            onClick={handleDownloadJson}
-            disabled={isDownloadingJson}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            className="flex items-center gap-2 px-4 py-2 bg-[#D0BB95] text-white rounded-md hover:bg-[#b8a378] focus:outline-none focus:ring-2 focus:ring-[#D0BB95] focus:ring-opacity-50"
           >
             <CloudArrowDownIcon className="h-5 w-5" />
-            JSON
+            Download
+            <ChevronDownIcon className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
           </button>
+          
+          {isDropdownOpen && (
+            <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 z-50">
+              <div className="py-1">
+                <button
+                  onClick={() => {
+                    handleDownloadExcel();
+                    setIsDropdownOpen(false);
+                  }}
+                  disabled={isDownloadingExcel}
+                  className="flex items-center gap-2 w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <CloudArrowDownIcon className="h-4 w-4 text-green-600" />
+                  Download Excel
+                </button>
+                <button
+                  onClick={() => {
+                    handleDownloadJson();
+                    setIsDropdownOpen(false);
+                  }}
+                  disabled={isDownloadingJson}
+                  className="flex items-center gap-2 w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <CloudArrowDownIcon className="h-4 w-4 text-blue-600" />
+                  Download JSON
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
