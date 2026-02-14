@@ -66,6 +66,12 @@ export const api = {
     });
     return response.data;
   },
+
+  // Submit bank location suggestion
+  submitBankLocationSuggestion: async (suggestionData) => {
+    const response = await apiClient.post("/suggestions", suggestionData);
+    return response.data;
+  },
 };
 
 export default apiClient;

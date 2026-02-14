@@ -2,7 +2,7 @@ from fastapi import Query, Depends, HTTPException, Response
 from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import or_, func, and_, select, text
 from typing import Optional, List
-from models import Bank, Base, Branch
+from models import Bank, Base, Branch, BankLocationSuggestion
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from schemas import BankSchema, BranchSchema, PaginatedBranches
@@ -23,7 +23,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=False,
-    allow_methods=["GET"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 
@@ -158,6 +158,41 @@ def downloadDataAsExcel(
         media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         headers={"Content-Disposition": "attachment; filename=bank_branches.xlsx"},
     )
+
+
+# Submit Bank Location Suggestion
+@app.post("/suggestions")
+def submit_bank_location_suggestion(
+    suggestion_data: dict,
+    db: Session = Depends(get_db),
+):
+    try:
+        suggestion = BankLocationSuggestion(
+            bank_name=suggestion_data.get("bank_name"),
+            branch_name=suggestion_data.get("branch_name"),
+            branch_code=suggestion_data.get("branch_code"),
+            location=suggestion_data.get("location"),
+            latitude=suggestion_data.get("latitude"),
+            longitude=suggestion_data.get("longitude"),
+        )
+        print(suggestion)
+
+        # Add to database
+        db.add(suggestion)
+        db.commit()
+        db.refresh(suggestion)
+
+        return {
+            "message": "Submitted successfully. Thank you for your contribution",
+            "suggestion_id": suggestion.id,
+        }
+
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to submit suggestion: {str(e)}",
+        )
 
 
 def paginate(

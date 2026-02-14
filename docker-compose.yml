@@ -1,0 +1,37 @@
+services:
+  # Backend API
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/kenya_bank_code_app
+      PORT: 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+    networks:
+      - bank-network
+    restart: unless-stopped
+
+  # Frontend
+  frontend:
+    build:
+      context: ./bank-info-fe
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./bank-info-fe:/app
+      - /app/node_modules
+    networks:
+      - bank-network
+    depends_on:
+      - api
+    restart: unless-stopped
+
+networks:
+  bank-network:
+    driver: bridge

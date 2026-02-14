@@ -39,3 +39,15 @@ class Branch(Base):
 
 
     bank = relationship("Bank", back_populates="branches")
+
+
+class BankLocationSuggestion(Base):
+    __tablename__ = "bank_location_suggestions"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    bank_name = Column(String, nullable=False)
+    branch_name = Column(String, nullable=False)
+    branch_code = Column(String, nullable=False)
+    location = Column(String, nullable=True)
+    latitude = Column(String, nullable=True)
+    longitude = Column(String, nullable=True)

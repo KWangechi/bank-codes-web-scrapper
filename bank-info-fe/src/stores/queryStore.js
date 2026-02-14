@@ -1,26 +1,22 @@
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useQuery, useMutation } from "@tanstack/react-query";
+import { QUERY_KEYS } from "constants";
+import toast from "react-hot-toast";
 import { api } from "services/api";
-import { generateExcelFilename, generateJsonFilename } from "utils/filenameUtils";
-
-// Query keys for cache management
-export const QUERY_KEYS = {
-  banks: ["banks"],
-  bankBranches: (bankId) => ["bankBranches", bankId],
-  search: (searchTerm, bankName) => ["search", searchTerm, bankName],
-};
-
+import {
+  generateExcelFilename,
+  generateJsonFilename,
+} from "utils/filenameUtils";
 
 // Fetch Banks
 export const useBanks = (query = "") => {
   return useQuery({
     queryKey: [...QUERY_KEYS.banks, query],
     queryFn: () => api.fetchAllBanks(query),
-    enabled: true, 
+    enabled: true,
     staleTime: 5 * 60 * 1000,
     cacheTime: 10 * 60 * 1000,
   });
 };
-
 
 // Fetch Bank Brances
 export const useBankBranches = (
@@ -38,7 +34,6 @@ export const useBankBranches = (
   });
 };
 
-
 // global search
 export const useSearch = (
   searchTerm,
@@ -54,7 +49,6 @@ export const useSearch = (
   });
 };
 
-
 // Download Results as Excel
 export const useDownloadExcel = () => {
   return useMutation({
@@ -63,7 +57,7 @@ export const useDownloadExcel = () => {
     onSuccess: (data, variables) => {
       const { bankName } = variables;
       const filename = generateExcelFilename(bankName);
-      
+
       // Create download link
       const url = window.URL.createObjectURL(new Blob([data]));
       const link = document.createElement("a");
@@ -80,7 +74,6 @@ export const useDownloadExcel = () => {
   });
 };
 
-
 // Download Results as JSON
 export const useDownloadJson = () => {
   return useMutation({
@@ -89,7 +82,7 @@ export const useDownloadJson = () => {
     onSuccess: (data, variables) => {
       const { bankName } = variables;
       const filename = generateJsonFilename(bankName);
-      
+
       // Create download link
       const url = window.URL.createObjectURL(new Blob([data]));
       const link = document.createElement("a");
@@ -106,32 +99,26 @@ export const useDownloadJson = () => {
   });
 };
 
-// Utility hook for cache management
-export const useCacheUtils = () => {
-  const queryClient = useQueryClient();
-
-  const invalidateSearch = () => {
-    queryClient.invalidateQueries({ queryKey: QUERY_KEYS.search });
-  };
-
-  const invalidateBanks = () => {
-    queryClient.invalidateQueries({ queryKey: QUERY_KEYS.banks });
-  };
-
-  const invalidateBankBranches = (bankId) => {
-    queryClient.invalidateQueries({
-      queryKey: QUERY_KEYS.bankBranches(bankId),
-    });
-  };
-
-  const clearCache = () => {
-    queryClient.clear();
-  };
-
-  return {
-    invalidateSearch,
-    invalidateBanks,
-    invalidateBankBranches,
-    clearCache,
-  };
+// Submit Bank Location Suggestion
+export const useSubmitBankLocationSuggestion = () => {
+  return useMutation({
+    mutationFn: (suggestionData) =>
+      api.submitBankLocationSuggestion(suggestionData),
+    onSuccess: (data) => {
+      toast.success(
+        data.message,
+        {
+          position: "top-center",
+          duration: 5000,
+        },
+      );
+    },
+    onError: (error) => {
+      toast.error("Failed to submit suggestion", {
+        position: "top-center",
+        duration: 5000,
+      });
+      console.error("Failed to submit suggestion:", error);
+    },
+  });
 };
