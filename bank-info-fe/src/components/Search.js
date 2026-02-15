@@ -74,7 +74,7 @@ function Search({ searchTerm, onSearchChange, onBankChange, selectedBank }) {
         <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl flex flex-col md:flex-row gap-4">
           {/* Input Text */}
           <div className="flex-1 relative">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <div   className="absolute inset-y-0 right-4 pl-3 flex items-center hover:cursor-pointer">
               {searchTerm && (
                 <button onClick={onClearSearch}>
                   <XCircleIcon className="h-6 w-6 text-gray-600 hover:text-gray-500" />

@@ -28,7 +28,7 @@ export default function Header({ onShowSuggestion, children }) {
           </span>
         </div>
 
-        <nav className="hidden md:flex items-center gap-4">
+        <nav className="hidden md:flex items-center gap-6">
           <a
             href="https://github.com/KWangechi/bank-codes-web-scrapper"
             target="_blank"
@@ -48,7 +48,7 @@ export default function Header({ onShowSuggestion, children }) {
             className="text-sm font-medium hover:text-primary flex items-center gap-1 hover:bg-none transition-all duration-200 transform hover:-translate-y-0.5"
           >
             <span className="text-blue-400">
-              <i className="fa-brands fa-twitter text-lg"></i>
+              <i className="fa-brands fa-twitter text-lg text-black"></i>
             </span>
             <span>Twitter</span>
           </a>

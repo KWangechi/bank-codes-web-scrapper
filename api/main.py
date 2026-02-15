@@ -175,7 +175,6 @@ def submit_bank_location_suggestion(
             latitude=suggestion_data.get("latitude"),
             longitude=suggestion_data.get("longitude"),
         )
-        print(suggestion)
 
         # Add to database
         db.add(suggestion)

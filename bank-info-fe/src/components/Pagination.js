@@ -37,7 +37,7 @@ export default function Pagination({ pagination, onPageChange }) {
   const pages = getPageRange(page, totalPages);
 
   return (
-    <nav className="flex items-center justify-center pt-6">
+    <nav className="flex items-center justify-center pt-10 mb-6">
       <button
         disabled={page === 1}
         onClick={() => onPageChange(page - 1)}
@@ -57,7 +57,7 @@ export default function Pagination({ pagination, onPageChange }) {
             onClick={() => onPageChange(p)}
             className={
               p === page
-                ? "bg-[#D0BB95] px-4 py-2 rounded-md font-medium ml-2 mr-2"
+                ? "bg-primary text-white px-4 py-2 rounded-md font-medium ml-2 mr-2"
                 : "px-4 py-2"
             }
           >

@@ -45,3 +45,4 @@ COMMENT ON COLUMN bank_location_suggestions.location IS 'Location description';
 COMMENT ON COLUMN bank_location_suggestions.latitude IS 'Latitude coordinate';
 COMMENT ON COLUMN bank_location_suggestions.longitude IS 'Longitude coordinate';
 COMMENT ON COLUMN bank_location_suggestions.created_at IS 'Timestamp when the suggestion was created';
+COMMENT ON COLUMN bank_location_suggestions.updated_at IS 'Timestamp when the suggestion was last updated';

@@ -4,12 +4,13 @@ import {
 } from "../utils/dateUtils";
 import { highlightText } from "utils/";
 import {
-  MapPinIcon,
-  ClipboardDocumentIcon,
+  // MapPinIcon,
+  // ClipboardDocumentIcon,
   PhoneIcon,
   EnvelopeIcon,
+  UserCircleIcon,
 } from "@heroicons/react/24/solid";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 
 export function ResultCard({ bank, branch, searchTerm }) {
   const operatingHours = branch?.operating_hours;
@@ -100,34 +101,36 @@ export function ResultCard({ bank, branch, searchTerm }) {
     config = { ...statusConfig.closed, label: isOpen() };
   }
 
-  const copyToClipboard = (bank) => {
-    const branchDetails = {
-      bank_name: bank.bank_name,
-      bank_code: bank.bank_code,
-      branch_name: branch.name,
-      branch_code: branch.code,
-      swift_code: bank.swift_code,
-    };
+  // const copyToClipboard = (bank) => {
+  //   const branchDetails = {
+  //     bank_name: bank.bank_name,
+  //     bank_code: bank.bank_code,
+  //     branch_name: branch.name,
+  //     branch_code: branch.code,
+  //     swift_code: bank.swift_code,
+  //   };
 
-    navigator.clipboard
-      .writeText(JSON.stringify(branchDetails))
-      .then(() => {
-        toast.success("Branch Details Copied to ClipBoard", {
-          position: "top-center",
-          duration: 3000,
-        });
-      })
-      .catch((err) => {
-        toast.error(`Error, failed to copy to clipboard: ${err}`, {
-          position: "top-center",
-          duration: 3000,
-        });
-      });
-  };
+  //   navigator.clipboard
+  //     .writeText(JSON.stringify(branchDetails))
+  //     .then(() => {
+  //       toast.success("Branch Details Copied to ClipBoard", {
+  //         position: "top-center",
+  //         duration: 3000,
+  //       });
+  //     })
+  //     .catch((err) => {
+  //       toast.error(`Error, failed to copy to clipboard: ${err}`, {
+  //         position: "top-center",
+  //         duration: 3000,
+  //       });
+  //     });
+  // };
 
   return (
     <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
       <div class="p-6">
+
+        {/* Card Header - Icon, Branch Name, Branch Name, Opening Status */}
         <div class="flex justify-between items-start mb-4">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-lg flex items-center justify-center">
@@ -153,14 +156,14 @@ export function ResultCard({ bank, branch, searchTerm }) {
           </div>
 
           <div className="">
-            <div className="flex max-w-sm text-wrap text-sm items-center">
+            {/* <div className="flex max-w-sm text-wrap text-sm items-center">
               <MapPinIcon className="h-4 w-4 text-gray-500" />
               <span className="ml-1 text-gray-500">
                 {branch.location_name
                   ? highlightText(branch?.location_name, searchTerm)
                   : highlightText(branch?.name, searchTerm)}
               </span>
-            </div>
+            </div> */}
             <span
               className={`px-2.5 py-1 text-[10px] font-bold uppercase rounded-full tracking-wider ${config.classes}`}
             >
@@ -168,6 +171,8 @@ export function ResultCard({ bank, branch, searchTerm }) {
             </span>
           </div>
         </div>
+
+        {/* Bank and Branch Details */}
         <div class="grid grid-cols-2 gap-y-4 gap-x-2 border-t border-slate-100 dark:border-slate-700 pt-4 mb-6">
           <div>
             <p class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">
@@ -210,6 +215,8 @@ export function ResultCard({ bank, branch, searchTerm }) {
             </p>
           </div>
         </div>
+
+        {/* Working Hours */}
         <div class="bg-slate-50 dark:bg-slate-900/50 rounded-lg p-4 mb-4">
           <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase mb-3 flex items-center gap-2">
             <i class="fa-regular fa-clock"></i>
@@ -234,15 +241,43 @@ export function ResultCard({ bank, branch, searchTerm }) {
             </div>
           </div>
         </div>
-        <div class="flex items-center gap-4 border-t border-slate-100 dark:border-slate-700 pt-4">
-          <button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary/10 text-primary text-xs font-bold hover:bg-primary/20 transition-colors">
-            <PhoneIcon className="h-4 w-4" />
-            Call
-          </button>
-          <button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary/10 text-primary text-xs font-bold hover:bg-primary/20 transition-colors">
-            <EnvelopeIcon className="h-4 w-4" />
-            Email
-          </button>
+        <div class="border-t border-slate-100 dark:border-slate-700 pt-4">
+          <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase mb-3 flex items-center gap-2">
+            <UserCircleIcon className="h-5 w-5"/>
+            Contact Information
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="bg-slate-50 dark:bg-slate-900/50 rounded-lg p-3">
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center">
+                  <PhoneIcon className="h-3 w-3 text-primary" />
+                </div>
+                <div>
+                  <p class="text-xs text-slate-500 uppercase font-semibold">
+                    Phone
+                  </p>
+                  <p class="text-sm font-semibold text-slate-900 dark:text-white">
+                    {bank?.telephone1 || "N/A"}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-900/50 rounded-lg p-3">
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center">
+                  <EnvelopeIcon className="h-3 w-3 text-primary" />
+                </div>
+                <div>
+                  <p class="text-xs text-slate-500 uppercase font-semibold">
+                    Email
+                  </p>
+                  <p class="text-sm font-semibold text-slate-900 dark:text-white truncate">
+                    {bank?.email || "N/A"}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
