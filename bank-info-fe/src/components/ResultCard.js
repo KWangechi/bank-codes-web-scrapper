@@ -77,6 +77,29 @@ export function ResultCard({ bank, branch, searchTerm }) {
     );
   };
 
+  const statusConfig = {
+    closing: {
+      label: "Closes Soon",
+      classes: "bg-orange-100 text-accent-orange",
+    },
+    open: {
+      classes: "bg-primary text-accent-green",
+    },
+    closed: {
+      classes: "bg-red-100 text-accent-red",
+    },
+  };
+
+  let config;
+
+  if (isClosingSoon()) {
+    config = statusConfig.closing;
+  } else if (isOpen() === "Open") {
+    config = { ...statusConfig.open, label: "Open" };
+  } else {
+    config = { ...statusConfig.closed, label: isOpen() };
+  }
+
   const copyToClipboard = (bank) => {
     const branchDetails = {
       bank_name: bank.bank_name,
@@ -91,140 +114,135 @@ export function ResultCard({ bank, branch, searchTerm }) {
       .then(() => {
         toast.success("Branch Details Copied to ClipBoard", {
           position: "top-center",
-          duration: 3000
+          duration: 3000,
         });
       })
       .catch((err) => {
         toast.error(`Error, failed to copy to clipboard: ${err}`, {
           position: "top-center",
-          duration: 3000
-
+          duration: 3000,
         });
       });
   };
 
   return (
-    <div className="grow shrink mt-6 mb-2 w-auto md:w-full mx-auto gap-x-4 rounded-2xl">
-      <div className="grow rounded-2xl shadow-md bg-white p-6">
-        <div className="flex flex-col sm:flex-row items-center mb-4 ">
-          <img
-            src={`/logos/${bank?.logo_url}`}
-            alt={bank.logo_url}
-            className="h-10 w-15 rounded-lg bg-none"
-          />
-          <div className="ml-4 flex-grow">
-            <h2 className="italic text-lg text-[#D0BB95] font-extrabold">
-              {highlightText(branch?.name, searchTerm)}
-            </h2>
-            <div className="flex items-center text-gray-600 gap-x-2">
-              <span className="text-md font-bold">
-                Branch Code: {highlightText(branch?.code, searchTerm)}
-              </span>
-              <ClipboardDocumentIcon
-                className="h-4 w-4 text-gray-500 cursor-pointer"
-                onClick={() => copyToClipboard(bank)}
+    <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+      <div class="p-6">
+        <div class="flex justify-between items-start mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center">
+              <img
+                src={`/logos/${bank?.logo_url}`}
+                alt={bank.name}
+                className="h-10 w-auto rounded-lg bg-none"
               />
+            </div>
+            <div>
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white flex gap-x-2 items-center">
+                {highlightText(branch?.name, searchTerm)}
+
+                {/* <ClipboardDocumentIcon
+                  className="h-4 w-4 text-gray-500 cursor-pointer"
+                  onClick={() => copyToClipboard(bank)}
+                /> */}
+              </h3>
+              <p class="text-xs text-slate-500 uppercase font-semibold">
+                {highlightText(bank?.name, searchTerm)}
+              </p>
             </div>
           </div>
 
-          <div className="flex flex-col">
+          <div className="">
             <div className="flex max-w-sm text-wrap text-sm items-center">
-              <MapPinIcon className="h-3 w-3 text-gray-500" />
+              <MapPinIcon className="h-4 w-4 text-gray-500" />
               <span className="ml-1 text-gray-500">
                 {branch.location_name
                   ? highlightText(branch?.location_name, searchTerm)
                   : highlightText(branch?.name, searchTerm)}
               </span>
             </div>
-
-            <div className="text-right">
-              {isClosingSoon() ? (
-                <span
-                  className="font-semibold text-sm italic"
-                  style={{
-                    color: "#f59e0b",
-                    fontWeight: "semibold",
-                  }}
-                >
-                  Closes Soon
-                </span>
-              ) : (
-                <span
-                  className="font-semibold text-sm italic"
-                  style={{
-                    color: isOpen() === "Open" ? "#16a34a" : "#dc2626",
-                    fontWeight: "semibold",
-                  }}
-                >
-                  {isOpen()}
-                </span>
-              )}
+            <span
+              className={`px-2.5 py-1 text-[10px] font-bold uppercase rounded-full tracking-wider ${config.classes}`}
+            >
+              {config.label}
+            </span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-y-4 gap-x-2 border-t border-slate-100 dark:border-slate-700 pt-4 mb-6">
+          <div>
+            <p class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">
+              Bank Code
+            </p>
+            <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">
+              {bank?.bank_code}
+            </p>
+          </div>
+          <div>
+            <p class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">
+              Branch Code
+            </p>
+            <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">
+              {branch?.code}
+            </p>
+          </div>
+          <div>
+            <p class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">
+              Swift Code
+            </p>
+            <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">
+              {bank?.swift_code ?? "N/A"}
+            </p>
+          </div>
+          <div>
+            <p class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">
+              Paybill No
+            </p>
+            <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">
+              {bank?.mpesa_paybill_no ?? "N/A"}
+            </p>
+          </div>
+          <div class="col-span-2">
+            <p class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">
+              USSD
+            </p>
+            <p class="text-sm font-semibold text-primary">
+              {bank?.ussd_code ?? "N/A"}
+            </p>
+          </div>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-900/50 rounded-lg p-4 mb-4">
+          <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase mb-3 flex items-center gap-2">
+            <i class="fa-regular fa-clock"></i>
+            Working Hours
+          </h4>
+          <div class="space-y-2 text-xs text-slate-600 dark:text-slate-400">
+            <div class="flex justify-between">
+              <span>Weekdays</span>
+              <span class="font-medium text-slate-900 dark:text-slate-200">
+                {weekdaysHours}
+              </span>
+            </div>
+            <div class="flex justify-between">
+              <span>Saturdays</span>
+              <span class="font-medium text-slate-900 dark:text-slate-200">
+                {saturdaysHours}
+              </span>
+            </div>
+            <div class="flex justify-between">
+              <span>Sundays</span>
+              <span class="font-medium text-slate-400">{sundaysHours}</span>
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-200 pt-4">
-          <div className="flex justify-between items-start mb-4 flex-col sm:flex-row">
-            <div className="space-y-1">
-              <p className="font-semibold text-[#D0BB95]">
-                {highlightText(bank?.bank_name, searchTerm)}
-              </p>
-              <span className="text-gray-600">
-                <span className="font-semibold">Bank Code:</span>
-                &nbsp;
-                {bank.bank_code}
-              </span>
-              <p className="text-gray-600">
-                <span className="text-md font-semibold">Swift Code:</span>
-                &nbsp;
-                {bank.swift_code}
-              </p>
-              <p className="text-gray-600">
-                <span className="text-md font-semibold">Paybill No:</span>
-                &nbsp;
-                {bank.mpesa_paybill_no || "N/A"}
-              </p>
-              <p className="text-gray-600">
-                <span className="text-md font-semibold">USSD:</span>
-                &nbsp;
-                {bank.ussd_code || "N/A"}
-              </p>
-            </div>
-            <div className="text-left sm:text-right mt-1.5 sm:mt-0">
-              <p className="font-semibold text-[#D0BB95]">Working Hours</p>
-              <span className="text-gray-600">{weekdaysHours} - Weekdays</span>
-              <p>
-                <span className="text-gray-600">
-                  {saturdaysHours} - Saturdays
-                </span>
-              </p>
-              <p className="mt-1.5 sm:mt-0">
-                <span className="text-red-600 text-base">
-                  {sundaysHours} - Sundays and Public Holidays
-                </span>
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 mt-4">
-            <div>
-              <p className="font-semibold text-[#D0BB95]">Contact Info</p>
-              <div className="flex justify-between">
-                <span className="flex justify-between items-center mt-1 text-gray-600">
-                  <PhoneIcon className="h-4 w-4" />
-                  <span className="ml-2">
-                    {bank?.telephone1}{" "}
-                    {bank?.contactInfo?.telephone2 ? "|" : ""}{" "}
-                    {/* {bank?.contactInfo?.phone2} */}
-                  </span>
-                </span>
-              </div>
-              <div className="flex justify-between ">
-                <span className="flex justify-between items-center mt-1 text-gray-600">
-                  <EnvelopeIcon className="h-4 w-4" />
-                  <span className="ml-2">{bank?.email}</span>
-                </span>
-              </div>
-            </div>
-          </div>
+        <div class="flex items-center gap-4 border-t border-slate-100 dark:border-slate-700 pt-4">
+          <button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary/10 text-primary text-xs font-bold hover:bg-primary/20 transition-colors">
+            <PhoneIcon className="h-4 w-4" />
+            Call
+          </button>
+          <button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary/10 text-primary text-xs font-bold hover:bg-primary/20 transition-colors">
+            <EnvelopeIcon className="h-4 w-4" />
+            Email
+          </button>
         </div>
       </div>
     </div>

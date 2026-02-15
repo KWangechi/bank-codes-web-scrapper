@@ -125,7 +125,7 @@ const BankLocationSuggestion = ({ handleClose }) => {
   };
 
   return (
-    <div className=" py-6 w-4xl mx-auto mb-6 rounded-2xl px-10">
+    <div className="relative py-8 px-4 overflow-hidden bg-primary/5 dark:bg-primary/10">
       <div className="flex justify-between items-center gap-3 mb-2">
         <h2 className="text-2xl font-bold text-gray-900">
           Suggest New Bank Location
@@ -162,7 +162,7 @@ const BankLocationSuggestion = ({ handleClose }) => {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6 pt-4">
+      <form onSubmit={handleSubmit} className="space-y-6 pt-10">
         {/* Bank Name Select */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -184,7 +184,7 @@ const BankLocationSuggestion = ({ handleClose }) => {
               control: (baseStyles, state) => ({
                 ...baseStyles,
                 padding: "3px 3px",
-                borderColor: state.isFocused ? "#D0BB95" : "gray",
+                borderColor: state.isFocused ? "primary" : "gray",
                 boxShadow: state.isFocused ? "0 0 0 1px gray" : "none",
                 "&:hover": {
                   borderColor: "gray",
@@ -203,7 +203,7 @@ const BankLocationSuggestion = ({ handleClose }) => {
             type="text"
             value={formData.branchName}
             onChange={(e) => handleInputChange("branchName", e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#D0BB95] focus:border-[#D0BB95]"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter branch name"
           />
         </div>
@@ -335,7 +335,7 @@ const BankLocationSuggestion = ({ handleClose }) => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="bg-[#D0BB95] hover:bg-[#ad915e] text-white font-bold py-2 px-6 rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+            className="bg-primary/80 hover:bg-primary text-white font-bold py-2 px-6 rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
           >
             {isSubmitting ? (
               <>
