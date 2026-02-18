@@ -53,7 +53,7 @@ function Search({ searchTerm, onSearchChange, onBankChange, selectedBank }) {
   }, [banks]);
 
   return (
-    <section className="relative py-16 z-0 px-4 overflow-hidden bg-primary/5 dark:bg-primary/10">
+    <section className="relative py-16 z-0 px-4 bg-primary/5 dark:bg-primary/10">
       <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
         <div class="absolute top-10 left-10 w-64 h-64 rounded-full bg-primary filter blur-3xl"></div>
         <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-primary filter blur-3xl"></div>
@@ -97,7 +97,7 @@ function Search({ searchTerm, onSearchChange, onBankChange, selectedBank }) {
           </div>
 
           {/* Bank Select */}
-          <div className="relative w-full max-w-[320px] ">
+          <div className=" w-full max-w-[320px] ">
             <Select
               isClearable
               options={sortedOptions}
@@ -123,7 +123,7 @@ function Search({ searchTerm, onSearchChange, onBankChange, selectedBank }) {
                   "&:hover": {
                     borderColor: "primary",
                   },
-                  zIndex: 1
+                  zIndex: 99999
                 }),
               }}
             />

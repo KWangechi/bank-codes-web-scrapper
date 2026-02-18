@@ -1,13 +1,12 @@
 import {
   // InformationCircleIcon,
   PencilSquareIcon,
-  // QuestionMarkCircleIcon,
 } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import Dialog from "@mui/material/Dialog";
 import BankLocationSuggestion from "./BankLocationSuggestion";
 
-export default function Header({ onShowSuggestion, children }) {
+export default function Header() {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
